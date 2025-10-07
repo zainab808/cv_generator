@@ -1563,15 +1563,16 @@ pw.SizedBox(height: 42),
                   style: pw.TextStyle(fontSize: 14, color: PdfColors.white,fontWeight: pw.FontWeight.bold)),
            
 pw.SizedBox(height: 8),
-              pw.Text('PHONE: +92 308 4695012',
+              pw.Text('PHONE:                                     +92 308 4695012',
                   style: pw.TextStyle(fontSize: 9, color: PdfColors.white)),
                   
 pw.SizedBox(height: 8),
+  
+                    pw.Text('LINKEDIN: arham-sarwar-a1b56b176 ', style: pw.TextStyle(color: PdfColors.white, fontSize: 9)),
+             pw.SizedBox(height: 8),
               pw.Text('EMAIL: arham.sarwar786@gmail.com',
                   style: pw.TextStyle(fontSize: 9, color: PdfColors.white)),
-                   pw.SizedBox(height: 8),
-                    pw.Text('Linkedin:arham-sarwar-a1b56b176 ', style: pw.TextStyle(color: PdfColors.white, fontSize: 8)),
-             
+                 
             ],
           ],
         ),
