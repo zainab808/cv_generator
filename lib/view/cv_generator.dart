@@ -1596,6 +1596,10 @@
 //   }
 // }
 
+
+
+
+
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:pdf/widgets.dart' as pw;
@@ -1611,7 +1615,8 @@ class ResumeScreen extends StatefulWidget {
 
 class _ResumeScreenState extends State<ResumeScreen> {
   // --------------------- CV DATA ---------------------
-  final String fullName = 'ARHAM SARWAR';
+  final String fullName = 'ARHAM ';
+  final String fullName2 = 'SARWAR';
   final String subtitle = 'Senior Flutter Developer ';
   final String phone = '+92 308 4695012';
   final String email = 'arhamsarwar786@gmail.com';
@@ -2093,7 +2098,7 @@ class _ResumeScreenState extends State<ResumeScreen> {
     final doc = pw.Document();
 
     final pw.TextStyle headerStyle = pw.TextStyle(
-      fontSize: 30,
+      fontSize: 33,
       fontWeight: pw.FontWeight.bold,
     );
     final pw.TextStyle titleStyle = pw.TextStyle(
@@ -2112,11 +2117,15 @@ class _ResumeScreenState extends State<ResumeScreen> {
             children: [
               pw.Column(
                 crossAxisAlignment: pw.CrossAxisAlignment.start,
+                mainAxisAlignment: pw.MainAxisAlignment.center,
                 children: [
                   pw.SizedBox(height: 20),
                   pw.Text(fullName, style: headerStyle),
+                  pw.SizedBox(height: 5),
+                    pw.Text(fullName2, style: headerStyle),
                   pw.SizedBox(height: 10),
-                  pw.Text(subtitle, style: normal),
+                  pw.Text(subtitle, style: pw.TextStyle(color: PdfColors.grey700)),
+                
                 ],
               ),
             ],
@@ -2459,7 +2468,7 @@ class _ResumeScreenState extends State<ResumeScreen> {
        
         build: (context) => pw.Row(children: [
           pw.Container(
-          width: 185,
+          width: 170,
          
                decoration: pw.BoxDecoration(
            border: pw.Border(
@@ -2535,7 +2544,7 @@ class _ResumeScreenState extends State<ResumeScreen> {
        
         build: (context) => pw.Row(children: [
           pw.Container(
-          width: 185,
+          width: 170,
                 decoration: pw.BoxDecoration(
            border: pw.Border(
       right: pw.BorderSide(
@@ -2591,7 +2600,7 @@ class _ResumeScreenState extends State<ResumeScreen> {
        
         build: (context) => pw.Row(children: [
           pw.Container(
-          width: 185,
+          width: 170,
       decoration: pw.BoxDecoration(
            border: pw.Border(
       right: pw.BorderSide(
