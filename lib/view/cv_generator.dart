@@ -7,11 +7,7 @@
 // import 'package:pdf/widgets.dart' as pw;
 // import 'package:printing/printing.dart';
 
-
-
-
 //   @override
- 
 
 // class ResumeScreen extends StatefulWidget {
 //   const ResumeScreen({super.key});
@@ -21,7 +17,6 @@
 // }
 
 // class _ResumeScreenState extends State<ResumeScreen> {
-  
 
 //   // Sample dynamic data (you can replace these)
 //   final String name = 'TAYLOR\nCOOK';
@@ -290,7 +285,6 @@
 
 //   Future<pw.MemoryImage?> _loadLogoForPdf() async {
 //     try {
-      
 
 //     } catch (e) {
 //       // no logo or failed to load
@@ -459,19 +453,13 @@
 //   }
 // }
 
-
-
 // import 'dart:typed_data';
 // import 'package:flutter/material.dart';
 // import 'package:pdf/widgets.dart' as pw;
 // import 'package:printing/printing.dart';
 // import 'package:pdf/pdf.dart';
 
-
-
-
 //   @override
-
 
 // class ResumeScreen extends StatefulWidget {
 //   const ResumeScreen({super.key});
@@ -928,28 +916,13 @@
 //   }
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-
 // import 'dart:typed_data';
 // import 'package:flutter/material.dart';
 // import 'package:pdf/widgets.dart' as pw;
 // import 'package:printing/printing.dart';
 // import 'package:pdf/pdf.dart';
 
-
-
 //   @override
- 
 
 // class ResumeScreen extends StatefulWidget {
 //   const ResumeScreen({super.key});
@@ -1257,7 +1230,7 @@
 //       width: 900,
 //       decoration: BoxDecoration(
 //           border: Border.all(color: Colors.grey.shade300),
-//           color: Colors.white,
+//           color: Colors.black,
 //           boxShadow: [
 //             BoxShadow(color: Colors.black.withOpacity(0.03), blurRadius: 6)
 //           ]),
@@ -1623,10 +1596,6 @@
 //   }
 // }
 
-
-
-
-
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:pdf/widgets.dart' as pw;
@@ -1656,161 +1625,162 @@ class _ResumeScreenState extends State<ResumeScreen> {
     {
       'title': 'Bachelors in Information Technology',
       'institution': 'University of Punjab Lahore',
-      'years': '2019 - 2023'
+      'years': '2019 - 2023',
     },
     {
       'title': 'F.Sc Pre-Engineering',
       'institution': 'Islamia College, Lahore',
-      'years': '2016 - 2019'
+      'years': '2016 - 2019',
     },
     {
       'title': 'Matric',
       'institution': 'Islamia High School, Lahore',
-      'years': '2014 - 2016'
+      'years': '2014 - 2016',
     },
   ];
 
-  final List<Map<String, dynamic>> experiences = [
-        {
+  final List<Map<String, dynamic>> education2 = [
+    {
       'title': 'Bachelors in Information Technology',
       'institution': 'University of Punjab Lahore',
-      'years': '2019 - 2023'
+      'years': '2019 - 2023',
     },
     {
       'title': 'F.Sc Pre-Engineering',
       'institution': 'Islamia College, Lahore',
-      'years': '2016 - 2019'
+      'years': '2016 - 2019',
     },
     {
       'title': 'Matric',
       'institution': 'Islamia High School, Lahore',
-      'years': '2014 - 2016'
+      'years': '2014 - 2016',
     },
   ];
 
   // Experience - comprehensive (summarized/bulleted based on images)
   // I included many roles from the 6 pages; edit any text if you want exact phrasing.
-  final List<Map<String, dynamic>> experience = [
-    {
-      'title':
-          'Full Stack Developer (Flutter + Backend + Deployments) [Promoted]',
-      'company': 'Securehops | www.securehops.com',
+  final List<Map<String, dynamic>> experience1 = [
+       {
+      'role': 'Full Stack Developer (Flutter + Backend + Deployments)',
+      'company': 'SecureHops | www.securehops.com',
       'period': 'Sept 2023 - Jan 2025',
-      'bullets': [
-        'Developed cross-platform mobile apps using Flutter and Firebase.',
-        'Integrated and developed backend APIs (Node.js, Laravel, GraphQL) for scalable applications.',
-        'Implemented CI/CD pipelines and cloud deployments (AWS/GCP).',
-        'Promoted for delivering high-quality solutions and mentoring junior developers.'
-      ],
+      'details': 'Developed cross-platform mobile apps using Flutter and Firebase. Integrated backend APIs and implemented CI/CD pipelines.'
     },
     {
-      'title': 'Team Lead (Flutter + Backend) [Promoted]',
-      'company': 'Securehops',
+      'role': 'Team Lead (Flutter + Backend)',
+      'company': 'SecureHops',
       'period': 'Jan 2023 - Jan 2025',
-      'bullets': [
-        'Led cross-platform mobile teams using Flutter and Firebase.',
-        'Architected and implemented backend services and deployments (GraphQL, REST).',
-        'Mentored junior developers and reviewed code to ensure maintainability.'
-      ],
+      'details': 'Led a team, developed apps, integrated backend systems, mentored juniors.'
     },
     {
-      'title': 'Senior Flutter & Backend Developer [Promoted]',
-      'company': 'Securehops',
-      'period': 'July 2022 - Jan 2025',
-      'bullets': [
-        'Developed robust backend integrations and mobile features.',
-        'Improved app performance and reliability; implemented best practices.'
-      ],
-    },
-    {
-      'title': 'Flutter Developer',
-      'company': 'TYDLUP (April 2024 - Sept 2025)',
+      'role': 'Flutter Developer',
+      'company': 'TYDUP LTD',
       'period': 'April 2024 - Sept 2025',
-      'bullets': [
-        'Designed and developed a mobile app to connect customers with on-demand cleaning services.',
-        'Implemented user-friendly booking, scheduling and service management features.'
-      ],
+      'details': 'Developed mobile apps connecting customers with cleaning services.'
     },
-    {
-      'title': 'Flutter Developer',
-      'company': 'Calamgram.inc',
-      'period': 'Mar 2019 - Jan 2025',
-      'bullets': [
-        'Contributed to the success of Salammy (Muslim Daily App) with 50k+ downloads.',
-        'Developed features for daily prayers, Quran and Islamic tools to enhance user engagement.',
-      ],
+        {
+      'role': 'Flutter Developer _ Salamgram',
+     
+      'period': 'Mar 2019 _ Jan 2025',
+      'details': 'As a Flutter Developer, contributing to the success of Salamly: Muslim Daily App, a comprehensive app for Muslims with 50K+ downloads Developed features for daily prayer days, Quran, and Islamic tools to enhance user engagement.\nPlayed a key role in achieving over 50,000 downloads through optimized performance and user-focused updates.'
     },
-    {
-      'title': 'Flutter Developer (Freelance)',
-      'company': 'Fiverr / Upwork',
-      'period': 'Apr 2020 - Sept 2022',
-      'bullets': [
-        'Worked as a freelance Flutter developer delivering high quality Flutter and backend solutions.',
-        'Completed diverse projects focusing on mobile apps, APIs and scalable backend systems.'
-      ],
-    },
-    {
-      'title': 'Flutter Developer',
-      'company': 'WeTeach',
-      'period': 'Dec 2024 - Present',
-      'bullets': [
-        'Developed and launched an app with 5k+ downloads and a 4.2+ rating.',
-        'Built features to register users, sign up and learn, and integrated expert guidance.'
-      ],
-    },
-    {
-      'title': 'CTO & Flutter Developer',
-      'company': 'Harry Clark (Independent / Startup roles)',
-      'period': 'Various',
-      'bullets': [
-        'Built a mobile app for users to buy and sell eBooks and digital content.',
-        'Implemented secure authentication, payments, and content management.',
-      ],
-    },
-    {
-      'title': 'CTO & Flutter Developer',
-      'company': 'IQRA QURAN APP',
-      'period': 'Various',
-      'bullets': [
-        'Led development that provided offline access to the Holy Quran and improved UX and performance.',
-        'Focused on accessibility and scalable architecture.'
-      ],
-    },
-    {
-      'title': 'CTO & Flutter Developer',
-      'company': 'JoinCircleUp / OnPlo (sample roles)',
-      'period': 'Various',
-      'bullets': [
-        'Delivered Flutter mobile apps, integrated with NodeJS/REST backends and deployed secure solutions.',
-      ],
-    },
-    {
-      'title': 'Senior Flutter & Backend Developer',
-      'company': 'OnPlo',
-      'period': 'Various',
-      'bullets': [
-        'Built a secure all-in-one platform with chat, storage, jobs, accounts and payments.',
-        'Delivered a unified digital solution under one roof.'
-      ],
-    },
-    {
-      'title': 'Senior Flutter Developer',
-      'company': 'OnPlo (other project)',
-      'period': 'Various',
-      'bullets': [
-        'Worked on scalable Flutter solutions ensuring smooth UI/UX and secure transactions.'
-      ],
-    },
-    {
-      'title': 'Senior Flutter Developer',
-      'company': 'NubesSIM',
-      'period': 'Various',
-      'bullets': [
-        'Developed apps for eSIM purchase and global usage; implemented secure account management.'
-      ],
-    },
+            {
+      'role': 'Flutter Developer _ Fiverr | Upwork',
+     
+      'period': 'April 2020 _ Sept 2022',
+      'details': 'Worked as a Freelance Flutter Developer on Fiverr, Upwork delivering high-quality Flutter and backend solutions.'
+
+'Completed 5 strong projects with a focus on mobile apps, APIs, and scalable backend systems.'
+'Maintained a strong reputation through timely delivery, attention to detail, and excellent client communication.'
+'Helped clients achieve their goals with tailored, innovative solutions.'
+    },    
+      {
+      'role': 'Flutter Developer _ Self',
+     
+      'period': 'Sept 2024 _ Dec 2024',
+      'details': 'Delivered high-quality solutions with strong technical expertise, ensuring tasks of any size were completed efficiently.'
+
+'Applied leadership skills to manage projects holistically and drive team success.'
+
+'Recognized proactively by suggesting innovative ideas beyond assigned tasks.'
+
+'Contributed as a reliable asset to teams and projects in Flutter/FlutterFlow development.'
+
+    }, 
+      
+    
+    
+      
+   
   ];
 
+ final List<Map<String, dynamic>> experience2 = [
+           {
+      'role': 'CTO & Flutter Developer _ Harry Chat',
+    
+      'period': 'Dec 2024 _ Present',
+      'details': 'Currently working as a CTO & Senior Flutter Developer for an Islamic App, Wordbook, with over 10,000 downloads.'
+
+'Designed and developed core features using Flutter and APIs, improving 70% workflows and boosting user retention.'
+
+'Helped deliver a spiritually enriching experience with engaging and innovative features.'
+
+'Achieved 10K+ downloads through robust performance, user engagement, and continuous updates.'
+    },
+    {
+      'role': 'CTO & FlutterFlow Developer _ Griot Contents',
+     
+      'period': 'Jan 2024 _ Present',
+      'details': 'Developed an eBook app for users to buy and sell eBooks online.'
+
+'Implemented secure authentication, payment integration, and digital library management.'
+
+'Enabled easy upload, search, and purchase of eBooks with a smooth user experience.'
+
+'Built complete FlutterFlow-based solution to support growing user and content needs.'
+    },
+    {
+      'role': 'CTO & Flutter Developer _ IQRA Quran App',
+     
+      'period': 'Jan 2024 _ Present',
+      'details': 'Led the development of the IQRA Quran App, providing offline access to the Holy Quran.'
+
+'Designed the technical strategy and architecture to ensure scalability, security, and smooth user experience.'
+
+'Focused on enriching spiritual engagement with interactive features of Surahs and Juz.'
+
+'Built and deploy'
+    },
+        {
+      'role': 'CTO & Flutter Developer _ CRO App',
+     
+      'period': 'Jan 2024 _Present',
+      'details': 'Developed a Flutter mobile app for students to find jobs.'
+
+'Built Flutter web panels for employers to post jobs and admins to manage features.'
+
+'Managed the end-to-end deployment of the platform.'
+    },
+           
+
+               {
+      'role': 'Flutter Developer _ WeQed',
+     
+      'period': 'Dec 2024 _ Present',
+      'details': 'Developed and launched an app with 5K+ downloads and a 12+ content rating.'
+
+'Built a performing learning app to sign up and earn by sharing their knowledge and skills.'
+
+'Developed features such as user sign-in, rewards system, and teacher/student dashboards.'
+
+'Designed solutions to help users solve problems efficiently and gain the right direction.'
+
+    },     
+   
+   
+     
+   
+  ];
   final List<String> coreSkills = [
     'Flutter & Dart',
     'Firebase Suite',
@@ -1828,79 +1798,47 @@ class _ResumeScreenState extends State<ResumeScreen> {
   ];
 
   final List<Map<String, String>> projects = [
-   {
-      'name': 'Sendsorta',
-      'type': 'Mobile Application',
-      'desc': 'Dedicated parent/carer app providing personalized guidance and support.'
-    },
-    {
-      'name': 'Griot Connects',
-      'type': 'Mobile Application',
-      'desc': 'Platform to sell and purchase ebooks and connect authors with readers.'
-    },
-    {
-      'name': 'CircleUp',
-      'type': 'Mobile Application',
-      'desc': 'Platform enabling community features and curated content.'
-    },
-    {
-      'name': 'OnFewka',
-      'type': 'Mobile Application',
-      'desc': 'Freelance service marketplace mobile app with secure transactions.'
-    },
-    {
-      'name': 'Hikary',
-      'type': 'Mobile Application',
-      'desc': 'Smart vehicle maintenance app to track car health and services.'
-    },
-    {
-      'name': 'Yobblemena',
-      'type': 'Mobile Application',
-      'desc': 'Driving app connecting drivers for local services and logistic tasks.'
-    },
-    {
-      'name': 'Mutaqi Quran App',
-      'type': 'Mobile Application',
-      'desc': 'Quran learning application with offline capabilities and recitation tools.'
-    },
-    {
-      'name': 'Bissi Player',
-      'type': 'Mobile Application',
-      'desc': 'Media player app for content streaming and playlist management.'
-    },
-    {
-      'name': 'Kamaec',
-      'type': 'Mobile Application',
-      'desc': 'Ecommerce-like marketplace app supporting local sellers and buyers.'
-    },
-    // second page projects (website & backend)
-    {
-      'name': 'Certainli.so',
-      'type': 'Website + Backend',
-      'desc':
-          'Ecommerce/Regulatory platform delivering compliance and product catalog solutions with fast searching capability.'
-    },
-    {
-      'name': 'FemClinic',
-      'type': 'Website + Backend',
-      'desc': 'Healthcare platform integrating modern E-doctor platform functionalities.'
-    },
-    {
-      'name': 'Globe',
-      'type': 'Web App',
-      'desc':
-          'Web app with unique interaction results and visual representations for global metrics.'
-    },
-    {
-      'name': 'Globe Deployment',
-      'type': 'Deployment',
-      'desc': 'Deployment architecture for globe web app (visualization + UX).'
-    },
-    {
-      'name': 'HP Appen',
-      'type': 'Web App',
-      'desc': 'MCQ/education platform with modern UX.'
-    },
+
+
+ {'title': 'Sendsorta', 'tag': 'Mobile Application', 'desc': 'Personalized guidance app with 24/7 support and case resources.'},
+    {'title': 'Griot Connects', 'tag': 'Mobile Application', 'desc': 'Social marketplace for sellers and buyers with secure checkout.'},
+    {'title': 'CircleUp', 'tag': 'Mobile Application', 'desc': 'Platform to create events and connect local businesses.'},
+    {'title': 'InstaCalm Anxiety', 'tag': 'Mobile Application', 'desc': 'Anxiety therapy helper with relaxation sessions and content.'},
+    {'title': 'BargainEx', 'tag': 'Mobile Application', 'desc': 'E-commerce platform for buying and selling categories.'},
+    {'title': 'Salamy', 'tag': 'Mobile Application', 'desc': 'Islamic daily prayer and Quran app.'},
+    {'title': 'Ping', 'tag': 'Mobile Application', 'desc': 'Proximity-based social app connecting nearby contacts.'},
+    {'title': 'Globe', 'tag': 'Website + Backend', 'desc': 'Interactive website with unique user interaction visuals.'},
+    {'title': 'Certainlini', 'tag': 'Website + Backend', 'desc': 'Platform for building compliance and certification workflows.'},
+   {'title': 'Fittechn', 'tag': 'Complete Flutter App', 'desc': 'Fittechn provides Arabic and Spanish speakers a fitness-oriented application focusing on daily workouts, calorie tracking, and nutrition. Developed entirely with a focus on Spanish-language users.'},
+   {'title': 'AirMoneRestaurant', 'tag': 'Complete Flutter Application', 'desc': 'AirMoneRestaurant app is a specialized application catering to a specific restaurants ordering and delivery system, along with an authentic point-based membership reward system.'},
+   {'title': 'IQRA Quran App', 'tag': 'Complete Flutter Application', 'desc': 'IQRA is a Quran app offering features like Quranic content, prayer times, daily Duas, and an offline reading mode. Designed for Muslims seeking Quranic guidance and Islamic practices.'},
+   {'title': 'Reverse Disease', 'tag': 'FlutterFlow Application', 'desc': 'Reverse Disease is a health tracking app that monitors fatigue, sugar, weight, and nutrition, providing a comprehensive tool for users aiming to improve their health and lifestyle.'},
+   {'title': 'Amici', 'tag': 'Complete Flutter App', 'desc': 'Amici App is designed to streamline the process of booking a chef for entire events and gatherings.'},
+     {'title': 'United Proposal', 'tag': 'FlutterFlow Application', 'desc': 'United Proposal is a matrimonial matching platform facilitating the search for suitable life partners through detailed algorithms and AI-based compatibility results. The app includes an integrated chat system, premium subscription model, and an admin dashboard for content control. '},
+     {'title': 'PricePro', 'tag': 'Complete Flutter App', 'desc': 'Application for managing menus of different branches of restaurants. Copy and sync features for branches and add different taxes. '},
+     {'title': 'MyCash', 'tag': 'Complete Flutter App', 'desc': 'MyCash App is a home-run application designed to provide easy and transparent record-keeping for small business owners and individuals. '},
+     {'title': 'Flavourz Restaurant', 'tag': 'Complete Flutter App', 'desc': 'Flavourz is a dedicated food application tailored for a specific restaurant, implementing ordering and specialized platform for customers to place orders. '},
+     {'title': 'Tritt', 'tag': 'Complete Flutter App', 'desc': ' Tritt is a FlutterApp now resembling TrueCaller, with features such as SMS blocking, number searching, as well as AI deep-clean and full functionalities.'},
+     {'title': 'LockSmith Guru', 'tag': 'Complete Flutter App', 'desc': 'Locksmith Guru is a specialized app designed for resolving various types of lockouts and guiding customers to the nearest locksmith. '},
+     {'title': 'EkCabFare', 'tag': 'Complete Flutter App', 'desc': 'EkCabFare displays and compares fares between Uber, Careem, and Ola cabs, allowing users to select the best option based on mileage, time, and convenience. '},
+  
+
+  ];
+   final List<Map<String, String>> projects2 = [
+   
+    {'title': 'OnFekwa', 'tag': 'Complete Flutter App', 'desc': 'OnFekwa is a social media app designed to help users discover the best lifestyle trends. It focuses on building fun, supportive communities based on hobbies and interests. The app includes story uploading, follower/following, messaging, and sharing features, bringing local discovery to life.'},
+    {'title': 'Hikary', 'tag': 'Complete Flutter App', 'desc': 'Hikary is a news and information app helping users stay informed with current, verified information. It features an AI-based recommendation system, content filtering, and user engagement through interactive discussions.'},
+    {'title': 'YobleMane', 'tag': 'Complete Flutter App', 'desc': 'YobleMane is an online dining app that connects customers with diners for customized meal selection and food discovery. Exceptionally functional, it provides easy ordering, menus, and food availability through the app.'},
+    {'title': 'Muttaqi Quran App', 'tag': 'Complete Flutter App', 'desc': 'Muttaqi Quran App is a digital Quran application serving a larger and growing Muslim community. The app provides Quran reading, tafseer, and prayer notifications with Arabic audio playback for improved accessibility.'},
+    {'title': 'Bissi Player', 'tag': 'Complete Flutter App', 'desc': 'Bissi Player is an AI-driven streaming app that allows users to watch movies and music videos through Flutter-based smooth integration. It features smart search, trending recommendations, and card-based interface for easy access.'},
+    {'title': 'Kamacee', 'tag': 'Complete Flutter App', 'desc': 'Kamacee is a local African online marketplace app, inspired by platforms like Amazon and Jumia. It provides multi-vendor shopping, delivery status tracking, and rating systems for both sellers and buyers, ensuring safe and reliable transactions.'},
+   {'title': 'WirdBook', 'tag': 'Complete Flutter App', 'desc': 'The WirdBook is a spiritual guide for all-day litanies rooted in Prophetic traditions. Designed by Sufi tech engineers, it serves as an all-in-one platform for learning, practicing, and managing daily Wirds, ensuring users remain consistent with their prayers and remembrance.'},
+   {'title': 'WeTeachs', 'tag': 'Complete Flutter Application', 'desc': 'Learn and earn by sharing your knowledge_any skill you learned could help others! The WeTeachs app allows users to teach, learn, and earn in one platform, providing practical guidance for tutors to grow their digital reach.'},
+   {'title': 'Nubes App', 'tag': 'Complete Flutter Application', 'desc': 'A seamless platform to purchase clothes, online accessories, and personal items designed for both small-scale eCommerce and global marketplaces.'},
+   {'title': 'OnPilo', 'tag': 'Complete Flutter App', 'desc': 'OnPilo is a digital learning platform designed to keep user data and activities secure through AI-based tracking and gamified learning systems. It includes a course management dashboard, building a sustainable student-centered model.'},
+   {'title': 'Umazing', 'tag': 'Complete Flutter App', 'desc': 'Umazing is a multi-functional eCommerce app built to provide users with a platform to buy and sell all categories of goods, products, and services online. The app includes AI recommendation systems, chat features, and advanced search options.'},
+     {'title': 'Visual Fraction Calculator', 'tag': 'Complete Flutter App', 'desc': 'Visual Fraction Calculator is a mobile app designed to make fraction calculation interactive and easy. It includes drag-and-drop visual representation of fractions and converts between forms, serving as a digital educational tool for students. '},
+    
   ];
 
   // --------------------- UI ---------------------
@@ -1910,17 +1848,14 @@ class _ResumeScreenState extends State<ResumeScreen> {
       appBar: AppBar(
         title: const Text('Resume Preview'),
         actions: [
-          IconButton(
-            icon: const Icon(Icons.print),
-            onPressed: _printPdf,
-          ),
+          IconButton(icon: const Icon(Icons.print), onPressed: _printPdf),
         ],
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Center(
           child: Column(
-            children: List.generate(6, (index) {
+            children: List.generate(1, (index) {
               return Padding(
                 padding: const EdgeInsets.only(bottom: 16),
                 child: _buildPreviewPage(pageIndex: index + 1),
@@ -1940,7 +1875,7 @@ class _ResumeScreenState extends State<ResumeScreen> {
         color: Colors.white,
         border: Border.all(color: Colors.grey.shade300),
         boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 6)
+          BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 6),
         ],
       ),
       child: Row(
@@ -1952,31 +1887,39 @@ class _ResumeScreenState extends State<ResumeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(fullName,
-                    style: const TextStyle(
-                        fontSize: 20, fontWeight: FontWeight.bold)),
+                Text(
+                  fullName,
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 Text(subtitle, style: TextStyle(color: Colors.grey[700])),
                 const Divider(),
                 const SizedBox(height: 8),
-                const Text('DETAILS',
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+                const Text(
+                  'DETAILS',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
+                ),
                 _smallInfoRow('Phone', phone),
                 _smallInfoRow('Email', email),
                 _smallInfoRow('Location', location),
                 _smallInfoRow('LinkedIn', linkedin),
                 const Divider(),
-                const Text('CORE SKILLS',
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+                const Text(
+                  'CORE SKILLS',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
+                ),
                 for (var s in coreSkills)
                   Padding(
-                      padding: const EdgeInsets.only(bottom: 4),
-                      child: Text('- $s')),
+                    padding: const EdgeInsets.only(bottom: 4),
+                    child: Text('- $s'),
+                  ),
                 const Divider(),
-                const Text('LANGUAGES',
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+                const Text(
+                  'LANGUAGES',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
+                ),
                 const Text('English'),
                 const Text('Urdu'),
               ],
@@ -1988,28 +1931,32 @@ class _ResumeScreenState extends State<ResumeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text('PROFILE',
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                const Text(
+                  'PROFILE',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                ),
                 Text(about),
                 const Divider(),
-                const Text('EXPERIENCE',
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                for (var e in experiences) _experiencePreview(e),
+                const Text(
+                  'EXPERIENCE',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                ),
+                for (var e in experience1) _experiencePreview(e),
                 const Divider(),
-                const Text('EDUCATION',
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                const Text(
+                  'EDUCATION',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                ),
                 for (var edu in education) _educationPreview(edu),
                 const Divider(),
-                const Text('PROJECTS',
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                const Text(
+                  'PROJECTS',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                ),
                 for (var p in projects) _projectPreview(p),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
@@ -2021,7 +1968,10 @@ class _ResumeScreenState extends State<ResumeScreen> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(width: 70, child: Text(label, style: const TextStyle(fontSize: 12))),
+          SizedBox(
+            width: 70,
+            child: Text(label, style: const TextStyle(fontSize: 12)),
+          ),
           Expanded(child: Text(value, style: const TextStyle(fontSize: 12))),
         ],
       ),
@@ -2032,20 +1982,67 @@ class _ResumeScreenState extends State<ResumeScreen> {
     final List<String> bullets = List<String>.from(e['bullets'] ?? []);
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Text(e['title'] ?? '',
-            style: const TextStyle(fontWeight: FontWeight.bold)),
-        Text(e['company'] ?? '',
-            style: const TextStyle(fontStyle: FontStyle.italic)),
-        for (var b in bullets)
-          Padding(
-            padding: const EdgeInsets.only(left: 8, top: 4),
-            child: Text('- $b', style: const TextStyle(fontSize: 12)),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            e['role'] ?? '',
+            style: const TextStyle(fontWeight: FontWeight.bold),
           ),
-        Align(
+          Text(
+            e['period'] ?? '',
+            style: const TextStyle(fontStyle: FontStyle.italic),
+          ),
+          for (var b in bullets)
+            Padding(
+              padding: const EdgeInsets.only(left: 8, top: 4),
+              child: Text('- $b', style: const TextStyle(fontSize: 12)),
+            ),
+          Align(
             alignment: Alignment.centerRight,
-            child: Text(e['period'] ?? '', style: const TextStyle(fontSize: 11))),
-      ]),
+            child: Text(
+              e['details'] ?? '',
+              style: const TextStyle(fontSize: 11),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+
+
+
+  
+  Widget _experience2Preview(Map<String, dynamic> ex) {
+    final List<String> bullets = List<String>.from(ex['bullets'] ?? []);
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            ex['role'] ?? '',
+            style: const TextStyle(fontWeight: FontWeight.bold),
+          ),
+          Text(
+            ex['period'] ?? '',
+            style: const TextStyle(fontStyle: FontStyle.italic),
+          ),
+          for (var b in bullets)
+            Padding(
+              padding: const EdgeInsets.only(left: 8, top: 4),
+              child: Text('- $b', style: const TextStyle(fontSize: 12)),
+            ),
+          Align(
+            alignment: Alignment.centerRight,
+            child: Text(
+              ex['details'] ?? '',
+              style: const TextStyle(fontSize: 11),
+            ),
+          ),
+        ],
+      ),
     );
   }
 
@@ -2055,15 +2052,21 @@ class _ResumeScreenState extends State<ResumeScreen> {
       child: Row(
         children: [
           Expanded(
-              child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(edu['title'] ?? '',
-                  style: const TextStyle(fontWeight: FontWeight.bold)),
-              Text(edu['institution'] ?? ''),
-            ],
-          )),
-          SizedBox(width: 80, child: Text(edu['years'] ?? '', textAlign: TextAlign.right)),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  edu['title'] ?? '',
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                ),
+                Text(edu['institution'] ?? ''),
+              ],
+            ),
+          ),
+          SizedBox(
+            width: 80,
+            child: Text(edu['years'] ?? '', textAlign: TextAlign.right),
+          ),
         ],
       ),
     );
@@ -2072,104 +2075,562 @@ class _ResumeScreenState extends State<ResumeScreen> {
   Widget _projectPreview(Map<String, String> p) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Text(p['name'] ?? '',
-            style: const TextStyle(fontWeight: FontWeight.bold)),
-        Text(p['desc'] ?? '', style: const TextStyle(fontSize: 12)),
-      ]),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            p['title'] ?? '',
+            style: const TextStyle(fontWeight: FontWeight.bold),
+          ),
+          Text(p['desc'] ?? '', style: const TextStyle(fontSize: 12)),
+        ],
+      ),
     );
   }
-
-
-
-
 
   // --------------------- PDF PRINT ---------------------
   Future<void> _printPdf() async {
     final doc = pw.Document();
 
-    final pw.TextStyle headerStyle =
-        pw.TextStyle(fontSize: 30, fontWeight: pw.FontWeight.bold);
-    final pw.TextStyle titleStyle =
-        pw.TextStyle(fontSize: 14, fontWeight: pw.FontWeight.bold);
+    final pw.TextStyle headerStyle = pw.TextStyle(
+      fontSize: 30,
+      fontWeight: pw.FontWeight.bold,
+    );
+    final pw.TextStyle titleStyle = pw.TextStyle(
+      fontSize: 16,
+      fontWeight: pw.FontWeight.bold,
+    );
     final pw.TextStyle normal = pw.TextStyle(fontSize: 10);
 
-    doc.addPage(pw.MultiPage(
-      pageFormat: PdfPageFormat.a4,
-      margin: const pw.EdgeInsets.all(24),
-      build: (context) => [
-        pw.Row(
-          mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
-          children: [
-            pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-              pw.SizedBox(height: 20),
-              pw.Text(fullName, style: headerStyle),
-      pw.SizedBox(height: 10),
-              pw.Text(subtitle, style: normal),
-            ]),
-           
-          ],
-        ),
-        pw.SizedBox(height: 20),
-        pw.Divider(),
-        pw.Row(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-          // LEFT COLUMN
-          pw.Container(
-            width: 160,
-            child: pw.Column(
-              crossAxisAlignment: pw.CrossAxisAlignment.start,
-              children: [
-                pw.Text('DETAILS', style: titleStyle),
-                pw.SizedBox(height: 6),
-                _pwText('Phone', phone),
-                _pwText('Email', email),
-                _pwText('Location', location),
-                _pwText('LinkedIn', linkedin),
-                pw.Divider(),
-                pw.Text('CORE SKILLS', style: titleStyle),
-                for (var s in coreSkills) pw.Text('- $s', style: normal),
-                pw.Divider(),
-                pw.Text('LANGUAGES', style: titleStyle),
-                pw.Text('English', style: normal),
-                pw.Text('Urdu', style: normal),
-              ],
-            ),
+    doc.addPage(
+      pw.MultiPage(
+        pageFormat: PdfPageFormat.a4,
+        margin: const pw.EdgeInsets.all(24),
+        build: (context) => [
+          pw.Row(
+            mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+            children: [
+              pw.Column(
+                crossAxisAlignment: pw.CrossAxisAlignment.start,
+                children: [
+                  pw.SizedBox(height: 20),
+                  pw.Text(fullName, style: headerStyle),
+                  pw.SizedBox(height: 10),
+                  pw.Text(subtitle, style: normal),
+                ],
+              ),
+            ],
           ),
+          pw.SizedBox(height: 20),
+          pw.Divider(),
+          pw.Row(
+            crossAxisAlignment: pw.CrossAxisAlignment.start,
+            children: [
+              // LEFT COLUMN
+              pw.Container(
+                width: 185,
+                     
+                child: pw.Column(
+                  crossAxisAlignment: pw.CrossAxisAlignment.start,
+                  children: [
+                    pw.SizedBox(height: 10),
+                    pw.Text('DETAILS', style: titleStyle),
+                    pw.SizedBox(height: 3),
+                    pw.Container(
+                      height: 2.5,
+                      width: 40,
+                      decoration: pw.BoxDecoration(
+                        color: PdfColors.black,
+                        borderRadius: pw.BorderRadius.circular(2),
+                      ),
+                    ),
+                    pw.SizedBox(height: 15),
+                    pw.Text(
+                      "LOCATION",
+                      style: pw.TextStyle(
+                        color: PdfColors.black,
+                        fontSize: 12,
+                        fontWeight: pw.FontWeight.bold,
+                      ),
+                    ),
+                    pw.SizedBox(height: 5),
+                    pw.Text(
+                      " Lahore, Pakistan",
+                      style: pw.TextStyle(color: PdfColors.black, fontSize: 11),
+                    ),
+                    pw.SizedBox(height: 10),
+
+                    pw.Text(
+                      "PHONE",
+                      style: pw.TextStyle(
+                        color: PdfColors.black,
+                        fontSize: 12,
+                        fontWeight: pw.FontWeight.bold,
+                      ),
+                    ),
+                    pw.SizedBox(height: 5),
+                    pw.Text(
+                      '+92 308 4695012',
+                      style: pw.TextStyle(color: PdfColors.black, fontSize: 11),
+                    ),
+                    pw.SizedBox(height: 10),
+                    pw.Text(
+                      "EMAIL",
+                      style: pw.TextStyle(
+                        color: PdfColors.black,
+                        fontSize: 12,
+                        fontWeight: pw.FontWeight.bold,
+                      ),
+                    ),
+                    pw.SizedBox(height: 5),
+                    pw.Text(
+                      'arhamsarwar786@gmail.com',
+                      style: pw.TextStyle(color: PdfColors.black, fontSize: 11),
+                    ),
+                    pw.SizedBox(height: 10),
+                    pw.Text(
+                      "NATIONALITY",
+                      style: pw.TextStyle(
+                        color: PdfColors.black,
+                        fontSize: 12,
+                        fontWeight: pw.FontWeight.bold,
+                      ),
+                    ),
+                    pw.SizedBox(height: 5),
+                    pw.Text(
+                      " Pakistani",
+                      style: pw.TextStyle(color: PdfColors.black, fontSize: 11),
+                    ),
+                    pw.SizedBox(height: 20),
+
+                    pw.Text(' CORE SKILLS', style: titleStyle),
+                    pw.SizedBox(height: 3),
+                    pw.Container(
+                      height: 2.5,
+                      width: 40,
+                      decoration: pw.BoxDecoration(
+                        color: PdfColors.black,
+                        borderRadius: pw.BorderRadius.circular(2),
+                      ),
+                    ),
+
+                    pw.SizedBox(height: 5),
+                    pw.Text(
+                      'Flutter Cross-Platform Development',
+                      style: pw.TextStyle(color: PdfColors.black, fontSize: 8),
+                    ),
+                    pw.SizedBox(height: 5),
+                    pw.Container(
+                      height: 4,
+                      decoration: pw.BoxDecoration(
+                        color: PdfColors.black,
+                        borderRadius: pw.BorderRadius.circular(3),
+                      ),
+                    ),
+                    pw.SizedBox(height: 5),
+
+                    pw.Text(
+                      'Firebase Suite_Cloud Functions',
+
+                      style: pw.TextStyle(color: PdfColors.black, fontSize: 8),
+                    ),
+                    pw.SizedBox(height: 5),
+                    pw.Container(
+                      height: 4,
+                      decoration: pw.BoxDecoration(
+                        color: PdfColors.black,
+                        borderRadius: pw.BorderRadius.circular(3),
+                      ),
+                    ),
+                    pw.SizedBox(height: 5),
+                    pw.Text(
+                      'Backend Development ',
+
+                      style: pw.TextStyle(color: PdfColors.black, fontSize: 8),
+                    ),
+                    pw.SizedBox(height: 5),
+                    pw.Container(
+                      height: 4,
+                      decoration: pw.BoxDecoration(
+                        color: PdfColors.black,
+                        borderRadius: pw.BorderRadius.circular(3),
+                      ),
+                    ),
+                    pw.SizedBox(height: 5),
+                    pw.Text(
+                      'State Management',
+
+                      style: pw.TextStyle(color: PdfColors.black, fontSize: 8),
+                    ),
+                    pw.SizedBox(height: 5),
+                    pw.Container(
+                      height: 4,
+                      decoration: pw.BoxDecoration(
+                        color: PdfColors.black,
+                        borderRadius: pw.BorderRadius.circular(3),
+                      ),
+                    ),
+                    pw.SizedBox(height: 5),
+                    pw.Text(
+                      'DevOps & Deployment ',
+
+                      style: pw.TextStyle(color: PdfColors.black, fontSize: 8),
+                    ),
+                    pw.SizedBox(height: 5),
+                    pw.Container(
+                      height: 4,
+                      decoration: pw.BoxDecoration(
+                        color: PdfColors.black,
+                        borderRadius: pw.BorderRadius.circular(3),
+                      ),
+                    ),
+                    pw.SizedBox(height: 5),
+                    pw.Text(
+                      'AI & ML Integration',
+
+                      style: pw.TextStyle(color: PdfColors.black, fontSize: 8),
+                    ),
+                    pw.SizedBox(height: 5),
+                    pw.Container(
+                      height: 4,
+                      decoration: pw.BoxDecoration(
+                        color: PdfColors.black,
+                        borderRadius: pw.BorderRadius.circular(3),
+                      ),
+                    ),
+                    pw.SizedBox(height: 5),
+                    pw.Text(
+                      'Databases ',
+
+                      style: pw.TextStyle(color: PdfColors.black, fontSize: 8),
+                    ),
+                    pw.SizedBox(height: 5),
+                    pw.Container(
+                      height: 4,
+                      decoration: pw.BoxDecoration(
+                        color: PdfColors.black,
+                        borderRadius: pw.BorderRadius.circular(3),
+                      ),
+                    ),
+                    pw.SizedBox(height: 5),
+                    pw.Text(
+                      'Version Control ',
+
+                      style: pw.TextStyle(color: PdfColors.black, fontSize: 8),
+                    ),
+                    pw.SizedBox(height: 5),
+                    pw.Container(
+                      height: 4,
+                      decoration: pw.BoxDecoration(
+                        color: PdfColors.black,
+                        borderRadius: pw.BorderRadius.circular(3),
+                      ),
+                    ),
+                    pw.SizedBox(height: 5),
+                    pw.Text(
+                      'Project Tools ',
+                      style: pw.TextStyle(color: PdfColors.black, fontSize: 8),
+                    ),
+                    pw.SizedBox(height: 5),
+                    pw.Container(
+                      height: 4,
+                      decoration: pw.BoxDecoration(
+                        color: PdfColors.black,
+                        borderRadius: pw.BorderRadius.circular(3),
+                      ),
+                    ),
+                    pw.SizedBox(height: 20),
+
+                    pw.Text('LANGUAGES', style: titleStyle),
+                    pw.Container(
+                      height: 2.5,
+                      width: 40,
+                      decoration: pw.BoxDecoration(
+                        color: PdfColors.black,
+                        borderRadius: pw.BorderRadius.circular(2),
+                      ),
+                    ),
+                    pw.SizedBox(height: 10),
+                    pw.Text('English', style: normal),
+                    pw.SizedBox(height: 5),
+                    pw.Container(
+                      height: 4,
+                      decoration: pw.BoxDecoration(
+                        color: PdfColors.black,
+                        borderRadius: pw.BorderRadius.circular(3),
+                      ),
+                    ),
+                    pw.Text('Urdu', style: normal),
+                    pw.SizedBox(height: 5),
+                    pw.Container(
+                      height: 4,
+                      decoration: pw.BoxDecoration(
+                        color: PdfColors.black,
+                        borderRadius: pw.BorderRadius.circular(3),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              pw.SizedBox(width: 20),
+              // RIGHT COLUMN
+              pw.Expanded(
+                child: pw.Column(
+                  crossAxisAlignment: pw.CrossAxisAlignment.start,
+                  children: [
+                    pw.SizedBox(height: 10),
+                    pw.Text('PROFILE', style: titleStyle),
+                    pw.Container(
+                      height: 2.5,
+                      width: 40,
+                      decoration: pw.BoxDecoration(
+                        color: PdfColors.black,
+                        borderRadius: pw.BorderRadius.circular(2),
+                      ),
+                    ),
+
+                    pw.SizedBox(height: 20),
+                    pw.Text(about, style: normal),
+                    pw.Divider(),
+                    pw.SizedBox(height: 10),
+                    pw.Text('EXPERIENCE', style: titleStyle),
+                    pw.Container(
+                      height: 2.5,
+                      width: 40,
+                      decoration: pw.BoxDecoration(
+                        color: PdfColors.black,
+                        borderRadius: pw.BorderRadius.circular(2),
+                      ),
+                    ),
+                    for (var e in experience1)
+                      pw.Padding(
+                        padding: const pw.EdgeInsets.only(top: 6),
+                        child: pw.Column(
+                          crossAxisAlignment: pw.CrossAxisAlignment.start,
+                          children: [
+                            pw.Text(
+                              e['role'] ?? '',
+                              style: pw.TextStyle(
+                                fontWeight: pw.FontWeight.bold,
+                                fontSize: 11,
+                              ),
+                            ),
+                            pw.SizedBox(height: 3),
+
+                            pw.Text(
+                              ' ${e['period']}',
+                              style: pw.TextStyle(
+                                fontSize: 8,
+                                fontWeight: pw.FontWeight.bold,
+                              ),
+                            ),
+                            pw.SizedBox(height: 3),
+                            pw.Text(
+                              e['details'] ?? '',
+                              style: const pw.TextStyle(fontSize: 10),
+                            ),
+
+
+                           
+
+                          ],
+                        ),
+                      ),
+
+
+
+
+
+
+                
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+// page 2
+
+    doc.addPage(
+      pw.Page(
+       
+        build: (context) => pw.Row(children: [
+          pw.Container(
+          width: 185,
+         
+               decoration: pw.BoxDecoration(
+           border: pw.Border(
+      right: pw.BorderSide(
+        color: PdfColors.black // border ka color
+                  // border ki motai
+      ),
+      ),)
+          ),
+        
+          pw.SizedBox(width: 10),
+       pw.Expanded(
+            child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+              // pw.Text('Profile', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14)),
+              // pw.Text(aboutText, style: const pw.TextStyle(fontSize: 10)),
+              // pw.SizedBox(height: 8),
+              // pw.Text('Employment History', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 12)),
+              for (var ex in experience2)
+                pw.Padding(
+                  padding: const pw.EdgeInsets.only(top: 6),
+                  child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+                    pw.Text(ex['role'] ?? '', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 10)),
+                              pw.SizedBox(height:  3),
+                    pw.Text(' ${ex['period']}', style: const pw.TextStyle(fontSize: 9)),
+                             pw.SizedBox(height:  3),
+                    pw.Text(ex['details'] ?? '', style: const pw.TextStyle(fontSize: 9)),
+                  ]),
+                ),
+              pw.SizedBox(height: 20),
+           
+              pw.Text('Education', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14,  color: PdfColors.black,)),
+               pw.SizedBox(height: 3),
+                    pw.Container(
+                      height: 2.5,
+                      width: 40,
+                      decoration: pw.BoxDecoration(
+                        color: PdfColors.black,
+                        borderRadius: pw.BorderRadius.circular(2),
+                      ),
+                    ),
+              pw.SizedBox(height: 10),
+            
+              for (var ed in education) pw.Text('${ed['title']} - ${ed['institution']} (${ed['years']})', style: const pw.TextStyle(fontSize: 12)),
+             
+                            pw.SizedBox(height: 20),
+              
+               pw.Text(' Skills', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 15,color: PdfColors.black)),
+                pw.SizedBox(height: 3),
+                    pw.Container(
+                      height: 2.5,
+                      width: 40,
+                      decoration: pw.BoxDecoration(
+                        color: PdfColors.black,
+                        borderRadius: pw.BorderRadius.circular(2),
+                      ),
+                    ),
+                                        pw.SizedBox(height: 10),
+              for (var s in coreSkills) pw.Text(' $s', style:  pw.TextStyle(fontSize: 12,)),
+    
+
+
+            ]),
+          ),
+    
+        ]),
+      ),
+    );
+
+
+    // page 3
+    doc.addPage(
+      pw.Page(
+       
+        build: (context) => pw.Row(children: [
+          pw.Container(
+          width: 185,
+                decoration: pw.BoxDecoration(
+           border: pw.Border(
+      right: pw.BorderSide(
+        color: PdfColors.black // border ka color
+                  // border ki motai
+      ),              
+      ),)
+          
+        
+          
+          ),
+        
+          pw.SizedBox(width: 10),
+          pw.Expanded(
+            child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+              pw.Text('Projects', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14,  color: PdfColors.black,)),
+
+              pw.SizedBox(height: 3),
+                    pw.Container(
+                      height: 2.5,
+                      width: 40,
+                      decoration: pw.BoxDecoration(
+                        color: PdfColors.black,
+                        borderRadius: pw.BorderRadius.circular(2),
+                      ),
+                    ),
+              // pw.Text('Projects', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14,  color: PdfColor.fromHex('#084A3F'),)),
+           for (var p in projects)
+                      pw.Padding(
+                  padding: const pw.EdgeInsets.only(top: 6),
+                  child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+                    pw.Text(p['title'] ?? '', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 11)),
+             pw.SizedBox(height:  3),
+
+                    pw.Text(' ${p['tag']}', style:  pw.TextStyle(fontSize: 8,fontWeight: pw.FontWeight.bold)),
+                     pw.SizedBox(height:  3),
+                    pw.Text(p['desc'] ?? '', style: const pw.TextStyle(fontSize: 10)),
+                  ]),
+                ),
+      
+           
+              // for (var p in projects)
+                // pw.Text('${p['title']}\n  ${p['tag']}\n${p['desc']}', style: const pw.TextStyle(fontSize: 10)),
+            
+            ]),
+          ),
+        ]),
+      ),
+    );
+// page 4
+    doc.addPage(
+      pw.Page(
+       
+        build: (context) => pw.Row(children: [
+          pw.Container(
+          width: 185,
+      decoration: pw.BoxDecoration(
+           border: pw.Border(
+      right: pw.BorderSide(
+        color: PdfColors.black // border ka color
+                  // border ki motai
+      ),
+      ),)
 
           
-          pw.SizedBox(width: 20),
-          // RIGHT COLUMN
+          ),
+        
+          pw.SizedBox(width: 10),
           pw.Expanded(
-            child: pw.Column(
-              crossAxisAlignment: pw.CrossAxisAlignment.start,
-              children: [
-//      
-                pw.Text('PROFILE', style: titleStyle),
-                pw.Text(about, style: normal),
-                pw.SizedBox(height: 10),
-                pw.Text('EXPERIENCE', style: titleStyle),
-                for (var e in experiences) ...[
-                  pw.Text(e['title'] ?? '', style: pw.TextStyle(fontWeight: pw.FontWeight.bold)),
-                  pw.Text(e['company'] ?? '', style: normal),
-                  for (var b in List<String>.from(e['bullets'] ?? []))
-                    pw.Text('- $b', style: normal),
-                  pw.SizedBox(height: 6),
-                ],
-                pw.Text('EDUCATION', style: titleStyle),
-                for (var edu in education)
-                  pw.Text('${edu['title']} - ${edu['institution']} (${edu['years']})',
-                      style: normal),
-                pw.SizedBox(height: 10),
-                pw.Text('PROJECTS', style: titleStyle),
-                for (var p in projects)
-                  pw.Text('${p['name']}: ${p['desc']}', style: normal),
-              ],
-            ),
-          )
-        ])
-      ],
-    ));
+            child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+             
+             
+              for (var P in projects2)
+              
+                      pw.Padding(
+                  padding: const pw.EdgeInsets.only(top: 6),
+                  child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+                    pw.Text(P['title'] ?? '', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 11)),
+             pw.SizedBox(height:  3),
 
+                    pw.Text(' ${P['tag']}', style:  pw.TextStyle(fontSize: 8,fontWeight: pw.FontWeight.bold)),
+                     pw.SizedBox(height:  3),
+                    pw.Text(P['desc'] ?? '', style: const pw.TextStyle(fontSize: 10)),
+                  ]),
+                ),
+                // pw.Text('${P['title']} — ${P['tag']}— ${P['desc']}', style: const pw.TextStyle(fontSize: 9)),
+             
+            ]),
+          ),
+        ]),
+      ),
+    );
+
+
+  
     final Uint8List bytes = await doc.save();
     await Printing.layoutPdf(onLayout: (format) async => bytes);
   }

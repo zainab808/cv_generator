@@ -1711,6 +1711,8 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
      {'title': 'LockSmith Guru', 'tag': 'Complete Flutter App', 'desc': 'Locksmith Guru is a specialized app designed for resolving various types of lockouts and guiding customers to the nearest locksmith. '},
      {'title': 'EkCabFare', 'tag': 'Complete Flutter App', 'desc': 'EkCabFare displays and compares fares between Uber, Careem, and Ola cabs, allowing users to select the best option based on mileage, time, and convenience. '},
   
+
+  
   ];
     final List<Map<String, String>> projects2 = [
    
