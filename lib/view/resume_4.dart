@@ -4,6 +4,33 @@ import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
 
+
+
+
+
+class _ProjectTile extends StatelessWidget {
+  final String title, desc;
+  const _ProjectTile({required this.title, required this.desc});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 4),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
+          ),
+          Text(desc, style: const TextStyle(fontSize: 11)),
+        ],
+      ),
+    );
+  }
+}
+
+
 class Resume4Page extends StatelessWidget {
   Resume4Page({super.key});
 
@@ -64,31 +91,10 @@ class Resume4Page extends StatelessWidget {
       'date': 'Apr 2024 - Sept 2025',
       'points': ['Developed delivery app and collaborated with product teams.'],
     },
-    {
-      'role': 'CTO & Flutter Developer | Griot Connects',
-      'date': '2018 - Present',
-      'points': [
-        'Developed eBook app with payments & digital library management.',
-      ],
-    },
-    {
-      'role': 'CTO & Flutter Developer | IQRA Quran App',
-      'date': '2018 - Present',
-      'points': ['Built scalable offline Quran app with high performance.'],
-    },
+
+   
   ];
 
-  final List<String> projects = [
-    'BargainX',
-    'Salamy',
-    'ohReady',
-    'InstaCalm Anxiety',
-    'Funky',
-    'Roshir Career',
-    'Fittecn',
-    'Ping',
-    'IQRA Quran App',
-  ];
 
   // ------------------ UI ------------------
   @override
@@ -180,16 +186,25 @@ class Resume4Page extends StatelessWidget {
                 const SizedBox(height: 16),
   Divider(color: Colors.grey.shade800, thickness: 1),
                 _sectionTitle('Projects'),
-                Wrap(
-                  spacing: 10,
-                  runSpacing: 6,
-                  children: projects
-                      .map(
-                        (p) =>
-                            Text('• $p', style: const TextStyle(fontSize: 12)),
-                      )
-                      .toList(),
-                ),
+   _ProjectTile(
+                          title: 'WirdBook',
+                          desc:
+                              'Spiritual guide app for daily litanies and reminders.',
+                        ),
+                        _ProjectTile(
+                          title: 'IQRA Quran App',
+                          desc:
+                              'Quranic app offering offline reading and prayer times.',
+                        ),
+                        _ProjectTile(
+                          title: 'Griot Connects',
+                          desc:
+                              'Marketplace app with secure checkout and user roles.',
+                        ),
+                        _ProjectTile(
+                          title: 'WeTeachs',
+                          desc: 'Learning platform where users teach and earn.',
+                        ),
               ],
             ),
           ),
@@ -209,6 +224,9 @@ class Resume4Page extends StatelessWidget {
       ),
     ),
   );
+
+
+  
 
   Widget _expTile(Map<String, dynamic> exp) {
     return Padding(
@@ -608,18 +626,27 @@ class Resume4Page extends StatelessWidget {
                  pw.SizedBox(height: 10),
 
               _pdfHeading('Projects', bluePdf),
-              pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start,
-              mainAxisAlignment: pw.MainAxisAlignment.start,
-                children: [
-                  pw.Text('BargainX'),
+            _projItem(
+                            'WirdBook',
+                            'Spiritual guide app for daily litanies and reminders.',
+                          ),
+                          _projItem(
+                            'IQRA Quran App',
+                            'Offline Quran, daily Duas, and prayer time app.',
+                          ),
+                          _projItem(
+                            'Griot Connects',
+                            'Marketplace app with secure checkout and user roles.',
+                          ),
+                          _projItem(
+                            'WeTeachs',
+                            'Learning platform where users teach and earn.',
+                          ),
+                          _projItem(
+                            'CRO App',
+                            'Job-finding platform for students with employer web panel and admin dashboard for management and scalability.',
+                          ),
 
-                  pw.Text('Salamy'),
-                  pw.Text('ohReady'),
-                  pw.Text('InstaCalm Anxiety'),
-                  pw.Text('Funky'),
-                
-                ],
-              ),
             ],
           );
         },
@@ -636,4 +663,18 @@ class Resume4Page extends StatelessWidget {
       style: pw.TextStyle(fontSize: 12, fontWeight: pw.FontWeight.bold,color: color),
     ),
   );
+  pw.Widget _projItem(String title, String desc) => pw.Padding(
+    padding: const pw.EdgeInsets.only(bottom: 3),
+    child: pw.Column(
+      crossAxisAlignment: pw.CrossAxisAlignment.start,
+      children: [
+        pw.Text(
+          title,
+          style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 9),
+        ),
+        pw.Text(desc, style: const pw.TextStyle(fontSize: 8)),
+      ],
+    ),
+  );
+  
 }
