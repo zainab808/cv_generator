@@ -152,7 +152,7 @@ class _Resume5PageState extends State<Resume5Page> {
                           _expItem(
                             'CTO & Flutter Developer _ Harry Chat',
                             'Dec 2024 _ Present',
-                            'Leading Islamic app “Wordbook” with 10K+ downloads. Designed and developed core features, improving workflows and retention.',
+                            'Leading Islamic app Wordbook with 10K+ downloads. Designed and developed core features, improving workflows and retention.',
                           ),
 
                           _expItem(
@@ -179,18 +179,9 @@ class _Resume5PageState extends State<Resume5Page> {
                             'Led Flutter team to build production apps, managed releases, reviewed architecture, and mentored developers.',
                           ),
 
-                          _expItem(
-                            'Full Stack Developer (Flutter + Backend + Deployments)',
-                            'Sept 2023 _ Jan 2025',
-                            'Developed cross-platform mobile apps using Flutter and Firebase. Integrated backend APIs and implemented CI/CD pipelines.',
-                          ),
-
-                       
-
-                      
-
                           pw.SizedBox(height: 8),
                           _sectionTitle('EDUCATION'),
+                          pw.SizedBox(height: 5),
                           _projItem(
                             'BS Information Technology',
                             'University of Punjab Lahore (2019_2023)',
@@ -205,6 +196,7 @@ class _Resume5PageState extends State<Resume5Page> {
                           ),
                           pw.SizedBox(height: 8),
                           _sectionTitle('PROJECTS'),
+                          pw.SizedBox(height: 5),
                           _projItem(
                             'WirdBook',
                             'Spiritual guide app for daily litanies and reminders.',
@@ -220,6 +212,25 @@ class _Resume5PageState extends State<Resume5Page> {
                           _projItem(
                             'WeTeachs',
                             'Learning platform where users teach and earn.',
+                          ),
+                          _projItem(
+                            'CRO App',
+                            'Job-finding platform for students with employer web panel and admin dashboard for management and scalability.',
+                          ),
+
+                          _projItem(
+                            'Reverse Disease',
+                            'Health tracking app monitoring fatigue, sugar, weight, and nutrition. Built with FlutterFlow to promote healthy lifestyles.',
+                          ),
+
+                          _projItem(
+                            'Salamly',
+                            'Muslim Daily App featuring Quran, prayer times, Islamic tools, and 50K+ downloads. Focused on user experience and performance.',
+                          ),
+
+                          _projItem(
+                            'OnFekwa',
+                            'Social media app helping users discover lifestyle trends. Includes story uploads, messaging, and sharing features.',
                           ),
                         ],
                       ),
@@ -253,11 +264,7 @@ class _Resume5PageState extends State<Resume5Page> {
     padding: const pw.EdgeInsets.only(bottom: 2),
     child: pw.Text(
       text,
-      style: pw.TextStyle(
-        color: PdfColor.fromInt(0xFF134080),
-        fontSize: 12,
-        fontWeight: pw.FontWeight.bold,
-      ),
+      style: pw.TextStyle(fontSize: 13, fontWeight: pw.FontWeight.bold),
     ),
   );
 
@@ -318,7 +325,7 @@ class _Resume5PageState extends State<Resume5Page> {
         children: [
           // Black header bar
           Container(
-            color: Colors.black,
+            color: Color(0xff4A4A4A),
             width: double.infinity,
             padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
             child: const Column(
@@ -333,10 +340,7 @@ class _Resume5PageState extends State<Resume5Page> {
                   ),
                 ),
                 SizedBox(height: 4),
-                Text(
-                  'Senior Flutter Developer',
-                  style: TextStyle(color: Colors.white70, fontSize: 12),
-                ),
+
               ],
             ),
           ),
@@ -352,34 +356,112 @@ class _Resume5PageState extends State<Resume5Page> {
                   child: SingleChildScrollView(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
+                        SizedBox(height: 20),
                         Text(
                           'DETAILS',
                           style: TextStyle(
                             color: Colors.white,
+                            fontSize: 11,
                             fontWeight: FontWeight.bold,
-                            fontSize: 12,
                           ),
                         ),
-                        SizedBox(height: 4),
+
+                        SizedBox(height: 10),
                         Text(
-                          '📞 +92 308 4695012\n✉️ arham.sarwar786@gmail.com\n🔗 linkedin.com/in/arham-sarwar-a1b56b176',
-                          style: TextStyle(color: Colors.white, fontSize: 10),
+                          ' +92 308 4695012\n arham.sarwar786@gmail.com\n linkedin.com/in/arham-sarwar-a1b56b176',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 9,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Divider(color: Colors.grey, thickness: 0.3),
+                        SizedBox(height: 10),
+                        
+                                                Text(
+                          'CORE QUALIFICATION',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 11,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                         SizedBox(height: 10),
                         Text(
-                          'SKILLS',
+                          'Flutter & Dart\nFirebase Suite\nBackend (Node, Laravel)\nState Management\nCI/CD, DevOps\nAI & ML\nDatabases\nGit & GitHub',
                           style: TextStyle(
                             color: Colors.white,
+                            fontSize: 9,
                             fontWeight: FontWeight.bold,
-                            fontSize: 12,
                           ),
                         ),
-                        SizedBox(height: 4),
-                        Text(
-                          'Flutter & Dart\nFirebase Suite\nBackend (Node, Laravel)\nState Management\nCI/CD, DevOps\nAI & ML\nDatabases\nGit & GitHub',
-                          style: TextStyle(color: Colors.white, fontSize: 10),
+                        SizedBox(height: 10),
+                        Divider(color: Colors.grey, thickness: 0.3),
+
+                        SizedBox(height: 10),
+                                               Text(
+                          'LANGUAGES',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 11,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
+                        SizedBox(height: 10),
+                        Text(
+                          'English\nUrdu',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 9,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Divider(color: Colors.grey, thickness: 0.3),
+                        SizedBox(height: 10),
+
+                                                Text(
+                          'INTRESTS',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 11,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          'RecreationalFootballLeague teamcaptain\nTwo-timeleaguechampions\nLocalcommunitytheatre: performedplaysandshows',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 9,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Divider(color: Colors.grey, thickness: 0.3),
+                        SizedBox(height: 10),
+                                                Text(
+                          'ADDITIONAL INFORMATION',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 11,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          'Taughtlifesavingskillsand CPRclasses\nRed Cross volunteer',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 9,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Divider(color: Colors.grey, thickness: 0.3),
+                        SizedBox(height: 10),
                       ],
                     ),
                   ),

@@ -3,6 +3,7 @@ import 'package:cv_generator/view/cv_3_generator.dart';
 import 'package:cv_generator/view/cv_4_generator.dart';
 import 'package:cv_generator/view/cv_5_generator.dart';
 import 'package:cv_generator/view/cv_generator.dart';
+import 'package:cv_generator/view/resume_4.dart';
 import 'package:cv_generator/view/resume_5.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
    debugShowCheckedModeBanner: false,
-      home: Resume5Page()
+      home: Resume4Page()
     );
   }
 }
