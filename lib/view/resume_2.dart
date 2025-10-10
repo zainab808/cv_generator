@@ -47,30 +47,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
       'period': 'Mar 2019 _ Jan 2025',
       'details': 'As a Flutter Developer, contributing to the success of Salamly: Muslim Daily App, a comprehensive app for Muslims with 50K+ downloads Developed features for daily prayer days, Quran, and Islamic tools to enhance user engagement.\nPlayed a key role in achieving over 50,000 downloads through optimized performance and user-focused updates.'
     },
-            {
-      'role': 'Flutter Developer _ Fiverr | Upwork',
-     
-      'period': 'April 2020 _ Sept 2022',
-      'details': 'Worked as a Freelance Flutter Developer on Fiverr, Upwork delivering high-quality Flutter and backend solutions.'
-
-'Completed 5 strong projects with a focus on mobile apps, APIs, and scalable backend systems.'
-'Maintained a strong reputation through timely delivery, attention to detail, and excellent client communication.'
-'Helped clients achieve their goals with tailored, innovative solutions.'
-    },    
-      {
-      'role': 'Flutter Developer _ Self',
-     
-      'period': 'Sept 2024 _ Dec 2024',
-      'details': 'Delivered high-quality solutions with strong technical expertise, ensuring tasks of any size were completed efficiently.'
-
-'Applied leadership skills to manage projects holistically and drive team success.'
-
-'Recognized proactively by suggesting innovative ideas beyond assigned tasks.'
-
-'Contributed as a reliable asset to teams and projects in Flutter/FlutterFlow development.'
-
-    },   
-        
+         
     
     
   ];
@@ -94,11 +71,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
     {'title': 'Griot Connects', 'tag': 'Mobile Application', 'desc': 'Social marketplace for sellers and buyers with secure checkout.'},
     {'title': 'CircleUp', 'tag': 'Mobile Application', 'desc': 'Platform to create events and connect local businesses.'},
     {'title': 'InstaCalm Anxiety', 'tag': 'Mobile Application', 'desc': 'Anxiety therapy helper with relaxation sessions and content.'},
-    {'title': 'BargainEx', 'tag': 'Mobile Application', 'desc': 'E-commerce platform for buying and selling categories.'},
-    {'title': 'Salamy', 'tag': 'Mobile Application', 'desc': 'Islamic daily prayer and Quran app.'},
    
-
-  
   ];
  
   final List<String> references = [
@@ -173,9 +146,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
           const SizedBox(height: 16),
           const Text('Projects', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
           ...projects.map((p) => Text('${p['title']} — ${p['desc']}')),
-          const SizedBox(height: 16),
-          const Text('References', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
-          ...references.map((r) => Text('• $r')),
+          
         ]),
       ),
     );
@@ -213,7 +184,6 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
            pw.Column(
             crossAxisAlignment: pw.CrossAxisAlignment.start,
             children: [
-              //  pw.Divider(color: PdfColors.white),
                    pw.SizedBox(height: 20),
               pw.Text('Details', style: pw.TextStyle(color: PdfColors.white, fontWeight: pw.FontWeight.bold,fontSize: 14)),
     pw.SizedBox(height: 10),
@@ -337,6 +307,9 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
           pw.SizedBox(width: 20),
           pw.Expanded(
             child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+
+
+              pw.SizedBox(height: 20),
               pw.Text('Profile', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14,  color: PdfColor.fromHex('#084A3F'),)),
              pw.SizedBox(height:  10),
               pw.Text(aboutText, style: const pw.TextStyle(fontSize: 10)),
@@ -354,76 +327,9 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                     pw.Text(e['details'] ?? '', style: const pw.TextStyle(fontSize: 10)),
                   ]),
                 ),
-              // pw.SizedBox(height: 8),
              
-            ]),
-          ),
-        ]),
-      ),
-    );
-
-    // Page 2
-    doc.addPage(
-      pw.Page(
-        pageFormat: format,
-        build: (context) => pw.Row(children: [
-          pw.Container(
-          width: 160,
-         color: PdfColor.fromHex('#084A3F'),
-          padding: const pw.EdgeInsets.all(10),
-          
-          ),
-        
-          pw.SizedBox(width: 10),
-       pw.Expanded(
-            child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-              // pw.Text('Profile', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14)),
-              // pw.Text(aboutText, style: const pw.TextStyle(fontSize: 10)),
-              // pw.SizedBox(height: 8),
-              // pw.Text('Employment History', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 12)),
-
-              pw.SizedBox(height: 20),
-           
-              pw.Text('Education', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14,  color: PdfColor.fromHex('#084A3F'),)),
-              pw.SizedBox(height: 10),
-            
-              for (var ed in education) pw.Text('${ed['title']} - ${ed['institution']} (${ed['years']})', style: const pw.TextStyle(fontSize: 12)),
-             
-                            pw.SizedBox(height: 20),
-              
-               pw.Text(' Skills', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 15,color: PdfColor.fromHex('#084A3F'))),
-                                        pw.SizedBox(height: 10),
-              for (var s in coreSkills) pw.Text(' $s', style:  pw.TextStyle(fontSize: 12,)),
-                pw.SizedBox(height:  20),
-              pw.Text('Projects', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14,  color: PdfColor.fromHex('#084A3F'),)),
-
-
-            ]),
-          ),
-    
-        ]),
-      ),
-    );
-
-
-// page 3
-      doc.addPage(
-      pw.Page(
-        pageFormat: format,
-        build: (context) => pw.Row(children: [
-          pw.Container(
-          width: 160,
-           color: PdfColor.fromHex('#084A3F'),
-          padding: const pw.EdgeInsets.all(10),
-          
-          ),
-        
-          pw.SizedBox(width: 10),
-          pw.Expanded(
-            child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-             
-              // pw.Text('Projects', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14,  color: PdfColor.fromHex('#084A3F'),)),
-           for (var p in projects)
+                             pw.Text('Projects', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14,  color: PdfColor.fromHex('#084A3F'),)),
+ for (var p in projects)
                       pw.Padding(
                   padding: const pw.EdgeInsets.only(top: 6),
                   child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
@@ -435,39 +341,17 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                     pw.Text(p['desc'] ?? '', style: const pw.TextStyle(fontSize: 10)),
                   ]),
                 ),
-      
-           
-              // for (var p in projects)
-                // pw.Text('${p['title']}\n  ${p['tag']}\n${p['desc']}', style: const pw.TextStyle(fontSize: 10)),
-            
-            ]),
-          ),
-        ]),
-      ),
-    );
-
-
-// page 4
-      doc.addPage(
-      pw.Page(
-        pageFormat: format,
-        build: (context) => pw.Row(children: [
-          pw.Container(
-          width: 160,
-        color: PdfColor.fromHex('#084A3F'),
-          padding: const pw.EdgeInsets.all(10),
-          
-          ),
-        
-          pw.SizedBox(width: 10),
-          pw.Expanded(
-            child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-             
-
-                // pw.Text('${P['title']} — ${P['tag']}— ${P['desc']}', style: const pw.TextStyle(fontSize: 9)),
+                 pw.SizedBox(height: 10),
+                
+              pw.Text('Education', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14,  color: PdfColor.fromHex('#084A3F'),)),
               pw.SizedBox(height: 10),
-              pw.Text('References', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 12)),
-              for (var r in references) pw.Text('• $r', style: const pw.TextStyle(fontSize: 9)),
+            
+              for (var ed in education) pw.Text('${ed['title']} - ${ed['institution']} (${ed['years']})', style: const pw.TextStyle(fontSize: 12)),
+             
+                            pw.SizedBox(height: 20),
+
+              // pw.SizedBox(height: 8),
+             
             ]),
           ),
         ]),
