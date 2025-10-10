@@ -1,94 +1,252 @@
-// Updated Flutter resume UI with left-aligned header and vertical divider between columns
-// One-page two-column layout with name/title on top and divider separating columns
 
+
+// lib/main.dart
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:pdf/pdf.dart';
-import 'package:printing/printing.dart';
 import 'package:pdf/widgets.dart' as pw;
+import 'package:printing/printing.dart';
+
+final Color accent = const Color(0xFFD0B9BC); // muted rose header
+final Color sidebar = const Color(0xFFB69DA2); // darker rose sidebar
+
+class Resume3Page extends StatefulWidget {
+  const Resume3Page({Key? key}) : super(key: key);
 
   @override
+  State<Resume3Page> createState() => _Resume3PageState();
+}
 
-
-final condensedResume = ResumeData(
-  name: 'ARHAM SARWAR',
-  title: 'Senior Flutter Developer',
-  location: 'Lahore, Pakistan',
-  phone: '+92 308 4695012',
-  email: 'arhamsarwar786@gmail.com',
-  nationality: 'Pakistani',
-  languages: ['English', 'Urdu'],
-  profile:
-      'Senior Flutter developer with 6+ years building scalable cross-platform apps. Strong Firebase, backend, and CI/CD experience. Passionate about performance and user-centric design.',
-  coreSkills: [
-    'Flutter & Dart',
-    'Firebase (Auth, Firestore, Functions)',
-    'State Mgmt (Provider, Riverpod, GetX)',
-    'Backend: Node.js / REST / GraphQL',
-    'CI/CD, Docker, GitHub Actions',
-    'Databases: MySQL, PostgreSQL, MongoDB'
-  ],
-  experiences: [
-    Experience(
-      role: 'CTO & Senior Flutter Developer',
-      company: 'Harry Chat / Multiple',
-      period: 'Dec 2024 — Present',
-      bullets: [
-        'Led architecture and delivery of multiple Flutter apps (10K+ downloads).',
-        'Improved retention by 70% via performance and UX improvements.'
-      ],
-    ),
-    Experience(
-      role: 'Team Lead / Full Stack Flutter',
-      company: 'Freelance & Agencies',
-      period: 'Jan 2023 — Jan 2025',
-      bullets: [
-        'Led teams, delivered cross-platform apps, and set CI/CD pipelines.',
-        'Mentored juniors and owned deployments.'
-      ],
-    ),
-  ],
-  education: [
-    Education(
-      degree: 'Bachelors in Information Technology',
-      institute: 'University of Punjab, Lahore',
-      year: '2019 — 2023',
-    ),
-  ],
-  projects: [
-    'IQRA Quran App — offline Quran, prayer times, 10K+ downloads',
-    'Griot Connects — social marketplace with secure checkout',
-    'WeTeachs — learn & earn platform with teacher dashboards'
-  ],
-);
-
-class Resume3Page  extends StatelessWidget {
+class _Resume3PageState extends State<Resume3Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('One-page Resume — ARHAM SARWAR'),
+        backgroundColor: sidebar,
+        title: const Text('One-page Résumé — Donna style (Arham content)'),
         actions: [
           IconButton(
-            icon: Icon(Icons.picture_as_pdf),
             tooltip: 'Export PDF',
             onPressed: () async {
-              final pdfBytes = await generatePdf(condensedResume);
-              await Printing.layoutPdf(onLayout: (_) async => pdfBytes);
+              final pdfBytes = await buildPdf();
+              await Printing.sharePdf(
+                bytes: pdfBytes,
+                filename: 'Arham_Sarwar_Resume.pdf',
+              );
             },
-          )
+            icon: const Icon(Icons.picture_as_pdf),
+          ),
+          IconButton(
+            tooltip: 'Print / Preview',
+            onPressed: () async {
+              final doc = await buildPdfDocument();
+              await Printing.layoutPdf(onLayout: (format) => doc.save());
+            },
+            icon: const Icon(Icons.print),
+          ),
         ],
       ),
-      body: SingleChildScrollView(
-        padding: EdgeInsets.all(20),
-        child: Center(
-          child: ConstrainedBox(
-            constraints: BoxConstraints(maxWidth: 900),
+      body: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 900),
+          child: AspectRatio(
+            aspectRatio: 0.7,
             child: Card(
-              elevation: 4,
-              child: Padding(
-                padding: const EdgeInsets.all(18.0),
-                child: ResumePage(data: condensedResume),
+              elevation: 6,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Row(
+                children: [
+                  // LEFT SIDEBAR
+                  Flexible(
+                    flex: 35,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: sidebar,
+                        borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(8),
+                          bottomLeft: Radius.circular(8),
+                        ),
+                      ),
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 18,
+                        horizontal: 14,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Center(
+                            child: Container(
+                              width: 96,
+                              height: 96,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(
+                                  color: Colors.white,
+                                  width: 4,
+                                ),
+                                image: const DecorationImage(
+                                  image: AssetImage('flower/ap.jpg'),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 25),
+                          const Text(
+                            'PROFILE',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          const Text(
+                            'Senior Flutter Developer skilled in Flutter, Firebase, and backend systems solutions. Looking forward to leadership opportunities.',
+                            style: TextStyle(
+                              color: Colors.white70,
+                              fontSize: 9,
+                            ),
+                          ),
+                          const SizedBox(height: 16),
+                          const Text(
+                            'CONTACT ME',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          const Text(
+                            'PHONE:\n+92 308 4695012',
+                            style: TextStyle(
+                              color: Colors.white70,
+                              fontSize: 9,
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          const Text(
+                            'LINKEDIN:\narham-sarwar-a1b56b176',
+                            style: TextStyle(
+                              color: Colors.white70,
+                              fontSize: 9,
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          const Text(
+                            'EMAIL:\narham.sarwar786@gmail.com',
+                            style: TextStyle(
+                              color: Colors.white70,
+                              fontSize: 9,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  // RIGHT MAIN AREA
+                  Flexible(
+                    flex: 65,
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 150,
+                          color: accent,
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 18,
+                            horizontal: 20,
+                          ),
+                          width: double.infinity,
+                          child: const Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(height: 20),
+                              Text(
+                                'ARHAM\nSARWAR',
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.w900,
+                                  height: 0.95,
+                                ),
+                              ),
+                              SizedBox(height: 15),
+                              Text(
+                                'Senior Flutter Developer',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              vertical: 14,
+                              horizontal: 20,
+                            ),
+                            child: SingleChildScrollView(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: const [
+                                  SectionTitle(title: 'EDUCATION'),
+                                  SizedBox(height: 6),
+                                  BoldText(
+                                    'Bachelors in Information Technology',
+                                  ),
+                                  SizedBox(height: 2),
+                                  SmallText(
+                                    'University of Punjab Lahore • 2019 - 2023',
+                                  ),
+                                  SizedBox(height: 12),
+                                  SectionTitle(title: 'EXPERIENCE'),
+                                  SizedBox(height: 6),
+                                  ExperienceItem(
+                                    role:
+                                        'Full Stack Developer (Flutter + Backend + Deployments) [Promoted]',
+                                    period: 'Sept 2023 - Jan 2025',
+                                    bullets: [
+                                      'Developed cross-platform mobile apps using Flutter and Firebase.',
+                                      'Integrated backend APIs (Node.js, Laravel, GraphQL).',
+                                      'Implemented CI/CD pipelines and cloud deployments (AWS/GCP).',
+                                    ],
+                                  ),
+                                  ExperienceItem(
+                                    role: 'Team Lead (Flutter + Backend)',
+                                    period: 'Jan 2023 - Jan 2025',
+                                    bullets: [
+                                      'Led team, developed cross-platform apps, implemented CI/CD.',
+                                      'Mentored junior devs and reviewed architecture.',
+                                    ],
+                                  ),
+                                  ExperienceItem(
+                                    role:
+                                        'CTO & Flutter Developer — Harry Chat',
+                                    period: 'Dec 2024 - Present',
+                                    bullets: [
+                                      'Designed and developed core features for the app.',
+                                      'Improved workflows and retention; 10K+ downloads.',
+                                    ],
+                                  ),
+                                  SizedBox(height: 12),
+                                  SectionTitle(title: 'PROJECTS'),
+                                  SizedBox(height: 6),
+                                  SmallText(
+                                    '• Salamy — Islamic daily prayer & Quran app\n• BargainEx — E-commerce app\n• WirdBook — Spiritual guide app\n• IQRA Quran App — Offline Quran features, prayer times\n• WeTeachs — Learn and earn app\n• Umazing — Multi-functional eCommerce platform',
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
@@ -98,212 +256,332 @@ class Resume3Page  extends StatelessWidget {
   }
 }
 
-class ResumePage extends StatelessWidget {
-  final ResumeData data;
-  ResumePage({required this.data});
-
+class SectionTitle extends StatelessWidget {
+  final String title;
+  const SectionTitle({Key? key, required this.title}) : super(key: key);
   @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        // Header
-        Text(data.name,
-            style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
-        Text(data.title,
-            style: TextStyle(fontSize: 16, color: Colors.grey[700])),
-        SizedBox(height: 16),
-
-        // Divider under header
-        Divider(thickness: 1, color: Colors.black87),
-        SizedBox(height: 12),
-
-        // Two-column layout
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Left Column
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  sectionTitle('DETAILS'),
-                  info('ADDRESS', data.location),
-                  info('PHONE', data.phone),
-                  info('EMAIL', data.email),
-                  info('NATIONALITY', data.nationality),
-                  SizedBox(height: 10),
-                  sectionTitle('SKILLS'),
-                  ...data.coreSkills.map((s) => Text('• $s')),
-                  SizedBox(height: 10),
-                  sectionTitle('LANGUAGES'),
-                  ...data.languages.map((l) => Text(l)),
-                ],
-              ),
-            ),
-
-            // Vertical Divider
-            Container(width: 1, height: 600, color: Colors.grey[400]),
-            SizedBox(width: 18),
-
-            // Right Column
-            Expanded(
-              flex: 2,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  sectionTitle('PROFILE'),
-                  Text(data.profile),
-                  SizedBox(height: 10),
-                  sectionTitle('EMPLOYMENT HISTORY'),
-                  ...data.experiences.map((e) => Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 6.0),
-                        child: ExperienceWidget(e),
-                      )),
-                  SizedBox(height: 10),
-                  sectionTitle('EDUCATION'),
-                  ...data.education.map((ed) => Text(
-                      '${ed.degree}, ${ed.institute} (${ed.year})',
-                      style: TextStyle(fontSize: 13))),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ],
-    );
-  }
-
-  Widget sectionTitle(String text) => Padding(
-        padding: const EdgeInsets.symmetric(vertical: 8.0),
-        child: Text(text,
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-      );
-
-  Widget info(String label, String value) => Padding(
-        padding: const EdgeInsets.only(bottom: 4.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(label,
-                style: TextStyle(fontSize: 12, color: Colors.grey[700])),
-            Text(value, style: TextStyle(fontSize: 13)),
-          ],
-        ),
-      );
+  Widget build(BuildContext context) => Text(
+    title,
+    style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 14),
+  );
 }
 
-class ExperienceWidget extends StatelessWidget {
-  final Experience e;
-  ExperienceWidget(this.e);
+class BoldText extends StatelessWidget {
+  final String text;
+  const BoldText(this.text, {Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) => Text(
+    text,
+    style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 13),
+  );
+}
+
+class SmallText extends StatelessWidget {
+  final String text;
+  const SmallText(this.text, {Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) =>
+      Text(text, style: const TextStyle(fontSize: 12, color: Colors.black87));
+}
+
+class ExperienceItem extends StatelessWidget {
+  final String role;
+  final String period;
+  final List<String> bullets;
+  const ExperienceItem({
+    Key? key,
+    required this.role,
+    required this.period,
+    required this.bullets,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text('${e.role}, ${e.company}',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
-        Text(e.period, style: TextStyle(color: Colors.black54, fontSize: 12)),
-        ...e.bullets.map((b) => Text('• $b', style: TextStyle(fontSize: 12)))
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            role,
+            style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 13),
+          ),
+          Text(
+            period,
+            style: const TextStyle(fontSize: 12, color: Colors.black54),
+          ),
+          const SizedBox(height: 6),
+          ...bullets
+              .map((b) => Text('• $b', style: const TextStyle(fontSize: 12)))
+              .toList(),
+          const SizedBox(height: 6),
+        ],
+      ),
     );
   }
 }
 
-Future<Uint8List> generatePdf(ResumeData data) async {
+Future<Uint8List> buildPdf() async {
+  final doc = await buildPdfDocument();
+  return doc.save();
+}
+
+Future<pw.Document> buildPdfDocument() async {
   final doc = pw.Document();
+
+  Uint8List? photoBytes;
+  try {
+    final data = await rootBundle.load('flower/ap.jpg');
+    photoBytes = data.buffer.asUint8List();
+  } catch (_) {
+    photoBytes = null;
+  }
+  final pw.MemoryImage? photo = photoBytes != null
+      ? pw.MemoryImage(photoBytes)
+      : null;
 
   doc.addPage(
     pw.Page(
-    
-      margin: pw.EdgeInsets.all(20),
-      build: (pw.Context context) {
-        return pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-          pw.Text(data.name, style: pw.TextStyle(fontSize: 22, fontWeight: pw.FontWeight.bold)),
-          pw.Text(data.title, style: pw.TextStyle(fontSize: 12)),
-          pw.Divider(thickness: 1),
-          pw.SizedBox(height: 10),
-          pw.Row(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-            pw.Expanded(
-              flex: 1,
-              child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-                pw.Text('DETAILS', style: pw.TextStyle(fontWeight: pw.FontWeight.bold)),
-                pw.Text(data.location),
-                pw.Text(data.phone),
-                pw.Text(data.email),
-                pw.Text(data.nationality),
-                pw.SizedBox(height: 8),
-                pw.Text('SKILLS', style: pw.TextStyle(fontWeight: pw.FontWeight.bold)),
-                ...data.coreSkills.map((s) => pw.Text('• $s', style: pw.TextStyle(fontSize: 9))),
-                pw.SizedBox(height: 8),
-                pw.Text('LANGUAGES', style: pw.TextStyle(fontWeight: pw.FontWeight.bold)),
-                ...data.languages.map((l) => pw.Text(l)),
-              ]),
+      pageFormat: PdfPageFormat.a4,
+      margin: const pw.EdgeInsets.all(20),
+      build: (context) {
+        return pw.Row(
+          crossAxisAlignment: pw.CrossAxisAlignment.start,
+          children: [
+            // Left sidebar
+            pw.Container(
+              width: 190,
+              padding: const pw.EdgeInsets.all(20),
+              color: PdfColor.fromInt(0xFFB69DA2),
+              child: pw.Column(
+                crossAxisAlignment: pw.CrossAxisAlignment.start,
+                children: [
+                  pw.SizedBox(height: 20),
+                  if (photo != null)
+                    pw.Center(
+                      child: pw.ClipOval(
+                        child: pw.Image(
+                          photo,
+                          width: 145,
+                          height: 170,
+                          fit: pw.BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  pw.SizedBox(height: 30),
+                  pw.Text(
+                    'PROFILE',
+                    style: pw.TextStyle(
+                      fontWeight: pw.FontWeight.bold,
+                      fontSize: 15,
+                      color: PdfColor.fromInt(0xFFFFFFFF),
+                    ),
+                  ),
+                  pw.SizedBox(height: 6),
+                  pw.Text(
+                    'Senior Flutter Developer in mobile app development.\n\n Skilled in Flutter, Firebase, with expertise in backend systems solutions. \n\nLooking forward to team leadership opportunities.',
+                    style: pw.TextStyle(
+                      color: PdfColor.fromInt(0xFFFFFFFF),
+                      fontSize: 12,
+                    ),
+                  ),
+
+                  pw.SizedBox(height: 40),
+                  pw.Text(
+                    'CONTACT ME',
+                    style: pw.TextStyle(
+                      fontWeight: pw.FontWeight.bold,
+                      color: PdfColor.fromInt(0xFFFFFFFF),
+                      fontSize: 15,
+                    ),
+                  ),
+                  pw.SizedBox(height: 6),
+                  pw.Text(
+                    'PHONE:\n+92 308 4695012',
+                    style: pw.TextStyle(
+                      color: PdfColor.fromInt(0xFFFFFFFF),
+                      fontSize: 12,
+                    ),
+                  ),
+                  pw.SizedBox(height: 6),
+                  pw.Text(
+                    'LINKEDIN:\narham-sarwar-a1b56b176',
+                    style: pw.TextStyle(
+                      color: PdfColor.fromInt(0xFFFFFFFF),
+                      fontSize: 12,
+                    ),
+                  ),
+                  pw.SizedBox(height: 6),
+                  pw.Text(
+                    'EMAIL:\narham.sarwar786@gmail.com',
+                    style: pw.TextStyle(
+                      color: PdfColor.fromInt(0xFFFFFFFF),
+                      fontSize: 12,
+                    ),
+                  ),
+                ],
+              ),
             ),
-            pw.Container(width: 1, height: 600, 
-            
-            color: PdfColors.black
-            
-            ),
-            pw.SizedBox(width: 10),
+
+            // Right side content
             pw.Expanded(
-              flex: 2,
-              child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-                pw.Text('PROFILE', style: pw.TextStyle(fontWeight: pw.FontWeight.bold)),
-                pw.Text(data.profile, style: pw.TextStyle(fontSize: 10)),
-                pw.SizedBox(height: 10),
-                pw.Text('EMPLOYMENT HISTORY',
-                    style: pw.TextStyle(fontWeight: pw.FontWeight.bold)),
-                ...data.experiences.map((e) => pw.Column(
+              child: pw.Column(
+                crossAxisAlignment: pw.CrossAxisAlignment.start,
+                children: [
+                  // Header connected to sidebar
+                  pw.Container(
+                    height: 200,
+                    width: double.infinity,
+                    padding: const pw.EdgeInsets.only(top: 60, left: 20),
+                    color: PdfColor.fromInt(0xFFD0B9BC),
+                    child: pw.Column(
                       crossAxisAlignment: pw.CrossAxisAlignment.start,
                       children: [
-                        pw.Text('${e.role}, ${e.company}', style: pw.TextStyle(fontSize: 10, fontWeight: pw.FontWeight.bold)),
-                        pw.Text(e.period, style: pw.TextStyle(fontSize: 9, color: PdfColors.grey600)),
-                        ...e.bullets.map((b) => pw.Text('• $b', style: pw.TextStyle(fontSize: 9)))
+                        pw.Text(
+                          'ARHAM\nSARWAR',
+                          style: pw.TextStyle(
+                            fontSize: 35,
+                            fontWeight: pw.FontWeight.bold,
+                          ),
+                        ),
+                        pw.SizedBox(height: 10),
+                        pw.Text(
+                          'Senior Flutter Developer',
+                          style: pw.TextStyle(
+                            fontSize: 13,
+                            fontWeight: pw.FontWeight.bold,
+                          ),
+                        ),
                       ],
-                    )),
-                pw.SizedBox(height: 10),
-                pw.Text('EDUCATION', style: pw.TextStyle(fontWeight: pw.FontWeight.bold)),
-                ...data.education.map((ed) => pw.Text('${ed.degree}, ${ed.institute} (${ed.year})', style: pw.TextStyle(fontSize: 9)))
-              ]),
+                    ),
+                  ),
+
+                  // Body with 20pt left padding
+                  pw.Padding(
+                    padding: const pw.EdgeInsets.only(
+                      left: 20,
+                      top: 35,
+                      right: 10,
+                    ),
+                    child: pw.Column(
+                      crossAxisAlignment: pw.CrossAxisAlignment.start,
+                      children: [
+                        pw.Text(
+                          'EDUCATION',
+                          style: pw.TextStyle(
+                            fontWeight: pw.FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                        pw.SizedBox(height: 15),
+                        pw.Text(
+                          'Bachelors in Information Technology',
+                          style: pw.TextStyle(
+                            fontWeight: pw.FontWeight.bold,
+                            fontSize: 13,
+                          ),
+                        ),
+                        pw.SizedBox(height: 5),
+
+                        pw.Text(
+                          'University of Punjab Lahore  2019 _ 2023',
+                          style: pw.TextStyle(fontSize: 13),
+                        ),
+                        pw.SizedBox(height: 10),
+                        pw.Text(
+                          'F.Sc Pre-Engineering',
+
+                          style: pw.TextStyle(
+                            fontWeight: pw.FontWeight.bold,
+                            fontSize: 13,
+                          ),
+                        ),
+                        pw.SizedBox(height: 5),
+
+                        pw.Text(
+                          'institution Islamia College, Lahore 2016 _ 2019',
+                          style: pw.TextStyle(fontSize: 13),
+                        ),
+                        pw.SizedBox(height: 10),
+                        pw.Text(
+                          'Matric',
+
+                          style: pw.TextStyle(
+                            fontWeight: pw.FontWeight.bold,
+                            fontSize: 13,
+                          ),
+                        ),
+                        pw.SizedBox(height: 5),
+                        pw.Text(
+                          'Islamia High School, Lahore 2014 _ 2016',
+
+                          style: pw.TextStyle(fontSize: 13),
+                        ),
+                        pw.SizedBox(height: 20),
+
+                         pw.Text(
+                          'EXPERIENCE',
+                          style: pw.TextStyle(
+                            fontWeight: pw.FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                        pw.SizedBox(height: 15),
+                        pw.Bullet(
+                          text:
+                              'Full Stack Developer (Flutter + Backend + Deployments) Promoted _ Sept 2023 _ Jan 2025',
+                        ),
+                        pw.Bullet(
+                          text:
+                              'Developed cross-platform apps and managed cloud deployments (AWS/GCP).',
+                        ),
+                        pw.Bullet(
+                          text:
+                              'Team Lead (Flutter + Backend) _ Jan 2023 _ Jan 2025',
+                        ),
+                        pw.Bullet(text: 'Led team, implemented CI/CD.'),
+                        pw.Bullet(
+                          text:
+                              'CTO & Flutter Developer _ Harry Chat _ Dec 2024 _ Present',
+                        ),
+                        pw.Bullet(
+                          text: 'Designed core features; 10K+ downloads.',
+                        ),
+                     
+
+                                               pw.SizedBox(height: 20),
+
+                         pw.Text(
+                          'PROJECTS',
+                          style: pw.TextStyle(
+                            fontWeight: pw.FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                        pw.SizedBox(height: 15),
+                        pw.Bullet(
+                          text: 'Salamy_ Islamic daily prayer & Quran app',
+                        ),
+                        pw.Bullet(text: 'BargainEx_ E-commerce platform'),
+                        pw.Bullet(text: 'WirdBook_ Spiritual guide app'),
+                        pw.Bullet(
+                          text:
+                              'IQRA Quran App_ Offline Quran and prayer times',
+                        ),
+                        pw.Bullet(
+                          text: 'WeTeachs_ Learn and earn platform for tutors',
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ])
-        ]);
+          ],
+        );
       },
     ),
   );
 
-  return await doc.save();
-}
-
-class ResumeData {
-  final String name, title, location, phone, email, nationality, profile;
-  final List<String> coreSkills, languages, projects;
-  final List<Experience> experiences;
-  final List<Education> education;
-  ResumeData({
-    required this.name,
-    required this.title,
-    required this.location,
-    required this.phone,
-    required this.email,
-    required this.nationality,
-    required this.profile,
-    required this.coreSkills,
-    required this.languages,
-    required this.experiences,
-    required this.education,
-    required this.projects,
-  });
-}
-
-class Experience {
-  final String role, company, period;
-  final List<String> bullets;
-  Experience({required this.role, required this.company, required this.period, required this.bullets});
-}
-
-class Education {
-  final String degree, institute, year;
-  Education({required this.degree, required this.institute, required this.year});
+  return doc;
 }
