@@ -695,91 +695,96 @@ class _PracticeScreenState extends State<PracticeScreen> {
                 //   ),
                 // ),
 
-   Container(
-      width: 170,
-      child:Stack(
-        alignment:Alignment.topCenter,
-        children: [
-          // background colors
-         Column(
-            children: [
-
-             Container(height: 90, color: Color(0xff3F3F3F)),
-             Container(height: 700, color: Color(0xff9C8B85)),
-            ],
-          ),
-
-          // profile image (only on page 1)
-        
-           Positioned(
-              top: 45,
-              child:Container(
-                decoration:BoxDecoration(
-                  image: DecorationImage(image: AssetImage("flower/ap.jpg"),fit: BoxFit.cover),
-                  border:Border.all(color: Colors.white, width: 2),
-                  borderRadius:BorderRadius.circular(6),
-                ),
-                
-              ),
+   SingleChildScrollView(
+     child: Container(
+      // height: 800,
+        width: 170,
+        child:Stack(
+          alignment:Alignment.topCenter,
+          children: [
+            // background colors
+           Column(
+              children: [
+     
+               Container(height: 90, color: Color(0xff3F3F3F)),
+               Container(height: 700, color: Color(0xff9C8B85)),
+              ],
             ),
-
-          // sidebar info (only on page 1)
+     
+            // profile image (only on page 1)
           
-            Positioned(
-              top: 165,
-              left: 12,
-              right: 12,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(email,
-                      style: TextStyle(color: Colors.white, fontSize: 10)),
-                  SizedBox(height: 4),
-                  Text(phone,
-                      style: TextStyle(color: Colors.white, fontSize: 10)),
-                  SizedBox(height: 4),
-                  Text(linkedIn,
-                      style: TextStyle(color: Colors.white, fontSize: 10)),
-                  SizedBox(height: 10),
-                  Divider(color: Colors.white, thickness: 2),
-                  Text("SUMMARY",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14)),
-                  SizedBox(height: 5),
-                  Text(summary,
-                      style: TextStyle(color: Colors.white, fontSize: 10)),
-                  SizedBox(height: 10),
-                  Divider(color: Colors.white, thickness: 2),
-                  Text("QUALIFICATIONS",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14)),
-                  SizedBox(height: 5),
-                  for (var q in coreQualifications)
-                    Text(". $q",
-                        style: TextStyle(
-                            color: Colors.white, fontSize: 10)),
-                  SizedBox(height: 10),
-                  Divider(color: Colors.white, thickness: 2),
-                  Text("LANGUAGES",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14)),
-                  SizedBox(height: 5),
-                  for (var l in languages1)
-                    Text(". $l",
-                        style: TextStyle(
-                            color: Colors.white, fontSize: 10)),
-                ],
+             Positioned(
+                top: 20,
+                child:Container(
+                  height: 130,
+                  width: 130,
+                  decoration:BoxDecoration(
+                    image: DecorationImage(image: AssetImage("flower/ap.jpg"),fit: BoxFit.cover),
+                    border:Border.all(color: Colors.white, width: 2),
+                    borderRadius:BorderRadius.circular(6),
+                  ),
+                  
+                ),
               ),
-            ),
-        ],
+     
+            // sidebar info (only on page 1)
+            
+              Positioned(
+                top: 165,
+                left: 12,
+                right: 12,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(email,
+                        style: TextStyle(color: Colors.white, fontSize: 10)),
+                    SizedBox(height: 4),
+                    Text(phone,
+                        style: TextStyle(color: Colors.white, fontSize: 10)),
+                    SizedBox(height: 4),
+                    Text(linkedIn,
+                        style: TextStyle(color: Colors.white, fontSize: 10)),
+                    SizedBox(height: 10),
+                    Divider(color: Colors.white, thickness: 2),
+                    Text("SUMMARY",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14)),
+                    SizedBox(height: 5),
+                    Text(summary,
+                        style: TextStyle(color: Colors.white, fontSize: 10)),
+                    SizedBox(height: 10),
+                    Divider(color: Colors.white, thickness: 2),
+                    Text("QUALIFICATIONS",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14)),
+                    SizedBox(height: 5),
+                    for (var q in coreQualifications)
+                      Text(". $q",
+                          style: TextStyle(
+                              color: Colors.white, fontSize: 10)),
+                    SizedBox(height: 10),
+                    Divider(color: Colors.white, thickness: 2),
+                    Text("LANGUAGES",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14)),
+                    SizedBox(height: 5),
+                    for (var l in languages1)
+                      Text(". $l",
+                          style: TextStyle(
+                              color: Colors.white, fontSize: 10)),
+                  ],
+                ),
+              ),
+          ],
+        ),
       ),
-    ),
+   ),
  
 
 
@@ -904,553 +909,6 @@ class _PracticeScreenState extends State<PracticeScreen> {
 
   // ✅ PDF GENERATION
   
-
-//   Future<void> _createPdfAndPrint() async {
-//     final image = (await rootBundle.load('flower/ap.jpg')).buffer.asUint8List();
-//     final pdf = pw.Document();
-
-//     final pw.Font ttf = await PdfGoogleFonts.openSansRegular();
-//     final pw.Font ttfBold = await PdfGoogleFonts.openSansBold();
-
-//     // 🔹 Sidebar Builder
-//     pw.Widget buildSidebar({bool includeInfo = false}) {
-//       return
-// pw.Column(children: [
-//   // pw.Container(
-//   //   height:90,
-//   //   width: 170,
-//   //   color: PdfColor.fromHex("#3F3F3F")
-//   // ),
-
-
-
-// pw.Container(
-//   width: 170,
-//   child: pw.Stack(
-//     alignment: pw.Alignment.topCenter,
-//     children: [
-//       // Background layers
-//       pw.Column(
-//         children: [
-//           pw.Container(
-//             height: 90,
-//             color: PdfColor.fromHex("#3F3F3F"),
-//           ),
-//           pw.Container(
-//             height: 700,
-//             color: PdfColor.fromHex("#9C8B85"),
-//           ),
-//         ],
-//       ),
-
-//       // 🔳 Profile image (square, same size)
-//       pw.Positioned(
-//         top: 45,
-//         child: pw.Container(
-//           decoration: pw.BoxDecoration(
-//             border: pw.Border.all(color: PdfColors.white, width: 2),
-//             borderRadius: pw.BorderRadius.circular(6), // small corner rounding
-//           ),
-//           child: pw.Image(
-//             pw.MemoryImage(image),
-//             width: 100, // same size as before
-//             height: 100,
-//             fit: pw.BoxFit.cover,
-//           ),
-//         ),
-//       ),
-
-//       // Sidebar content
-//       pw.Positioned(
-//         top: 165,
-//         left: 12,
-//         right: 12,
-//         child: pw.Column(
-//           crossAxisAlignment: pw.CrossAxisAlignment.start,
-//           children: [
-//             pw.Text(email,
-//                 style: pw.TextStyle(color: PdfColors.white, fontSize: 10)),
-//             pw.SizedBox(height: 4),
-//             pw.Text(phone,
-//                 style: pw.TextStyle(color: PdfColors.white, fontSize: 10)),
-//             pw.SizedBox(height: 4),
-//             pw.Text(linkedIn,
-//                 style: pw.TextStyle(color: PdfColors.white, fontSize: 10)),
-//             pw.SizedBox(height: 10),
-//             pw.Divider(color: PdfColors.white, thickness: 2),
-//             pw.Text("SUMMARY",
-//                 style: pw.TextStyle(
-//                     color: PdfColors.white,
-//                     fontWeight: pw.FontWeight.bold,
-//                     fontSize: 14)),
-//             pw.SizedBox(height: 5),
-//             pw.Text(summary,
-//                 style: pw.TextStyle(color: PdfColors.white, fontSize: 10)),
-//           ],
-//         ),
-//       ),
-//     ],
-//   ),
-// ),
-
-
-
-
-
-   
-        
-//        pw.Container(
-//         width: 170,
-//         color: PdfColor.fromHex('#9C8B85'),
-//         padding: const pw.EdgeInsets.all(12),
-//         child: includeInfo
-//             ?         pw.Column(
-//                     crossAxisAlignment: pw.CrossAxisAlignment.start,
-//                     children: [
-//                       pw.SizedBox(height: 40),
-
-//                       pw.Center(
-//                         child: pw.Container(
-//                           decoration: pw.BoxDecoration(
-//                             border: pw.Border.all(color: PdfColors.white),
-//                           ),
-//                           child: pw.Image(
-//                             pw.MemoryImage(image),
-//                             width: 100,
-//                             height: 100,
-//                           ),
-//                         ),
-//                       ),
-//                       pw.SizedBox(height: 40),
-//                       pw.Text(
-//                         email,
-//                         style: pw.TextStyle(
-//                           color: PdfColors.white,
-//                           fontSize: 10,
-//                         ),
-//                       ),
-//                       pw.SizedBox(height: 4),
-
-//                       pw.Text(
-//                         phone,
-//                         style: pw.TextStyle(
-//                           color: PdfColors.white,
-//                           fontSize: 10,
-//                         ),
-//                       ),
-//                       pw.SizedBox(height: 4),
-
-//                       pw.Text(
-//                         linkedIn,
-//                         style: pw.TextStyle(
-//                           color: PdfColors.white,
-//                           fontSize: 10,
-//                           // 8,
-//                         ),
-//                       ),
-//                       pw.SizedBox(height: 10),
-//                       pw.Divider(color: PdfColors.white, thickness: 2),
-//                       pw.Text(
-//                         "SUMMARY",
-//                         style: pw.TextStyle(
-//                           color: PdfColors.white,
-//                           fontWeight: pw.FontWeight.bold,
-//                           fontSize: 14,
-//                         ),
-//                       ),
-//                       pw.SizedBox(height: 5),
-
-//                       pw.Text(
-//                         summary,
-//                         style: pw.TextStyle(
-//                           color: PdfColors.white,
-//                           fontSize: 10,
-//                         ),
-//                       ),
-//                       pw.SizedBox(height: 10),
-//                       pw.Divider(color: PdfColors.white, thickness: 2),
-
-//                       pw.Text(
-//                         "QUALIFICATIONS",
-//                         style: pw.TextStyle(
-//                           color: PdfColors.white,
-//                           fontWeight: pw.FontWeight.bold,
-//                           fontSize: 14,
-//                         ),
-//                       ),
-//                       pw.SizedBox(height: 5),
-
-//                       for (var q in coreQualifications)
-//                         pw.Text(
-//                           ". $q",
-//                           style: pw.TextStyle(
-//                             lineSpacing: 1,
-//                             color: PdfColors.white,
-//                             fontSize: 10,
-//                           ),
-//                         ),
-//                       pw.SizedBox(height: 10),
-//                       pw.Divider(color: PdfColors.white, thickness: 2),
-
-//                       pw.Text(
-//                         "LANGUAGES",
-//                         style: pw.TextStyle(
-//                           color: PdfColors.white,
-//                           fontWeight: pw.FontWeight.bold,
-//                           fontSize: 14,
-//                         ),
-//                       ),
-//                       pw.SizedBox(height: 5),
-
-//                       for (var l in languages1)
-//                         pw.Text(
-//                           ". $l",
-//                           style: pw.TextStyle(
-//                             color: PdfColors.white,
-//                             fontSize: 10,
-//                           ),
-//                         ),
-//                     ],
-//                   )
-           
-//            : pw.Container(), // Empty but keeps same structure
-//       )
-// ]);
-//     }
-
-//     // 🔹 Header Builder (only for Page 1)
-  
-
-//     // 🔹 Page Layout Builder
-//     pw.Widget buildPage({
-//       required pw.Widget content,
-//       bool showHeader = true,
-//       bool includeInfo = true,
-//     }) {
-//       return pw.Container(
-//         width: double.infinity,
-//         height: double.infinity,
-//         child: pw.Column(
-//           children: [
-
-//             pw.Expanded(
-//               child: pw.Row(
-//                 crossAxisAlignment: pw.CrossAxisAlignment.start,
-//                 children: [
-//                   buildSidebar(includeInfo: includeInfo),
-//                   pw.SizedBox(width: 12),
-//                   pw.Expanded(child: content),
-//                 ],
-//               ),
-//             ),
-//           ],
-//         ),
-//       );
-//     }
-
-//     // 🔸 PAGE 1 (Header + Full Sidebar)
-//     pdf.addPage(
-//       pw.Page(
-//         pageFormat: PdfPageFormat.a4,
-//         margin: pw.EdgeInsets.zero, // ensure full width usage
-//         build: (context) => buildPage(
-//           showHeader: true,
-//           includeInfo: true,
-//           content: pw.Padding(
-//             padding: const pw.EdgeInsets.all(12),
-//             child: pw.Column(
-//               crossAxisAlignment: pw.CrossAxisAlignment.start,
-//               children: [
-                
-//                 pw.SizedBox(width: 10),
-//             pw.Text(
-//               nameLine1,
-//               style: pw.TextStyle(
-//                 font: ttfBold,
-//                 fontSize: 37,
-//                 color: PdfColor.fromHex("#9C8B85"),
-//               ),
-//             ),
-
-//                 pw.SizedBox(height: 10),
-//                 pw.Container(height: 1,
-//                 width: double.infinity,
-//                                 color: PdfColor.fromHex("#9C8B85"),),
-//                 pw.Text(
-//                   'EXPERIENCE',
-//                   style: pw.TextStyle(font: ttfBold, fontSize: 15),
-//                 ),
-//                 pw.SizedBox(height: 6),
-//                 ...experience.map(
-//                   (exp) => pw.Padding(
-//                     padding: const pw.EdgeInsets.only(bottom: 6),
-//                     child: pw.Column(
-//                       crossAxisAlignment: pw.CrossAxisAlignment.start,
-//                       children: [
-//                         pw.Text(
-//                           exp['role']!,
-//                           style: pw.TextStyle(font: ttfBold, fontSize: 11),
-//                         ),
-//                         pw.Text(
-//                           ' (${exp['period']})',
-//                           style: pw.TextStyle(fontSize: 9, font: ttfBold),
-//                         ),
-//                         ...((exp['bullets'] as List<String>).map(
-//                           (b) => pw.Text(
-//                             '• $b',
-//                             style: pw.TextStyle(font: ttf, fontSize: 9),
-//                           ),
-//                         )),
-//                       ],
-//                     ),
-//                   ),
-//                 ),
-//               ],
-//             ),
-//           ),
-//         ),
-//       ),
-//     );
-
-//     // 🔸 PAGE 2 (NO header, EMPTY Sidebar — but same layout)
-//     pdf.addPage(
-//       pw.Page(
-//         pageFormat: PdfPageFormat.a4,
-//         margin: pw.EdgeInsets.zero,
-//         build: (context) => buildPage(
-//           showHeader: false, // No black header
-//           includeInfo: false, // Sidebar same but empty
-//           content: pw.Padding(
-//             padding: const pw.EdgeInsets.all(12),
-//             child: pw.Column(
-//               crossAxisAlignment: pw.CrossAxisAlignment.start,
-//               children: [
-//                 ...experience2.map(
-//                   (exp2) => pw.Padding(
-//                     padding: const pw.EdgeInsets.only(bottom: 6),
-//                     child: pw.Column(
-//                       crossAxisAlignment: pw.CrossAxisAlignment.start,
-//                       children: [
-//                         pw.Text(
-//                           exp2['role']!,
-//                           style: pw.TextStyle(font: ttfBold, fontSize: 11),
-//                         ),
-//                         pw.Text(
-//                           ' (${exp2['period']})',
-//                           style: pw.TextStyle(font: ttfBold, fontSize: 9),
-//                         ),
-//                         ...((exp2['bullets'] as List<String>).map(
-//                           (b) => pw.Text(
-//                             '• $b',
-//                             style: pw.TextStyle(font: ttf, fontSize: 9),
-//                           ),
-//                         )),
-//                       ],
-//                     ),
-//                   ),
-//                 ),
-//               ],
-//             ),
-//           ),
-//         ),
-//       ),
-//     );
-
-//     // page 3
-//     pdf.addPage(
-//       pw.Page(
-//         pageFormat: PdfPageFormat.a4,
-//         margin: pw.EdgeInsets.zero,
-//         build: (context) => buildPage(
-//           showHeader: false, // No black header
-//           includeInfo: false, // Sidebar same but empty
-//           content: pw.Padding(
-//             padding: const pw.EdgeInsets.all(12),
-//             child: pw.Column(
-//               crossAxisAlignment: pw.CrossAxisAlignment.start,
-//               children: [
-//                 // 🔸 PROJECTS Section
-//                 pw.Text(
-//                   'PROJECTS',
-//                   style: pw.TextStyle(font: ttfBold, fontSize: 15),
-//                 ),
-//                 pw.SizedBox(height: 6),
-//                 ...projects.map(
-//                   (p) => pw.Padding(
-//                     padding: const pw.EdgeInsets.only(bottom: 4),
-//                     child: pw.Column(
-//                       crossAxisAlignment: pw.CrossAxisAlignment.start,
-//                       children: [
-//                         pw.Text(
-//                           p['title']!,
-//                           style: pw.TextStyle(font: ttfBold, fontSize: 11),
-//                         ),
-//                         pw.Text(
-//                           p['subtitle']!,
-//                           style: pw.TextStyle(font: ttf, fontSize: 9),
-//                         ),
-//                       ],
-//                     ),
-//                   ),
-//                 ),
-//               ],
-//             ),
-//           ),
-//         ),
-//       ),
-//     );
-//     // page 4
-//     pdf.addPage(
-//       pw.Page(
-//         pageFormat: PdfPageFormat.a4,
-//         margin: pw.EdgeInsets.zero,
-//         build: (context) => buildPage(
-//           showHeader: false, // No black header
-//           includeInfo: false, // Sidebar same but empty
-//           content: pw.Padding(
-//             padding: const pw.EdgeInsets.all(12),
-//             child: pw.Column(
-//               crossAxisAlignment: pw.CrossAxisAlignment.start,
-//               children: [
-//                 // 🔸 PROJECTS Section
-//                 ...projects2.map(
-//                   (p) => pw.Padding(
-//                     padding: const pw.EdgeInsets.only(bottom: 4),
-//                     child: pw.Column(
-//                       crossAxisAlignment: pw.CrossAxisAlignment.start,
-//                       children: [
-//                         pw.Text(
-//                           p['title']!,
-//                           style: pw.TextStyle(font: ttfBold, fontSize: 11),
-//                         ),
-//                         pw.Text(
-//                           p['subtitle']!,
-//                           style: pw.TextStyle(font: ttf, fontSize: 9),
-//                         ),
-//                       ],
-//                     ),
-//                   ),
-//                 ),
-//               ],
-//             ),
-//           ),
-//         ),
-//       ),
-//     );
-//     // page 5
-//        pdf.addPage(
-//       pw.Page(
-//         pageFormat: PdfPageFormat.a4,
-//         margin: pw.EdgeInsets.zero,
-//         build: (context) => buildPage(
-//           showHeader: false, // No black header
-//           includeInfo: false, // Sidebar same but empty
-//           content: pw.Padding(
-//             padding: const pw.EdgeInsets.all(12),
-//             child: pw.Column(
-//               crossAxisAlignment: pw.CrossAxisAlignment.start,
-//               children: [
-//                                 pw.Text(
-//                   'EDUCATION',
-//                   style: pw.TextStyle(font: ttfBold, fontSize: 15),
-//                 ),
-//                 pw.SizedBox(height: 6),
-//                 ...education.map(
-//                   (edu) => pw.Padding(
-//                     padding: const pw.EdgeInsets.only(bottom: 6),
-//                     child: pw.Column(
-//                       crossAxisAlignment: pw.CrossAxisAlignment.start,
-//                       children: [
-//                         pw.Text(
-//                           ' (${edu['degree']})',
-//                           style: pw.TextStyle(fontSize: 9, font: ttfBold),
-//                         ), 
-//                                                 pw.Text(
-//                           ' (${edu['institution']})',
-//                           style: pw.TextStyle(fontSize: 9, font: ttfBold),
-//                         ),                       pw.Text(
-//                           ' (${edu['period']})',
-//                           style: pw.TextStyle(fontSize: 9, font: ttf),
-//                         ),
-//                         ...((edu['details'] as List<String>).map(
-//                           (b) => pw.Text(
-//                             '• $b',
-//                             style: pw.TextStyle(font: ttf, fontSize: 9),
-//                           ),
-//                         )),
-//                       ],
-//                     ),
-//                   ),
-//                 ),
-//               ],
-              
-//                 // 🔸 PROJECTS Section
-
-               
-//             ),
-//           ),
-//         ),
-//       ),
-//     );
-  
-
-//     await Printing.layoutPdf(onLayout: (format) => pdf.save());
-//   }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Future<void> _createPdfAndPrint() async {
   final image = (await rootBundle.load('flower/ap.jpg')).buffer.asUint8List();
   final pdf = pw.Document();
