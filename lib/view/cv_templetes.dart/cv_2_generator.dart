@@ -334,7 +334,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
  ),
    pw.SizedBox(height: 5),
 
-  pw.Text('Firebase Suite_Cloud Functions',
+  pw.Text('Firebase Suite_Cloud Functions', 
     
  style: pw.TextStyle(color: PdfColors.white, fontSize: 8)),
    pw.SizedBox(height: 10),
