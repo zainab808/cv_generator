@@ -3,6 +3,7 @@ import 'package:cv_generator/view/cv_3_generator.dart';
 import 'package:cv_generator/view/cv_4_generator.dart';
 import 'package:cv_generator/view/cv_5_generator.dart';
 import 'package:cv_generator/view/cv_generator.dart';
+import 'package:cv_generator/view/practice_screen.dart';
 import 'package:cv_generator/view/resume.dart';
 import 'package:cv_generator/view/resume_2.dart';
 import 'package:cv_generator/view/resume_3.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
    debugShowCheckedModeBanner: false,
-      home: Resume2Page()
+      home: PracticeScreen()
     );
   }
 }
