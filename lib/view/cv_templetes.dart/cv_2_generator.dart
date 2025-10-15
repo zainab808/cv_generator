@@ -27,19 +27,19 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
       'role': 'Full Stack Developer (Flutter + Backend + Deployments)',
       'company': 'SecureHops | www.securehops.com',
       'period': 'Sept 2023 - Jan 2025',
-      'details': 'Developed cross-platform mobile apps using Flutter and Firebase. Integrated backend APIs and implemented CI/CD pipelines.'
+      'details': 'Developed cross-platform mobile apps using Flutter and Firebase. Integrated backend APIs and implemented CI/CD pipelines.\nDeployed applications on AWS and managed CI/CD pipelines backend APIs'
     },
     {
       'role': 'Team Lead (Flutter + Backend)',
       'company': 'SecureHops',
       'period': 'Jan 2023 - Jan 2025',
-      'details': 'Led a team, developed apps, integrated backend systems, mentored juniors.'
+      'details': 'Led a team, developed apps, integrated backend systems, mentored juniors.\nLed a cross-functional team of Flutter developers and UI designers'
     },
     {
       'role': 'Flutter Developer',
       'company': 'TYDUP LTD',
       'period': 'April 2024 - Sept 2025',
-      'details': 'Developed mobile apps connecting customers with cleaning services.'
+      'details': 'Developed mobile apps connecting customers with cleaning services.\nDeveloped cross-platform mobile apps using Flutter and Dart'
     },
         {
       'role': 'Flutter Developer _ Salamgram',
@@ -53,40 +53,44 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
       'period': 'April 2020 _ Sept 2022',
       'details': 'Worked as a Freelance Flutter Developer on Fiverr, Upwork delivering high-quality Flutter and backend solutions.'
 
-'Completed 5 strong projects with a focus on mobile apps, APIs, and scalable backend systems.'
-'Maintained a strong reputation through timely delivery, attention to detail, and excellent client communication.'
-'Helped clients achieve their goals with tailored, innovative solutions.'
+'Completed 5 strong projects with a focus on mobile apps, APIs, and scalable backend systems.\n'
+'Maintained a strong reputation through timely delivery, attention to detail, and excellent client communication.\n'
+'Helped clients achieve their goals with tailored, innovative solutions.\n'
+// 'Completed 5 strong projects with a focus on mobile apps, APIs, and scalable backend systems.\n'
+
     },    
       {
       'role': 'Flutter Developer _ Self',
      
       'period': 'Sept 2024 _ Dec 2024',
-      'details': 'Delivered high-quality solutions with strong technical expertise, ensuring tasks of any size were completed efficiently.'
+      'details': 'Delivered high-quality solutions with strong technical expertise, ensuring tasks of any size were completed efficiently.\n'
 
-'Applied leadership skills to manage projects holistically and drive team success.'
+'Applied leadership skills to manage projects holistically and drive team success.\n'
 
-'Recognized proactively by suggesting innovative ideas beyond assigned tasks.'
+'Recognized proactively by suggesting innovative ideas beyond assigned tasks.\n'
 
 'Contributed as a reliable asset to teams and projects in Flutter/FlutterFlow development.'
 
     },   
-     {
-      'role': 'Flutter Developer _ WeQed',
-     
-      'period': 'Dec 2024 _ Present',
-      'details': 'Developed and launched an app with 5K+ downloads and a 12+ content rating.'
 
-'Built a performing learning app to sign up and earn by sharing their knowledge and skills.'
-
-'Developed features such as user sign-in, rewards system, and teacher/student dashboards.'
-
-'Designed solutions to help users solve problems efficiently and gain the right direction.'
-
-    },       
     
     
   ];
   final List<Map<String, String>> experiences2 = [
+         {
+      'role': 'Flutter Developer _ WeQed',
+     
+      'period': 'Dec 2024 _ Present',
+      'details': 'Developed and launched an app with 5K+ downloads and a 12+ content rating.\n'
+
+'Built a performing learning app to sign up and earn by sharing their knowledge and skills.\n'
+
+'Developed features such as user sign-in, rewards system, and teacher/student dashboards.\n'
+
+'Designed solutions to help users solve problems efficiently and gain the right direction.\n'
+
+
+    },       
     {
       'role': 'CTO & Flutter Developer _ Harry Chat',
     
@@ -115,16 +119,28 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
       'role': 'CTO & Flutter Developer _ IQRA Quran App',
      
       'period': 'Jan 2024 _ Present',
-      'details': 'Led the development of the IQRA Quran App, providing offline access to the Holy Quran.'
+      'details': 'Led the development of the IQRA Quran App, providing offline access to the Holy Quran.\n'
 
-'Designed the technical strategy and architecture to ensure scalability, security, and smooth user experience.'
+'Designed the technical strategy and architecture to ensure scalability, security, and smooth user experience.\n'
 
-'Focused on enriching spiritual engagement with interactive features of Surahs and Juz.'
+'Focused on enriching spiritual engagement with interactive features of Surahs and Juz.\n'
+
+// 'Designed the technical strategy and architecture to ensure scalability, security, and smooth user experience.'
 
 'Built and deploy'
     },
         {
       'role': 'CTO & Flutter Developer _ CRO App',
+     
+      'period': 'Jan 2024 _Present',
+      'details': 'Developed a Flutter mobile app for students to find jobs.'
+
+'Built Flutter web panels for employers to post jobs and admins to manage features.\n'
+
+'Managed the end-to-end deployment of the platform.'
+    },
+      {
+      'role': 'CTO & Flutter Developer _ On Pio',
      
       'period': 'Jan 2024 _Present',
       'details': 'Developed a Flutter mobile app for students to find jobs.'
@@ -172,10 +188,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
      {'title': 'PricePro', 'tag': 'Complete Flutter App', 'desc': 'Application for managing menus of different branches of restaurants. Copy and sync features for branches and add different taxes. '},
      {'title': 'MyCash', 'tag': 'Complete Flutter App', 'desc': 'MyCash App is a home-run application designed to provide easy and transparent record-keeping for small business owners and individuals. '},
      {'title': 'Flavourz Restaurant', 'tag': 'Complete Flutter App', 'desc': 'Flavourz is a dedicated food application tailored for a specific restaurant, implementing ordering and specialized platform for customers to place orders. '},
-     {'title': 'Tritt', 'tag': 'Complete Flutter App', 'desc': ' Tritt is a FlutterApp now resembling TrueCaller, with features such as SMS blocking, number searching, as well as AI deep-clean and full functionalities.'},
-     {'title': 'LockSmith Guru', 'tag': 'Complete Flutter App', 'desc': 'Locksmith Guru is a specialized app designed for resolving various types of lockouts and guiding customers to the nearest locksmith. '},
-     {'title': 'EkCabFare', 'tag': 'Complete Flutter App', 'desc': 'EkCabFare displays and compares fares between Uber, Careem, and Ola cabs, allowing users to select the best option based on mileage, time, and convenience. '},
-  
+     
 
   
   ];
@@ -432,23 +445,99 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
           pw.SizedBox(width: 20),
           pw.Expanded(
             child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-              pw.Text('Profile', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14,  color: PdfColor.fromHex('#084A3F'),)),
+              pw.Text('Profile', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 18,  color: PdfColor.fromHex('#084A3F'),)),
              pw.SizedBox(height:  10),
               pw.Text(aboutText, style: const pw.TextStyle(fontSize: 10)),
               pw.SizedBox(height: 8),
-              pw.Text('Experience', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14,  color: PdfColor.fromHex('#084A3F'),)),
-              for (var e in experiences)
-                pw.Padding(
-                  padding: const pw.EdgeInsets.only(top: 6),
-                  child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-                    pw.Text(e['role'] ?? '', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 11)),
-             pw.SizedBox(height:  3),
+              pw.Text('Experience', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 18,  color: PdfColor.fromHex('#084A3F'),)),
+            //   for (var e in experiences)
+            //     pw.Padding(
+            //       padding: const pw.EdgeInsets.only(top: 6),
+            //       child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+            //         pw.Text(e['role'] ?? '', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 11)),
+            //  pw.SizedBox(height:  3),
 
-                    pw.Text(' ${e['period']}', style:  pw.TextStyle(fontSize: 8,fontWeight: pw.FontWeight.bold)),
-                     pw.SizedBox(height:  3),
-                    pw.Text(e['details'] ?? '', style: const pw.TextStyle(fontSize: 10)),
-                  ]),
-                ),
+            //         pw.Text(' ${e['period']}', style:  pw.TextStyle(fontSize: 10,)),
+            //          pw.SizedBox(height:  3),
+            //         pw.Text(e['details'] ?? '', style: const pw.TextStyle(fontSize: 10)),
+            //       ]),
+            //     ),
+
+
+
+
+
+
+
+  //           for (var e in experiences)
+  // pw.Padding(
+  //   padding: const pw.EdgeInsets.only(top: 10),
+  //   child: pw.Column(
+  //     crossAxisAlignment: pw.CrossAxisAlignment.start,
+  //     children: [
+  //       pw.Text(
+  //         e['role'] ?? '',
+  //         style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 11),
+  //       ),
+  //        pw.SizedBox(height: 5),
+  //       if (e['company'] != null)
+  //         pw.Text(
+  //           ' ${e['period']}',
+  //           style: const pw.TextStyle(fontSize: 10),
+  //         ),
+  //       pw.SizedBox(height: 5),
+
+  //       // ✅ Using pw.Bullet for each point
+  //       ...((e['details'] ?? '').split('\n').where((line) => line.trim().isNotEmpty).map(
+  //             (line) => pw.Bullet(
+  //               text: line.trim(),
+  //               style: const pw.TextStyle(fontSize: 10),
+  //               bulletSize: 5,
+  //               bulletMargin: pw.EdgeInsets.only(right: 4),
+  //             ),
+  //           )),
+  //     ],
+  //   ),
+  // ),
+
+
+
+
+
+pw.SizedBox(height: 5),
+
+
+for (var e in experiences)
+  pw.Padding(
+    padding: const pw.EdgeInsets.only(top: 10),
+    child: pw.Column(
+      crossAxisAlignment: pw.CrossAxisAlignment.start,
+      children: [
+        pw.Text(
+          e['role'] ?? '',
+          style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 11),
+        ),
+        pw.SizedBox(height: 8),
+        if (e['company'] != null)
+
+        pw.SizedBox(height: 6),
+
+        // 🔹 Each line → automatic bullet
+        ...((e['details'] ?? '')
+            .split(RegExp(r'[\n\r]+')) // split on line breaks
+            .where((line) => line.trim().isNotEmpty)
+            .map(
+              (line) => pw.Bullet(
+                text: line.trim(),
+                style: const pw.TextStyle(fontSize: 10),
+                bulletSize: 4,
+                bulletMargin: pw.EdgeInsets.only(right: 5),
+              ),
+            )),
+      ],
+    ),
+  ),
+
               // pw.SizedBox(height: 8),
              
             ]),
@@ -469,38 +558,78 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
           
           ),
         
-          pw.SizedBox(width: 10),
+          pw.SizedBox(width: 20),
        pw.Expanded(
             child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
               // pw.Text('Profile', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14)),
               // pw.Text(aboutText, style: const pw.TextStyle(fontSize: 10)),
               // pw.SizedBox(height: 8),
               // pw.Text('Employment History', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 12)),
-              for (var e in experiences2)
-                pw.Padding(
-                  padding: const pw.EdgeInsets.only(top: 6),
-                  child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-                    pw.Text(e['role'] ?? '', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 10)),
-                              pw.SizedBox(height:  3),
-                    pw.Text(' ${e['period']}', style: const pw.TextStyle(fontSize: 9)),
-                             pw.SizedBox(height:  3),
-                    pw.Text(e['details'] ?? '', style: const pw.TextStyle(fontSize: 9)),
-                  ]),
-                ),
-              pw.SizedBox(height: 20),
+              // for (var e in experiences2)
+              //   pw.Padding(
+              //     padding: const pw.EdgeInsets.only(top: 6),
+              //     child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+              //       pw.Text(e['role'] ?? '', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 10)),
+              //                 pw.SizedBox(height:  3),
+              //       pw.Text(' ${e['period']}', style: const pw.TextStyle(fontSize: 10)),
+              //                pw.SizedBox(height:  3),
+              //       pw.Text(e['details'] ?? '', style: const pw.TextStyle(fontSize: 9)),
+              //     ]),
+              //   ),
+
+
+
+
+
+
+
+      
+for (var e in experiences2)
+  pw.Padding(
+    padding: const pw.EdgeInsets.only(top: 10),
+    child: pw.Column(
+      crossAxisAlignment: pw.CrossAxisAlignment.start,
+      children: [
+        pw.Text(
+          e['role'] ?? '',
+          style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 11),
+        ),
+        pw.SizedBox(height: 8),
+        if (e['company'] != null)
+
+        pw.SizedBox(height: 6),
+
+        // 🔹 Each line → automatic bullet
+        ...((e['details'] ?? '')
+            .split(RegExp(r'[\n\r]+')) // split on line breaks
+            .where((line) => line.trim().isNotEmpty)
+            .map(
+              (line) => pw.Bullet(
+                text: line.trim(),
+                style: const pw.TextStyle(fontSize: 10),
+                bulletSize: 4,
+                bulletMargin: pw.EdgeInsets.only(right: 5),
+              ),
+            )),
+      ],
+    ),
+  ),
+
+
+              // pw.SizedBox(height: 20),
            
-              pw.Text('Education', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14,  color: PdfColor.fromHex('#084A3F'),)),
-              pw.SizedBox(height: 10),
+              // pw.Text('Education', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 18,  color: PdfColor.fromHex('#084A3F'),)),
+              // pw.SizedBox(height: 10),
             
-              for (var ed in education) pw.Text('${ed['title']} - ${ed['institution']} (${ed['years']})', style: const pw.TextStyle(fontSize: 12)),
+              // for (var ed in education) pw.Text('${ed['title']} - ${ed['institution']} (${ed['years']})', style: const pw.TextStyle(fontSize: 12)),
              
-                            pw.SizedBox(height: 20),
+              //               pw.SizedBox(height: 20),
               
-               pw.Text(' Skills', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 15,color: PdfColor.fromHex('#084A3F'))),
-                                        pw.SizedBox(height: 10),
-              for (var s in coreSkills) pw.Text(' $s', style:  pw.TextStyle(fontSize: 12,)),
-                pw.SizedBox(height:  20),
-              pw.Text('Projects', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14,  color: PdfColor.fromHex('#084A3F'),)),
+              //  pw.Text(' Skills', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 18,color: PdfColor.fromHex('#084A3F'))),
+              //                           pw.SizedBox(height: 10),
+              // for (var s in coreSkills) pw.Text(' $s', style:  pw.TextStyle(fontSize: 12,)),
+              //   pw.SizedBox(height:  20),
+              // pw.Text('Projects', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 18,  color: PdfColor.fromHex('#084A3F'),)),
 
 
             ]),
@@ -510,8 +639,72 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
       ),
     );
 
-
 // page 3
+
+     doc.addPage(
+      pw.Page(
+        pageFormat: format,
+        build: (context) => pw.Row(children: [
+          pw.Container(
+          width: 160,
+           color: PdfColor.fromHex('#084A3F'),
+          padding: const pw.EdgeInsets.all(10),
+          
+          ),
+        
+          pw.SizedBox(width: 20),
+
+          pw.Expanded(
+            child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+             pw.SizedBox(height: 20),
+           
+              pw.Text('Education', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 19,  color: PdfColor.fromHex('#084A3F'),)),
+           pw.SizedBox(height: 10),
+             pw.Text('Bachelors in Information Technology',style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 12,  )),
+            
+          
+             pw.Text('University of Punjab Lahore',style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 10,  )),
+                 pw.SizedBox(height: 5),
+             pw.Text('2019 - 2023',style: pw.TextStyle( fontSize: 10,  )),
+                        pw.SizedBox(height: 10),
+             pw.Text(  'F.Sc Pre-Engineering', 
+    style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 12,  )),
+            
+             
+             pw.Text( 'Islamia College, Lahore',
+    style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 10,  )),
+                 pw.SizedBox(height: 5),
+             pw.Text( '2016 - 2019',
+    style: pw.TextStyle( fontSize: 10,  )),           pw.SizedBox(height: 10),
+             pw.Text( 
+     'Matric',style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 12,  )),
+            
+          
+             pw.Text( 
+     'Islamia High School, Lahore',style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 10,  )),
+                 pw.SizedBox(height: 5),
+             pw.Text( 
+'2014 - 2016',style: pw.TextStyle( fontSize: 10,  )),
+            
+            
+                            pw.SizedBox(height: 20),
+              
+               pw.Text(' Skills', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 18,color: PdfColor.fromHex('#084A3F'))),
+                                        pw.SizedBox(height: 10),
+             
+             
+            
+              // for (var p in projects)
+                // pw.Text('${p['title']}\n  ${p['tag']}\n${p['desc']}', style: const pw.TextStyle(fontSize: 10)),
+            
+            ]),
+          ),
+        ]),
+      ),
+    );
+
+
+// page 4
       doc.addPage(
       pw.Page(
         pageFormat: format,
@@ -523,9 +716,12 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
           
           ),
         
-          pw.SizedBox(width: 10),
+          pw.SizedBox(width: 20),
+
           pw.Expanded(
             child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+              pw.Text('Projects', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 18,  color: PdfColor.fromHex('#084A3F'),)),
+
              
               // pw.Text('Projects', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14,  color: PdfColor.fromHex('#084A3F'),)),
            for (var p in projects)
@@ -552,7 +748,9 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
     );
 
 
-// page 4
+
+
+// page 5
       doc.addPage(
       pw.Page(
         pageFormat: format,
@@ -564,7 +762,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
           
           ),
         
-          pw.SizedBox(width: 10),
+          pw.SizedBox(width: 20),
           pw.Expanded(
             child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
              
