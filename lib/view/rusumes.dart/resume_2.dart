@@ -27,7 +27,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
       'role': 'Full Stack Developer (Flutter + Backend + Deployments)',
       'company': 'SecureHops | www.securehops.com',
       'period': 'Sept 2023 - Jan 2025',
-      'details': 'Developed cross-platform mobile apps using Flutter and Firebase. Integrated backend APIs and implemented CI/CD pipelines.'
+      'details': 'Developed cross-platform mobile apps using Flutter and Firebase.\n Integrated backend APIs and implemented CI/CD pipelines.'
     },
     {
       'role': 'Team Lead (Flutter + Backend)',
@@ -310,45 +310,138 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
 
 
               pw.SizedBox(height: 20),
-              pw.Text('Profile', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14,  color: PdfColor.fromHex('#084A3F'),)),
+              pw.Text('Profile', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 17,  color: PdfColor.fromHex('#084A3F'),)),
              pw.SizedBox(height:  10),
               pw.Text(aboutText, style: const pw.TextStyle(fontSize: 10)),
               pw.SizedBox(height: 8),
-              pw.Text('Experience', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14,  color: PdfColor.fromHex('#084A3F'),)),
-              for (var e in experiences)
-                pw.Padding(
-                  padding: const pw.EdgeInsets.only(top: 6),
-                  child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-                    pw.Text(e['role'] ?? '', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 11)),
-             pw.SizedBox(height:  3),
+              pw.Text('Experience', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 17,  color: PdfColor.fromHex('#084A3F'),)),
+            //   for (var e in experiences)
+            //     pw.Padding(
+            //       padding: const pw.EdgeInsets.only(top: 6),
+            //       child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+            //         pw.Text(e['role'] ?? '', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 11)),
+            //  pw.SizedBox(height:  3),
 
-                    pw.Text(' ${e['period']}', style:  pw.TextStyle(fontSize: 8,fontWeight: pw.FontWeight.bold)),
-                     pw.SizedBox(height:  3),
-                    pw.Text(e['details'] ?? '', style: const pw.TextStyle(fontSize: 10)),
-                  ]),
-                ),
+            //         pw.Text(' ${e['period']}', style:  pw.TextStyle(fontSize: 8,fontWeight: pw.FontWeight.bold)),
+            //          pw.SizedBox(height:  3),
+            //         pw.Text(e['details'] ?? '', style: const pw.TextStyle(fontSize: 10)),
+            //       ]),
+            //     ),
+
+
+
+                              for (var e in experiences)
+                    pw.Padding(
+                      padding: const pw.EdgeInsets.only(top: 10),
+                      child: pw.Column(
+                        crossAxisAlignment: pw.CrossAxisAlignment.start,
+                        children: [
+                          pw.Text(
+                            e['role'] ?? '',
+                            style: pw.TextStyle(
+                              fontWeight: pw.FontWeight.bold,
+                              fontSize: 11,
+                            ),
+                          ),
+                          pw.SizedBox(height: 2),
+                          if (e['company'] != null) pw.SizedBox(height: 6),
+
+                          // 🔹 Each line → automatic bullet
+                          ...((e['details'] ?? '')
+                              .split(RegExp(r'[\n\r]+')) // split on line breaks
+                              .where((line) => line.trim().isNotEmpty)
+                              .map(
+                                (line) => pw.Bullet(
+                                  text: line.trim(),
+                                  style: const pw.TextStyle(fontSize: 10),
+                                  bulletSize: 4,
+                                  bulletMargin: pw.EdgeInsets.only(top: 5, right: 5),
+                                ),
+                              )),
+                        ],
+                      ),
+                    ),
              
-                             pw.Text('Projects', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14,  color: PdfColor.fromHex('#084A3F'),)),
- for (var p in projects)
-                      pw.Padding(
-                  padding: const pw.EdgeInsets.only(top: 6),
-                  child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-                    pw.Text(p['title'] ?? '', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 11)),
-             pw.SizedBox(height:  3),
+//                              pw.Text('Projects', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 17,  color: PdfColor.fromHex('#084A3F'),)),
+//  for (var p in projects)
+//                       pw.Padding(
+//                   padding: const pw.EdgeInsets.only(top: 6),
+//                   child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+//                     pw.Text(p['title'] ?? '', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 11)),
+//              pw.SizedBox(height:  3),
 
-                    pw.Text(' ${p['tag']}', style:  pw.TextStyle(fontSize: 8,fontWeight: pw.FontWeight.bold)),
-                     pw.SizedBox(height:  3),
-                    pw.Text(p['desc'] ?? '', style: const pw.TextStyle(fontSize: 10)),
-                  ]),
-                ),
+//                     pw.Text(' ${p['tag']}', style:  pw.TextStyle(fontSize: 8,fontWeight: pw.FontWeight.bold)),
+//                      pw.SizedBox(height:  3),
+//                     pw.Text(p['desc'] ?? '', style: const pw.TextStyle(fontSize: 10)),
+//                   ]),
+//                 ),
                  pw.SizedBox(height: 10),
                 
-              pw.Text('Education', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14,  color: PdfColor.fromHex('#084A3F'),)),
-              pw.SizedBox(height: 10),
-            
-              for (var ed in education) pw.Text('${ed['title']} - ${ed['institution']} (${ed['years']})', style: const pw.TextStyle(fontSize: 12)),
-             
-                            pw.SizedBox(height: 20),
+                  pw.Text(
+                    'Education',
+                    style: pw.TextStyle(
+                      fontWeight: pw.FontWeight.bold,
+                      fontSize: 19,
+                      color: PdfColor.fromHex('#084A3F'),
+                    ),
+                  ),
+                  pw.SizedBox(height: 10),
+                  pw.Text(
+                    'Bachelors in Information Technology',
+                    style: pw.TextStyle(
+                      fontWeight: pw.FontWeight.bold,
+                      fontSize: 12,
+                    ),
+                  ),
+
+                  pw.Text(
+                    'University of Punjab Lahore',
+                    style: pw.TextStyle(
+                      fontWeight: pw.FontWeight.bold,
+                      fontSize: 10,
+                    ),
+                  ),
+                  pw.SizedBox(height: 5),
+                  pw.Text('2019 - 2023', style: pw.TextStyle(fontSize: 10)),
+                  pw.SizedBox(height: 10),
+                  pw.Text(
+                    'F.Sc Pre-Engineering',
+                    style: pw.TextStyle(
+                      fontWeight: pw.FontWeight.bold,
+                      fontSize: 12,
+                    ),
+                  ),
+
+                  pw.Text(
+                    'Islamia College, Lahore',
+                    style: pw.TextStyle(
+                      fontWeight: pw.FontWeight.bold,
+                      fontSize: 10,
+                    ),
+                  ),
+                  pw.SizedBox(height: 5),
+                  pw.Text('2016 - 2019', style: pw.TextStyle(fontSize: 10)),
+                  pw.SizedBox(height: 10),
+                  pw.Text(
+                    'Matric',
+                    style: pw.TextStyle(
+                      fontWeight: pw.FontWeight.bold,
+                      fontSize: 12,
+                    ),
+                  ),
+
+                  pw.Text(
+                    'Islamia High School, Lahore',
+                    style: pw.TextStyle(
+                      fontWeight: pw.FontWeight.bold,
+                      fontSize: 10,
+                    ),
+                  ),
+                  pw.SizedBox(height: 5),
+                  pw.Text('2014 - 2016', style: pw.TextStyle(fontSize: 10)),
+
+                  pw.SizedBox(height: 30),
+
 
               // pw.SizedBox(height: 8),
              

@@ -5,7 +5,8 @@ import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
 
 class Resume5Page extends StatefulWidget {
-  const Resume5Page({super.key});
+
+ const  Resume5Page({super.key});
 
   @override
   State<Resume5Page> createState() => _Resume5PageState();
@@ -43,7 +44,8 @@ class _Resume5PageState extends State<Resume5Page> {
                       style: pw.TextStyle(
                         color: PdfColors.white,
                         fontSize: 32,
-                        fontWeight: pw.FontWeight.bold,
+                        fontWeight: pw.FontWeight.bold,   font: 
+                      pw.Font.timesBold(),
                       ),
                     ),
                   ],
@@ -80,7 +82,8 @@ class _Resume5PageState extends State<Resume5Page> {
                         pw.Text(
                           'Flutter & Dart\nFirebase Suite\nBackend (Node, Laravel)\nState Management\nCI/CD, DevOps\nAI & ML\nDatabases\nGit & GitHub',
                           style: pw.TextStyle(
-                            color: PdfColors.white,
+                            color: PdfColors.white,   font: 
+                      pw.Font.timesBold(),
                             fontSize: 9,
                             fontWeight: pw.FontWeight.bold,
                           ),
@@ -94,7 +97,8 @@ class _Resume5PageState extends State<Resume5Page> {
                         pw.Text(
                           'English\nUrdu',
                           style: pw.TextStyle(
-                            color: PdfColors.white,
+                            color: PdfColors.white,   font: 
+                      pw.Font.timesBold(),
                             fontSize: 9,
                             fontWeight: pw.FontWeight.bold,
                           ),
@@ -108,7 +112,8 @@ class _Resume5PageState extends State<Resume5Page> {
                         pw.Text(
                           'RecreationalFootballLeague teamcaptain\nTwo-timeleaguechampions\nLocalcommunitytheatre: performedplaysandshows',
                           style: pw.TextStyle(
-                            color: PdfColors.white,
+                            color: PdfColors.white,   font: 
+                      pw.Font.timesBold(),
                             fontSize: 9,
                             fontWeight: pw.FontWeight.bold,
                           ),
@@ -121,7 +126,8 @@ class _Resume5PageState extends State<Resume5Page> {
                         pw.Text(
                           'Taughtlifesavingskillsand CPRclasses\nRed Cross volunteer',
                           style: pw.TextStyle(
-                            color: PdfColors.white,
+                            color: PdfColors.white,   font: 
+                      pw.Font.timesBold(),
                             fontSize: 9,
                             fontWeight: pw.FontWeight.bold,
                           ),
@@ -140,61 +146,67 @@ class _Resume5PageState extends State<Resume5Page> {
                         crossAxisAlignment: pw.CrossAxisAlignment.start,
                         children: [
                           pw.SizedBox(height: 10),
-                          _sectionTitle('PROFILE'),
+                         
                           pw.Text(
                             'Senior Flutter Developer with 6+ years of experience in mobile app development, backend integration, and cloud deployment. Skilled in Flutter, Firebase, CI/CD, and DevOps with expertise in backend systems and AI solutions.',
-                            style: const pw.TextStyle(fontSize: 10),
+                            style: pw.TextStyle(fontSize: 10,),
                           ),
+                              pw.SizedBox(height: 10),
+                          pw.Divider(),
                           pw.SizedBox(height: 10),
                           _sectionTitle('EXPERIENCE'),
                           pw.SizedBox(height: 10),
 
                           _expItem(
-                            'CTO & Flutter Developer _ Harry Chat',
-                            'Dec 2024 _ Present',
-                            'Leading Islamic app Wordbook with 10K+ downloads. Designed and developed core features, improving workflows and retention.',
+                            'CTO & Flutter Developer _ Harry Chat\n',
+                           
+                            'Leading Islamic app Wordbook with 10K+ downloads.\n Designed and developed core features, improving workflows and retention.',
                           ),
 
                           _expItem(
-                            'CTO & FlutterFlow Developer _ Griot Contents',
-                            'Jan 2024 _ Present',
+                            'CTO & FlutterFlow Developer  \n',
+                            
                             'Developed an eBook app for users to buy and sell eBooks online with secure authentication, payment integration, and digital library management.',
                           ),
 
                           _expItem(
-                            'CTO & Flutter Developer _ IQRA Quran App',
-                            'Jan 2024 _ Present',
-                            'Led the development of the IQRA Quran App with offline access to the Holy Quran. Designed technical architecture ensuring scalability and user experience.',
+                            'CTO & Flutter Developer _ IQRA Quran App\n',
+                            
+                            'Led the development of the IQRA Quran App with offline access to the Holy Quran.\n Designed technical architecture ensuring scalability and user experience.',
                           ),
 
                           _expItem(
-                            'CTO & Flutter Developer _ CRO App',
-                            'Jan 2024 _ Present',
-                            'Developed a Flutter mobile app for students to find jobs. Built Flutter web panels for employers to post jobs and managed end-to-end deployment.',
+                            'CTO & Flutter Developer _ CRO App\n',
+                            
+                            'Developed a Flutter mobile app for students to find jobs.\n Built Flutter web panels for employers to post jobs and managed end-to-end deployment.',
                           ),
 
                           _expItem(
-                            'Team Lead (Flutter + Backend) _ SecureHops',
-                            'Jan 2023 _ Jan 2025',
+                            'Team Lead (Flutter + Backend) _ SecureHops\n',
+                            
                             'Led Flutter team to build production apps, managed releases, reviewed architecture, and mentored developers.',
                           ),
 
                           pw.SizedBox(height: 8),
+                          pw.Divider(),
+                            pw.SizedBox(height: 8),
                           _sectionTitle('EDUCATION'),
                           pw.SizedBox(height: 5),
                           _projItem(
                             'BS Information Technology',
-                            'University of Punjab Lahore (2019_2023)',
+                            'University of Punjab Lahore ',
                           ),
                           _projItem(
                             'F.Sc Pre-Engineering',
-                            'Islamia College Lahore (2016_2019)',
+                            'Islamia College Lahore ',
                           ),
                           _projItem(
                             'Matriculation',
-                            'Islamia High School Lahore (2014_2016)',
+                            'Islamia High School Lahore ',
                           ),
                           pw.SizedBox(height: 8),
+                           pw.Divider(),
+                            pw.SizedBox(height: 8),
                           _sectionTitle('PROJECTS'),
                           pw.SizedBox(height: 5),
                           _projItem(
@@ -213,25 +225,13 @@ class _Resume5PageState extends State<Resume5Page> {
                             'WeTeachs',
                             'Learning platform where users teach and earn.',
                           ),
-                          _projItem(
-                            'CRO App',
-                            'Job-finding platform for students with employer web panel and admin dashboard for management and scalability.',
-                          ),
-
+                       
                           _projItem(
                             'Reverse Disease',
                             'Health tracking app monitoring fatigue, sugar, weight, and nutrition. Built with FlutterFlow to promote healthy lifestyles.',
                           ),
 
-                          _projItem(
-                            'Salamly',
-                            'Muslim Daily App featuring Quran, prayer times, Islamic tools, and 50K+ downloads. Focused on user experience and performance.',
-                          ),
-
-                          _projItem(
-                            'OnFekwa',
-                            'Social media app helping users discover lifestyle trends. Includes story uploads, messaging, and sharing features.',
-                          ),
+                     
                         ],
                       ),
                     ),
@@ -254,7 +254,8 @@ class _Resume5PageState extends State<Resume5Page> {
       text,
       style: pw.TextStyle(
         color: PdfColors.white,
-        fontSize: 11,
+        fontSize: 11,   font: 
+                      pw.Font.timesBold(),
         fontWeight: pw.FontWeight.bold,
       ),
     ),
@@ -264,26 +265,27 @@ class _Resume5PageState extends State<Resume5Page> {
     padding: const pw.EdgeInsets.only(bottom: 2),
     child: pw.Text(
       text,
-      style: pw.TextStyle(fontSize: 13, fontWeight: pw.FontWeight.bold),
+      style: pw.TextStyle(fontSize: 13, fontWeight: pw.FontWeight.bold,   font: 
+                      pw.Font.timesBold(),),
     ),
   );
 
-  pw.Widget _expItem(String title, String date, String desc) => pw.Padding(
+  pw.Widget _expItem(String title, String desc) => pw.Padding(
     padding: const pw.EdgeInsets.only(bottom: 3),
     child: pw.Column(
       crossAxisAlignment: pw.CrossAxisAlignment.start,
       children: [
         pw.Text(
           title,
-          style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 10),
+          style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 10,   font: 
+                      pw.Font.timesBold(),),
         ),
         pw.SizedBox(height: 2),
-        pw.Text(
-          date,
-          style: const pw.TextStyle(fontSize: 9, color: PdfColors.grey800),
-        ),
+
         pw.SizedBox(height: 2),
-        pw.Text(desc, style: const pw.TextStyle(fontSize: 10)),
+
+       pw.Bullet(text: desc,style: const pw.TextStyle(fontSize: 10)),
+     
       ],
     ),
   );
@@ -295,7 +297,8 @@ class _Resume5PageState extends State<Resume5Page> {
       children: [
         pw.Text(
           title,
-          style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 9),
+          style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 9,   font: 
+                      pw.Font.timesBold(),),
         ),
         pw.Text(desc, style: const pw.TextStyle(fontSize: 8)),
       ],

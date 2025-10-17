@@ -218,9 +218,10 @@ class Resume4Page extends StatelessWidget {
     child: Text(
       title,
       style: const TextStyle(
-        fontSize: 15,
+        fontSize: 18,
         fontWeight: FontWeight.bold,
         color: blue,
+        
       ),
     ),
   );
@@ -287,6 +288,7 @@ class Resume4Page extends StatelessWidget {
                       fontSize: 22,
                       fontWeight: pw.FontWeight.bold,
                       color: bluePdf,
+                      font: pw.Font.timesBold()
                     ),
                   ),
                   pw.Spacer(),
@@ -596,6 +598,7 @@ class Resume4Page extends StatelessWidget {
                         style: pw.TextStyle(
                           fontSize: 9,
                           fontWeight: pw.FontWeight.bold,
+                          font: pw.Font.timesBold()
                         ),
                       ),
                       pw.Text(
@@ -660,7 +663,7 @@ class Resume4Page extends StatelessWidget {
     padding: const pw.EdgeInsets.only(bottom: 4),
     child: pw.Text(
       title,
-      style: pw.TextStyle(fontSize: 12, fontWeight: pw.FontWeight.bold,color: color),
+      style: pw.TextStyle(fontSize: 17, fontWeight: pw.FontWeight.bold,color: color,font: pw.Font.timesBold()),
     ),
   );
   pw.Widget _projItem(String title, String desc) => pw.Padding(
@@ -670,9 +673,9 @@ class Resume4Page extends StatelessWidget {
       children: [
         pw.Text(
           title,
-          style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 9),
+          style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 9,font: pw.Font.timesBold()),
         ),
-        pw.Text(desc, style: const pw.TextStyle(fontSize: 8)),
+        pw.Text(desc, style: const pw.TextStyle(fontSize: 9)),
       ],
     ),
   );

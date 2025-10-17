@@ -320,6 +320,35 @@ class ExperienceItem extends StatelessWidget {
     );
   }
 }
+ pw.Widget experienceItem({
+    required String role,
+    required String period,
+    required List<String> bullets,
+  }) {
+    return pw.Container(
+      margin: const pw.EdgeInsets.only(bottom: 20),
+      child: pw.Column(
+        crossAxisAlignment: pw.CrossAxisAlignment.start,
+        children: [
+          pw.Text(role,
+              style: pw.TextStyle( fontSize: 12, color: PdfColors.black,fontWeight: pw.FontWeight.bold)),
+          pw.Text(period,
+              style: pw.TextStyle(
+                  fontSize: 11, color: PdfColors.grey700)),
+          // pw.SizedBox(height: 3),
+          pw.Column(
+            crossAxisAlignment: pw.CrossAxisAlignment.start,
+            children: bullets
+                .map((b) => pw.Bullet(
+                      text: b,
+                      style: pw.TextStyle( fontSize: 11),
+                    ))
+                .toList(),
+          ),
+        ],
+      ),
+    );
+  }
 
 Future<Uint8List> buildPdf() async {
   final doc = await buildPdfDocument();
@@ -373,6 +402,8 @@ Future<pw.Document> buildPdfDocument() async {
                     'PROFILE',
                     style: pw.TextStyle(
                       fontWeight: pw.FontWeight.bold,
+                      font: 
+                      pw.Font.timesBold(),
                       fontSize: 15,
                       color: PdfColor.fromInt(0xFFFFFFFF),
                     ),
@@ -392,7 +423,8 @@ Future<pw.Document> buildPdfDocument() async {
                     style: pw.TextStyle(
                       fontWeight: pw.FontWeight.bold,
                       color: PdfColor.fromInt(0xFFFFFFFF),
-                      fontSize: 15,
+                      fontSize: 15,    font: 
+                      pw.Font.timesBold(),
                     ),
                   ),
                   pw.SizedBox(height: 6),
@@ -442,6 +474,8 @@ Future<pw.Document> buildPdfDocument() async {
                           style: pw.TextStyle(
                             fontSize: 35,
                             fontWeight: pw.FontWeight.bold,
+                               font: 
+                      pw.Font.timesBold(),
                           ),
                         ),
                         pw.SizedBox(height: 10),
@@ -470,7 +504,8 @@ Future<pw.Document> buildPdfDocument() async {
                           'EDUCATION',
                           style: pw.TextStyle(
                             fontWeight: pw.FontWeight.bold,
-                            fontSize: 18,
+                            fontSize: 18,   font: 
+                      pw.Font.timesBold(),
                           ),
                         ),
                         pw.SizedBox(height: 15),
@@ -517,48 +552,105 @@ Future<pw.Document> buildPdfDocument() async {
 
                           style: pw.TextStyle(fontSize: 13),
                         ),
+                         
                         pw.SizedBox(height: 20),
 
                          pw.Text(
                           'EXPERIENCE',
                           style: pw.TextStyle(
                             fontWeight: pw.FontWeight.bold,
-                            fontSize: 18,
+                            fontSize: 18,   font: 
+                      pw.Font.timesBold(),
                           ),
                         ),
                         pw.SizedBox(height: 15),
-                        pw.Bullet(
-                          text:
-                              'Full Stack Developer (Flutter + Backend + Deployments) Promoted _ Sept 2023 _ Jan 2025',
-                        ),
-                        pw.Bullet(
-                          text:
-                              'Developed cross-platform apps and managed cloud deployments (AWS/GCP).',
-                        ),
-                        pw.Bullet(
-                          text:
-                              'Team Lead (Flutter + Backend) _ Jan 2023 _ Jan 2025',
-                        ),
-                        pw.Bullet(text: 'Led team, implemented CI/CD.'),
-                        pw.Bullet(
-                          text:
-                              'CTO & Flutter Developer _ Harry Chat _ Dec 2024 _ Present',
-                        ),
-                        pw.Bullet(
-                          text: 'Designed core features; 10K+ downloads.',
-                        ),
+
+
+
+
+
+
+
+
+
+
+  // 🔹 Helper Widget for Experience Items
+ 
+
+  
+    
+      
+       
+
+            // 🔸 Experience 1
+            experienceItem(
+              role:
+                  'Full Stack Developer (Flutter + Backend + Deployments) ',
+              period: 'Sept 2023 - Jan 2025',
+              bullets: [
+                'Developed cross-platform mobile apps using Flutter and Firebase.',
+                'Integrated backend APIs (Node.js, Laravel, GraphQL).',
+                'Implemented CI/CD pipelines and cloud deployments (AWS/GCP).',
+              ],
+            ),
+
+            // 🔸 Experience 2
+            experienceItem(
+              role: 'Team Lead (Flutter + Backend)',
+              period: 'Jan 2023 - Jan 2025',
+              bullets: [
+                'Led team, developed cross-platform apps, implemented CI/CD.',
+                'Mentored junior devs and reviewed architecture.',
+              ],
+            ),
+
+            // 🔸 Experience 3
+            // experienceItem(
+            //   role: 'CTO & Flutter Developer — Harry Chat',
+            //   period: 'Dec 2024 - Present',
+            //   bullets: [
+            //     'Designed and developed core features for the app.',
+            //     'Improved workflows and retention; 10K+ downloads.',
+            //   ],
+            // ),
+      
+        
+ 
+                        
+                        // pw.Bullet(
+                     
+                        //   text:
+                        //       'Full Stack Developer (Flutter + Backend + Deployments) Promoted _ Sept 2023 _ Jan 2025',
+                        // ),
+                        // pw.Bullet(
+                        //   text:
+                        //       'Developed cross-platform apps and managed cloud deployments (AWS/GCP).',
+                        // ),
+                        // pw.Bullet(
+                        //   text:
+                        //       'Team Lead (Flutter + Backend) _ Jan 2023 _ Jan 2025',
+                        // ),
+                        // pw.Bullet(text: 'Led team, implemented CI/CD.'),
+                        // pw.Bullet(
+                        //   text:
+                        //       'CTO & Flutter Developer _ Harry Chat _ Dec 2024 _ Present',
+                        // ),
+                        // pw.Bullet(
+                        //   text: 'Designed core features; 10K+ downloads.',
+                        // ),
                      
 
-                                               pw.SizedBox(height: 20),
+                                               pw.SizedBox(height: 5),
 
                          pw.Text(
                           'PROJECTS',
                           style: pw.TextStyle(
                             fontWeight: pw.FontWeight.bold,
-                            fontSize: 18,
+                            fontSize: 18,   font: 
+                      pw.Font.timesBold(),
                           ),
                         ),
-                        pw.SizedBox(height: 15),
+                        pw.SizedBox(height: 10),
                         pw.Bullet(
                           text: 'Salamy_ Islamic daily prayer & Quran app',
                         ),
@@ -568,9 +660,9 @@ Future<pw.Document> buildPdfDocument() async {
                           text:
                               'IQRA Quran App_ Offline Quran and prayer times',
                         ),
-                        pw.Bullet(
-                          text: 'WeTeachs_ Learn and earn platform for tutors',
-                        ),
+                        // pw.Bullet(
+                        //   text: 'WeTeachs_ Learn and earn platform for tutors',
+                        // ),
                       ],
                     ),
                   ),

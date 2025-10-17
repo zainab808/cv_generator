@@ -29,12 +29,12 @@ final condensedResume = ResumeData(
   ],
   experiences: [
     Experience(
-      role: 'CTO & Senior Flutter Developer',
+      role: ' Senior Flutter Developer',
       company: '',
       period: 'Dec 2024 _Present',
       bullets: [
-        'Led architecture and delivery of multiple Flutter apps (10K+ downloads).',
-        'Improved retention by 70% via performance and UX improvements.',
+        'Led architecture and delivery of multiple Flutter apps (10K+ downloads).\n',
+        'Improved retention by 70% via performance and UX improvements.\n',
       ],
     ),
     Experience(
@@ -46,13 +46,15 @@ final condensedResume = ResumeData(
       ],
     ),
     Experience(
-      role: 'CTO & FlutterFlow Developer _ Griot Contents',
+      role: 'CTO & FlutterFlow Developer ',
 
       period: 'Jan 2024 _ Present',
 
       company: '',
       bullets: [
-        'Developed an eBook app for users to buy and sell eBooks online.',
+        'Developed an eBook app for users to buy and sell eBooks online.\n',
+                'Developed mobile apps connecting customers with cleaning services.'
+        
       ],
     ),
     Experience(
@@ -60,7 +62,7 @@ final condensedResume = ResumeData(
       company: '',
       period: 'Jan 2023 _ Jan 2025',
       bullets: [
-        'Led teams, delivered cross-platform apps, and set CI/CD pipelines.',
+        'Led teams, delivered cross-platform apps, and set CI/CD pipelines.\n',
         'Mentored juniors and owned deployments.',
       ],
     ),
@@ -373,7 +375,7 @@ Future<Uint8List> generatePdf(ResumeData data) async {
                       ),
                       pw.SizedBox(height: 5),
                       pw.Container(
-                        height: 4,
+                        height: 5,
                         width: 160,
                         decoration: pw.BoxDecoration(
                           color: PdfColors.black,
@@ -392,7 +394,7 @@ Future<Uint8List> generatePdf(ResumeData data) async {
                       ),
                       pw.SizedBox(height: 5),
                       pw.Container(
-                        height: 4,
+                        height: 5,
                         width: 160,
                         decoration: pw.BoxDecoration(
                           color: PdfColors.black,
@@ -410,7 +412,7 @@ Future<Uint8List> generatePdf(ResumeData data) async {
                       ),
                       pw.SizedBox(height: 5),
                       pw.Container(
-                        height: 4,
+                        height: 5,
                         width: 160,
                         decoration: pw.BoxDecoration(
                           color: PdfColors.black,
@@ -428,7 +430,7 @@ Future<Uint8List> generatePdf(ResumeData data) async {
                       ),
                       pw.SizedBox(height: 5),
                       pw.Container(
-                        height: 4,
+                        height: 5,
                         width: 160,
                         decoration: pw.BoxDecoration(
                           color: PdfColors.black,
@@ -446,7 +448,7 @@ Future<Uint8List> generatePdf(ResumeData data) async {
                       ),
                       pw.SizedBox(height: 5),
                       pw.Container(
-                        height: 4,
+                        height: 5,
                         width: 160,
                         decoration: pw.BoxDecoration(
                           color: PdfColors.black,
@@ -464,7 +466,7 @@ Future<Uint8List> generatePdf(ResumeData data) async {
                       ),
                       pw.SizedBox(height: 5),
                       pw.Container(
-                        height: 4,
+                        height: 5,
                         width: 160,
                         decoration: pw.BoxDecoration(
                           color: PdfColors.black,
@@ -482,7 +484,7 @@ Future<Uint8List> generatePdf(ResumeData data) async {
                       ),
                       pw.SizedBox(height: 5),
                       pw.Container(
-                        height: 4,
+                        height: 5,
                         width: 160,
                         decoration: pw.BoxDecoration(
                           color: PdfColors.black,
@@ -500,7 +502,7 @@ Future<Uint8List> generatePdf(ResumeData data) async {
                       ),
                       pw.SizedBox(height: 5),
                       pw.Container(
-                        height: 4,
+                        height: 5,
                         width: 160,
                         decoration: pw.BoxDecoration(
                           color: PdfColors.black,
@@ -517,7 +519,7 @@ Future<Uint8List> generatePdf(ResumeData data) async {
                       ),
                       pw.SizedBox(height: 5),
                       pw.Container(
-                        height: 4,
+                        height: 5,
                         width: 160,
                         decoration: pw.BoxDecoration(
                           color: PdfColors.black,
@@ -630,43 +632,85 @@ Future<Uint8List> generatePdf(ResumeData data) async {
                         ),
                       ),
                       pw.SizedBox(height: 10),
-                      ...data.experiences.map(
-                        (e) => pw.Column(
-                          crossAxisAlignment: pw.CrossAxisAlignment.start,
-                          children: [
-                            pw.Text(
-                              '${e.role}, ${e.company}',
-                              style: pw.TextStyle(
-                                fontSize: 12,
-                                fontWeight: pw.FontWeight.bold,
-                              ),
-                            ),
-                            pw.SizedBox(height: 2),
+                      // ...data.experiences.map(
+                      //   (e) => pw.Column(
+                      //     crossAxisAlignment: pw.CrossAxisAlignment.start,
+                      //     children: [
+                      //       pw.Text(
+                      //         '${e.role}, ${e.company}',
+                      //         style: pw.TextStyle(
+                      //           fontSize: 12,
+                      //           fontWeight: pw.FontWeight.bold,
+                      //         ),
+                      //       ),
+                      //       pw.SizedBox(height: 2),
 
-                            pw.Text(
-                              e.period,
-                              style: pw.TextStyle(
-                                fontSize: 9,
-                                color: PdfColors.grey800,
-                              ),
-                            ),
-                            pw.SizedBox(height: 4),
+                      //       pw.Text(
+                      //         e.period,
+                      //         style: pw.TextStyle(
+                      //           fontSize: 9,
+                      //           color: PdfColors.grey800,
+                      //         ),
+                      //       ),
+                      //       pw.SizedBox(height: 4),
 
-                            ...e.bullets.map(
-                              (b) => pw.Text(
-                                ' $b',
-                                style: pw.TextStyle(fontSize: 10),
+                      //       ...e.bullets.map(
+                      //         (b) => pw.Text(
+                      //           ' $b',
+                      //           style: pw.TextStyle(fontSize: 10),
 
-                              ),
+                      //         ),
 
 
                           
 
-                            ),
-                             pw.SizedBox(height: 5),
-                          ],
-                        ),
-                      ),
+                      //       ),
+                      //        pw.SizedBox(height: 5),
+                      //     ],
+                      //   ),
+                      // ),
+
+
+...data.experiences.map(
+  (e) => pw.Padding(
+    padding: const pw.EdgeInsets.only(bottom: 10),
+    child: pw.Column(
+      crossAxisAlignment: pw.CrossAxisAlignment.start,
+      children: [
+        pw.Text(
+          '${e.role}, ${e.company}',
+          style: pw.TextStyle(
+            fontSize: 11,
+            fontWeight: pw.FontWeight.bold,
+          ),
+        ),
+        pw.SizedBox(height: 2),
+        pw.Text(
+          e.period,
+          style: pw.TextStyle(
+            fontSize: 8,
+            // color: PdfColors.grey900,
+          ),
+        ),
+        pw.SizedBox(height: 4),
+
+        // ✅ Render each detail as a proper bullet
+        ...e.bullets.map(
+          (b) => pw.Bullet(
+            text: b,
+            bulletSize: 4,
+            style: const pw.TextStyle(fontSize: 10),
+          ),
+        ),
+
+        // pw.SizedBox(height: 3),
+      ],
+    ),
+  ),
+),
+
+
+                      
                       pw.SizedBox(height: 10),
                        pw.SizedBox(height: 10),
                       pw.Text(
