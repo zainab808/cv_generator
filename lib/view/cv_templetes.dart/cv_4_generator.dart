@@ -767,9 +767,10 @@ class Resume4Screen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 _buildHeaderUI(data, accent),
-                const SizedBox(height: 12),
+                const SizedBox(height: 30),
                 _sectionTitle('About', accent),
                 Text(data.about),
+                const SizedBox(height: 30),
                 const Divider(height: 28),
                 _sectionTitle('Skills', accent),
                 const SizedBox(height: 8),
@@ -843,7 +844,7 @@ class Resume4Screen extends StatelessWidget {
       children: [
         Text(t,
             style: TextStyle(
-                fontSize: 16, fontWeight: FontWeight.bold, color: accent)),
+                fontSize: 18, fontWeight: FontWeight.bold, color: accent)),
         const SizedBox(width: 8),
         Expanded(child: Container(height: 1.2, color: Colors.grey[300])),
       ],
@@ -1353,7 +1354,7 @@ class Resume4Screen extends StatelessWidget {
 Future<Uint8List> buildPdf(ResumeData data) async {
   final doc = pw.Document();
   final PdfColor accent = PdfColor.fromInt(0xFF2E75B6);
-  final base = pw.TextStyle(fontSize: 11);
+  final base = pw.TextStyle(fontSize: 12,lineSpacing: 1,font: pw.Font.helvetica());
 
   // Single MultiPage that contains header, about, skills, experience AND projects
   doc.addPage(pw.MultiPage(
@@ -1392,18 +1393,20 @@ Future<Uint8List> buildPdf(ResumeData data) async {
 
       pw.SizedBox(height: 5),
       pw.Divider(color: accent),
-      pw.SizedBox(height: 8),
+      pw.SizedBox(height: 23),
 
       // About
       pw.Text(data.about, style: base),
-      pw.SizedBox(height: 10),
+      pw.SizedBox(height: 23),
       pw.Divider(color: accent),
       pw.SizedBox(height: 12),
 
       // Skills heading
       pw.Text('Skills',
           style: pw.TextStyle(
-              fontSize: 14, fontWeight: pw.FontWeight.bold, color: accent)),
+              fontSize: 18, fontWeight: pw.FontWeight.bold, color: accent,font: pw.Font.timesBold()
+              // font: pw.Font.courierBold()
+              )),
       pw.SizedBox(height: 10),
 
 
@@ -1755,7 +1758,9 @@ style: pw.TextStyle(
       // Experience heading
       pw.Text('Experience',
           style: pw.TextStyle(
-              fontSize: 16, fontWeight: pw.FontWeight.bold, color: accent)),
+              fontSize: 18, fontWeight: pw.FontWeight.bold, color: accent,font: pw.Font.timesBold()
+              // font: pw.Font.courierBold()
+              )),
       pw.SizedBox(height: 8),
 
       // Experience items (flows naturally across pages)
@@ -1763,7 +1768,7 @@ style: pw.TextStyle(
             crossAxisAlignment: pw.CrossAxisAlignment.start,
             children: [
               pw.Text('${e.role} | ${e.company}',
-                  style: pw.TextStyle(fontWeight: pw.FontWeight.bold)),
+                  style: pw.TextStyle(fontWeight: pw.FontWeight.bold,font: pw.Font.timesBold())),
                    pw.SizedBox(height: 5),
               pw.Text(e.duration,
                   style: pw.TextStyle(fontSize: 10, color: PdfColors.grey800)),
@@ -1779,14 +1784,17 @@ style: pw.TextStyle(
       pw.SizedBox(height: 12),
       pw.Text('Projects',
           style: pw.TextStyle(
-              fontSize: 14, fontWeight: pw.FontWeight.bold, color: accent)),
+              fontSize: 18, fontWeight: pw.FontWeight.bold, color: accent,font: pw.Font.timesBold()
+              // font: pw.Font.courierBold()
+              )),
       pw.SizedBox(height: 8),
 
       ...data.projects.map((p) => pw.Column(
             crossAxisAlignment: pw.CrossAxisAlignment.start,
             children: [
               pw.Text(p.title,
-                  style: pw.TextStyle(fontWeight: pw.FontWeight.bold)),
+                  style: pw.TextStyle(fontWeight: pw.FontWeight.bold,font: pw.Font.timesBold())),
+                    pw.SizedBox(height: 5),
               pw.Text(p.description, style: base),
               pw.SizedBox(height: 8)
             ],
