@@ -52,14 +52,14 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
       'company': 'TYDUP LTD',
       'period': 'April 2024 - Sept 2025',
       'details':
-          'Developed mobile apps connecting customers with cleaning services.\nDeveloped cross-platform mobile apps using Flutter and Dart',
+          'Developed mobile apps connecting customers with cleaning services.\nDeveloped cross-platform mobile apps customers using Flutter and Dart',
     },
     {
       'role': 'Flutter Developer _ Salamgram',
 
       'period': 'Mar 2019 _ Jan 2025',
       'details':
-          'As a Flutter Developer, contributing to the success of Salamly: Muslim Daily App, a comprehensive app for Muslims with 50K+ downloads Developed features for daily prayer days, Quran, and Islamic tools to enhance user engagement.\nPlayed a key role in achieving over 50,000 downloads through optimized performance and user-focused updates.',
+          'As a Flutter Developer, contributing to the success of Salamly: Muslim Daily App,  for Muslims with 50K+ downloads Developed features for daily prayer days, Quran, and Islamic tools to enhance user engagement.\nPlayed a key role in achieving  through optimized performance and user-focused updates.',
     },
     {
       'role': 'Flutter Developer _ Fiverr | Upwork',
@@ -69,7 +69,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
           'Worked as a Freelance Flutter Developer on Fiverr, Upwork delivering high-quality Flutter and backend solutions.'
           'Completed 5 strong projects with a focus on mobile apps, APIs, and scalable backend systems.\n'
           'Maintained a strong reputation through timely delivery, attention to detail, and excellent client communication.\n'
-          'Helped clients achieve their goals with tailored, innovative solutions.\n',
+          // 'Helped clients achieve their goals with tailored, innovative solutions.\n',
 
       // 'Completed 5 strong projects with a focus on mobile apps, APIs, and scalable backend systems.\n'
     },
@@ -134,6 +134,26 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
           'Developed a Flutter mobile app for students to find jobs.'
           'Built Flutter web panels for employers to post jobs and admins to manage features.\n'
           'Managed the end-to-end deployment of the platform.',
+    },
+      {
+      'role': 'CTO & Flutter Developer _ Harry Chat',
+
+      'period': 'Dec 2024 _ Present',
+      'details':
+          'Currently working as a CTO & Senior Flutter Developer for an Islamic App, Wordbook, with over 10,000 downloads.\n'
+          // 'Designed and developed core features using Flutter and APIs, improving 70% workflows and boosting user retention.'
+          'Helped deliver a spiritually enriching experience with engaging and innovative features.\n'
+          'Achieved 10K+ downloads through robust performance, user engagement, and continuous updates.',
+    },
+    {
+      'role': 'CTO & FlutterFlow Developer _ Griot Contents',
+
+      'period': 'Jan 2024 _ Present',
+      'details':
+          'Developed an eBook app for users to buy and sell eBooks online\n.'
+          'Implemented secure authentication, payment integration, and digital library management.\n'
+          'Enabled easy upload, search, and purchase of eBooks with a smooth user experience.\n'
+          'Built complete FlutterFlow-based solution to support growing user and content needs.',
     },
     {
       'role': 'CTO & Flutter Developer _ On Pio',
@@ -556,16 +576,16 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
             style: pw.TextStyle(
               color: PdfColors.white,
               fontWeight: pw.FontWeight.bold,
-              fontSize: 14,
+              fontSize: 15,
             ),
           ),
 
-          pw.Text('...', style: pw.TextStyle(color: PdfColors.white)),
+          pw.Text('...', style: pw.TextStyle(color: PdfColors.grey200,)),
           pw.SizedBox(height: 3),
 
           pw.Text(
             'Senior Flutter Developer',
-            style: pw.TextStyle(color: PdfColors.white, fontSize: 11),
+            style: pw.TextStyle(color: PdfColors.grey200, fontSize: 11),
           ),
 
           pw.Column(
@@ -578,26 +598,26 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                 style: pw.TextStyle(
                   color: PdfColors.white,
                   fontWeight: pw.FontWeight.bold,
-                  fontSize: 14,
+                  fontSize: 13,
                 ),
               ),
               pw.SizedBox(height: 10),
               pw.Text(
                 'Mobile: +92 308 4695012',
-                style: pw.TextStyle(color: PdfColors.white, fontSize: 8),
+                style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8),
               ),
               pw.SizedBox(height: 5),
 
               pw.Text(
                 'Email: arham.sarwar786@gmail.com',
-                style: pw.TextStyle(color: PdfColors.white, fontSize: 8),
+                style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8),
               ),
 
               pw.SizedBox(height: 5),
 
               pw.Text(
                 'Linkedin:arham-sarwar-a1b56b176 ',
-                style: pw.TextStyle(color: PdfColors.white, fontSize: 8),
+                style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8),
               ),
 
               pw.SizedBox(height: 20),
@@ -606,13 +626,13 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                 style: pw.TextStyle(
                   color: PdfColors.white,
                   fontWeight: pw.FontWeight.bold,
-                  fontSize: 14,
+                  fontSize: 13,
                 ),
               ),
               pw.SizedBox(height: 10),
               pw.Text(
                 'Flutter Cross-Platform Development',
-                style: pw.TextStyle(color: PdfColors.white, fontSize: 8),
+                style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8),
               ),
               pw.SizedBox(height: 10),
               pw.Container(
@@ -627,7 +647,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
               pw.Text(
                 'Firebase Suite_Cloud Functions',
 
-                style: pw.TextStyle(color: PdfColors.white, fontSize: 8),
+                style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8),
               ),
               pw.SizedBox(height: 10),
               pw.Container(
@@ -641,7 +661,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
               pw.Text(
                 'Backend Development ',
 
-                style: pw.TextStyle(color: PdfColors.white, fontSize: 8),
+                style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8),
               ),
               pw.SizedBox(height: 10),
               pw.Container(
@@ -655,7 +675,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
               pw.Text(
                 'State Management',
 
-                style: pw.TextStyle(color: PdfColors.white, fontSize: 8),
+                style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8),
               ),
               pw.SizedBox(height: 10),
               pw.Container(
@@ -669,7 +689,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
               pw.Text(
                 'DevOps & Deployment ',
 
-                style: pw.TextStyle(color: PdfColors.white, fontSize: 8),
+                style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8),
               ),
               pw.SizedBox(height: 10),
               pw.Container(
@@ -683,7 +703,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
               pw.Text(
                 'AI & ML Integration',
 
-                style: pw.TextStyle(color: PdfColors.white, fontSize: 8),
+                style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8),
               ),
               pw.SizedBox(height: 10),
               pw.Container(
@@ -697,7 +717,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
               pw.Text(
                 'Databases ',
 
-                style: pw.TextStyle(color: PdfColors.white, fontSize: 8),
+                style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8),
               ),
               pw.SizedBox(height: 10),
               pw.Container(
@@ -711,7 +731,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
               pw.Text(
                 'Version Control ',
 
-                style: pw.TextStyle(color: PdfColors.white, fontSize: 8),
+                style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8),
               ),
               pw.SizedBox(height: 10),
               pw.Container(
@@ -724,7 +744,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
               pw.SizedBox(height: 5),
               pw.Text(
                 'Project Tools ',
-                style: pw.TextStyle(color: PdfColors.white, fontSize: 8),
+                style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8),
               ),
               pw.SizedBox(height: 10),
               pw.Container(
@@ -755,22 +775,23 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
               child: pw.Column(
                 crossAxisAlignment: pw.CrossAxisAlignment.start,
                 children: [
+                   pw.SizedBox(height: 20),
                   pw.Text(
                     'Profile',
                     style: pw.TextStyle(
                       fontWeight: pw.FontWeight.bold,
-                      fontSize: 18,
+                      fontSize: 16,
                       color: PdfColor.fromHex('#084A3F'),
                     ),
                   ),
                   pw.SizedBox(height: 10),
                   pw.Text(aboutText, style: const pw.TextStyle(fontSize: 10)),
-                  pw.SizedBox(height: 8),
+                  pw.SizedBox(height: 12),
                   pw.Text(
                     'Experience',
                     style: pw.TextStyle(
                       fontWeight: pw.FontWeight.bold,
-                      fontSize: 18,
+                      fontSize: 16,
                       color: PdfColor.fromHex('#084A3F'),
                     ),
                   ),
@@ -818,9 +839,9 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                   //     ],
                   //   ),
                   // ),
-                  pw.SizedBox(height: 5),
+                  pw.SizedBox(height: 3),
 
-                  for (var e in experiences)
+                 for (var e in experiences)
                     pw.Padding(
                       padding: const pw.EdgeInsets.only(top: 10),
                       child: pw.Column(
@@ -833,7 +854,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                               fontSize: 11,
                             ),
                           ),
-                          pw.SizedBox(height: 8),
+                          pw.SizedBox(height: 5),
                           if (e['company'] != null) pw.SizedBox(height: 6),
 
                           // 🔹 Each line → automatic bullet
@@ -845,7 +866,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                                   text: line.trim(),
                                   style: const pw.TextStyle(fontSize: 10),
                                   bulletSize: 4,
-                                  bulletMargin: pw.EdgeInsets.only(right: 5,top: 5),
+                                  bulletMargin: pw.EdgeInsets.only(top: 5, right: 5),
                                 ),
                               )),
                         ],
@@ -867,13 +888,9 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
         pageFormat: format,
         build: (context) => pw.Row(
           children: [
-            pw.Container(
-              width: 160,
-              color: PdfColor.fromHex('#084A3F'),
-              padding: const pw.EdgeInsets.all(10),
-            ),
+           
 
-            pw.SizedBox(width: 20),
+           
             pw.Expanded(
               child: pw.Column(
                 crossAxisAlignment: pw.CrossAxisAlignment.start,
@@ -927,18 +944,18 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
 
                   // pw.SizedBox(height: 20),
 
-                  // pw.Text('Education', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 18,  color: PdfColor.fromHex('#084A3F'),)),
+                  // pw.Text('Education', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 16,  color: PdfColor.fromHex('#084A3F'),)),
                   // pw.SizedBox(height: 10),
 
                   // for (var ed in education) pw.Text('${ed['title']} - ${ed['institution']} (${ed['years']})', style: const pw.TextStyle(fontSize: 12)),
 
                   //               pw.SizedBox(height: 20),
 
-                  //  pw.Text(' Skills', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 18,color: PdfColor.fromHex('#084A3F'))),
+                  //  pw.Text(' Skills', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 16,color: PdfColor.fromHex('#084A3F'))),
                   //                           pw.SizedBox(height: 10),
                   // for (var s in coreSkills) pw.Text(' $s', style:  pw.TextStyle(fontSize: 12,)),
                   //   pw.SizedBox(height:  20),
-                  // pw.Text('Projects', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 18,  color: PdfColor.fromHex('#084A3F'),)),
+                  // pw.Text('Projects', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 16,  color: PdfColor.fromHex('#084A3F'),)),
                 ],
               ),
             ),
@@ -954,16 +971,13 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
         pageFormat: format,
         build: (context) => pw.Row(
           children: [
-            pw.Container(
-              width: 160,
-              color: PdfColor.fromHex('#084A3F'),
-              padding: const pw.EdgeInsets.all(10),
-            ),
+          
 
-            pw.SizedBox(width: 20),
+
 
             pw.Expanded(
               child: pw.Column(
+                mainAxisAlignment: pw.MainAxisAlignment.start,
                 crossAxisAlignment: pw.CrossAxisAlignment.start,
                 children: [
 
@@ -973,6 +987,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                       padding: const pw.EdgeInsets.only(top: 10),
                       child: pw.Column(
                         crossAxisAlignment: pw.CrossAxisAlignment.start,
+                        mainAxisAlignment: pw.MainAxisAlignment.start,
                         children: [
                           pw.Text(
                             e['role'] ?? '',
@@ -1005,7 +1020,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                     'Education',
                     style: pw.TextStyle(
                       fontWeight: pw.FontWeight.bold,
-                      fontSize: 19,
+                      fontSize: 17,
                       color: PdfColor.fromHex('#084A3F'),
                     ),
                   ),
@@ -1014,15 +1029,17 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                     'Bachelors in Information Technology',
                     style: pw.TextStyle(
                       fontWeight: pw.FontWeight.bold,
-                      fontSize: 12,
+                      fontSize: 13,
                     ),
                   ),
+                  pw.SizedBox(height: 2),
 
                   pw.Text(
                     'University of Punjab Lahore',
                     style: pw.TextStyle(
-                      fontWeight: pw.FontWeight.bold,
-                      fontSize: 10,
+                      
+                      fontSize: 11,
+
                     ),
                   ),
                   pw.SizedBox(height: 5),
@@ -1032,15 +1049,15 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                     'F.Sc Pre-Engineering',
                     style: pw.TextStyle(
                       fontWeight: pw.FontWeight.bold,
-                      fontSize: 12,
+                      fontSize: 13,
                     ),
                   ),
-
+    pw.SizedBox(height: 2),
                   pw.Text(
                     'Islamia College, Lahore',
                     style: pw.TextStyle(
-                      fontWeight: pw.FontWeight.bold,
-                      fontSize: 10,
+                      // fontWeight: pw.FontWeight.bold,
+                      fontSize: 11,
                     ),
                   ),
                   pw.SizedBox(height: 5),
@@ -1050,15 +1067,15 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                     'Matric',
                     style: pw.TextStyle(
                       fontWeight: pw.FontWeight.bold,
-                      fontSize: 12,
+                      fontSize: 13,
                     ),
                   ),
-
+    pw.SizedBox(height: 2),
                   pw.Text(
                     'Islamia High School, Lahore',
                     style: pw.TextStyle(
                       fontWeight: pw.FontWeight.bold,
-                      fontSize: 10,
+                      fontSize: 11,
                     ),
                   ),
                   pw.SizedBox(height: 5),
@@ -1066,18 +1083,22 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
 
                   pw.SizedBox(height: 30),
 
-                  pw.Text(
-                    ' Skills',
+                pw.Row(mainAxisAlignment: pw.MainAxisAlignment.start,
+                  children: [
+                    pw.Text(
+                    'Core Skills',
                     style: pw.TextStyle(
                       fontWeight: pw.FontWeight.bold,
-                      fontSize: 19,
+                      fontSize: 17,
                       color: PdfColor.fromHex('#084A3F'),
                     ),
                   ),
+                ]),
                   pw.SizedBox(height: 10),
 
                   pw.Row(
                     crossAxisAlignment: pw.CrossAxisAlignment.start,
+                    mainAxisAlignment: pw.MainAxisAlignment.start,
 
                     children: [
                       pw.Text(
@@ -1095,7 +1116,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                   ),
                   pw.SizedBox(height: 10),
 
-                  pw.Row(
+                  pw.Row(   mainAxisAlignment: pw.MainAxisAlignment.start,
                     crossAxisAlignment: pw.CrossAxisAlignment.start,
                     children: [
                       pw.Text(
@@ -1113,7 +1134,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                   ),
                   pw.SizedBox(height: 10),
 
-                  pw.Row(
+                  pw.Row(   mainAxisAlignment: pw.MainAxisAlignment.start,
                     crossAxisAlignment: pw.CrossAxisAlignment.start,
                     children: [
                       pw.Text(
@@ -1131,11 +1152,11 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                   ),
                   pw.SizedBox(height: 10),
 
-                  pw.Row(
+                  pw.Row(   mainAxisAlignment: pw.MainAxisAlignment.start,
                     crossAxisAlignment: pw.CrossAxisAlignment.start,
                     children: [
                       pw.Text(
-                        ' State Management ',
+                        'State Management ',
                         style: pw.TextStyle(
                           fontWeight: pw.FontWeight.bold,
                           fontSize: 10,
@@ -1149,7 +1170,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                   ),
                   pw.SizedBox(height: 10),
 
-                  pw.Row(
+                  pw.Row(   mainAxisAlignment: pw.MainAxisAlignment.start,
                     crossAxisAlignment: pw.CrossAxisAlignment.start,
                     children: [
                       pw.Text(
@@ -1167,7 +1188,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                   ),
                   pw.SizedBox(height: 10),
 
-                  pw.Row(
+                  pw.Row(   mainAxisAlignment: pw.MainAxisAlignment.start,
                     crossAxisAlignment: pw.CrossAxisAlignment.start,
                     children: [
                       pw.Text(
@@ -1185,7 +1206,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                   ),
                   pw.SizedBox(height: 10),
 
-                  pw.Row(
+                  pw.Row(   mainAxisAlignment: pw.MainAxisAlignment.start,
                     crossAxisAlignment: pw.CrossAxisAlignment.start,
                     children: [
                       pw.Text(
@@ -1203,7 +1224,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                   ),
                   pw.SizedBox(height: 10),
 
-                  pw.Row(
+                  pw.Row(   mainAxisAlignment: pw.MainAxisAlignment.start,
                     crossAxisAlignment: pw.CrossAxisAlignment.start,
                     children: [
                       pw.Text(
@@ -1221,7 +1242,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                   ),
                   pw.SizedBox(height: 10),
 
-                  pw.Row(
+                  pw.Row(   mainAxisAlignment: pw.MainAxisAlignment.start,
                     crossAxisAlignment: pw.CrossAxisAlignment.start,
                     children: [
                       pw.Text(
@@ -1262,13 +1283,9 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
         pageFormat: format,
         build: (context) => pw.Row(
           children: [
-            pw.Container(
-              width: 160,
-              color: PdfColor.fromHex('#084A3F'),
-              padding: const pw.EdgeInsets.all(10),
-            ),
+         
 
-            pw.SizedBox(width: 20),
+          
 
             pw.Expanded(
               child: pw.Column(
@@ -1278,11 +1295,11 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                     'Projects',
                     style: pw.TextStyle(
                       fontWeight: pw.FontWeight.bold,
-                      fontSize: 18,
+                      fontSize: 17,
                       color: PdfColor.fromHex('#084A3F'),
                     ),
                   ),
-
+ pw.SizedBox(height: 15),
                   // pw.Text('Projects', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14,  color: PdfColor.fromHex('#084A3F'),)),
                   for (var p in projects)
                     pw.Padding(
@@ -1294,22 +1311,16 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                             p['title'] ?? '',
                             style: pw.TextStyle(
                               fontWeight: pw.FontWeight.bold,
-                              fontSize: 11,
+                              fontSize: 12,
                             ),
                           ),
                           pw.SizedBox(height: 3),
 
-                          pw.Text(
-                            ' ${p['tag']}',
-                            style: pw.TextStyle(
-                              fontSize: 8,
-                              fontWeight: pw.FontWeight.bold,
-                            ),
-                          ),
+                       
                           pw.SizedBox(height: 3),
                           pw.Text(
                             p['desc'] ?? '',
-                            style: const pw.TextStyle(fontSize: 10),
+                            style: const pw.TextStyle(fontSize: 11),
                           ),
                         ],
                       ),
@@ -1331,13 +1342,9 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
         pageFormat: format,
         build: (context) => pw.Row(
           children: [
-            pw.Container(
-              width: 160,
-              color: PdfColor.fromHex('#084A3F'),
-              padding: const pw.EdgeInsets.all(10),
-            ),
+         
 
-            pw.SizedBox(width: 20),
+          
             pw.Expanded(
               child: pw.Column(
                 crossAxisAlignment: pw.CrossAxisAlignment.start,
@@ -1352,37 +1359,22 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                             P['title'] ?? '',
                             style: pw.TextStyle(
                               fontWeight: pw.FontWeight.bold,
-                              fontSize: 11,
+                              fontSize: 12,
                             ),
                           ),
                           pw.SizedBox(height: 3),
 
-                          pw.Text(
-                            ' ${P['tag']}',
-                            style: pw.TextStyle(
-                              fontSize: 8,
-                              fontWeight: pw.FontWeight.bold,
-                            ),
-                          ),
+                        
                           pw.SizedBox(height: 3),
                           pw.Text(
                             P['desc'] ?? '',
-                            style: const pw.TextStyle(fontSize: 10),
+                            style: const pw.TextStyle(fontSize: 11),
                           ),
                         ],
                       ),
                     ),
                   // pw.Text('${P['title']} — ${P['tag']}— ${P['desc']}', style: const pw.TextStyle(fontSize: 9)),
-                  pw.SizedBox(height: 10),
-                  pw.Text(
-                    'References',
-                    style: pw.TextStyle(
-                      fontWeight: pw.FontWeight.bold,
-                      fontSize: 12,
-                    ),
-                  ),
-                  for (var r in references)
-                    pw.Text('• $r', style: const pw.TextStyle(fontSize: 9)),
+               
                 ],
               ),
             ),
