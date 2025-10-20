@@ -1,4 +1,3 @@
-
 // import 'package:flutter/material.dart';
 // import 'package:pdf/widgets.dart' as pw;
 // import 'package:pdf/pdf.dart';
@@ -69,7 +68,6 @@
 //     ]
 //   }
 // ];
-
 
 //   final List<Map<String, dynamic>> experience = [
 //     {
@@ -608,8 +606,6 @@
 //     },
 //   ];
 
-
-
 //   @override
 //   Widget build(BuildContext context) {
 //     return Scaffold(
@@ -804,7 +800,6 @@
 //   }
 
 //   // ✅ PDF GENERATION
-  
 
 //   Future<void> _createPdfAndPrint() async {
 //     final pdf = pw.Document();
@@ -1016,7 +1011,7 @@
 //             child: pw.Column(
 //               crossAxisAlignment: pw.CrossAxisAlignment.start,
 //               children: [
-                
+
 //                 pw.SizedBox(height: 6),
 //                 pw.Text(about, style: pw.TextStyle(font: ttf, fontSize: 10)),
 //                 pw.SizedBox(height: 10),
@@ -1208,7 +1203,7 @@
 //                         pw.Text(
 //                           ' (${edu['degree']})',
 //                           style: pw.TextStyle(fontSize: 9, font: ttfBold),
-//                         ), 
+//                         ),
 //                                                 pw.Text(
 //                           ' (${edu['institution']})',
 //                           style: pw.TextStyle(fontSize: 9, font: ttfBold),
@@ -1227,27 +1222,18 @@
 //                   ),
 //                 ),
 //               ],
-              
+
 //                 // 🔸 PROJECTS Section
 
-               
 //             ),
 //           ),
 //         ),
 //       ),
 //     );
-  
 
 //     await Printing.layoutPdf(onLayout: (format) => pdf.save());
 //   }
 // }
-
-
-
-
-
-
-
 
 import 'package:flutter/material.dart';
 import 'package:pdf/widgets.dart' as pw;
@@ -1279,15 +1265,13 @@ class _Resume5ScreenState extends State<Resume5Screen> {
   ];
   final List<String> languages = ['English', 'Urdu'];
 
-  final List<String> AI = [
-    'Taughtlifesavingskillsand CPRclasses',
-    'Red Cross volunteer',
-  ];
+  final List<String> AI = ['Taught life saving skills ', 'Red Cross volunteer'];
+
   final List<String> intrests = [
-    'RecreationalFootballLeague teamcaptain'
-        '\nTwo-timeleaguechampions'
-        '\nLocalcommunitytheatre\n performedplaysandshows',
+    ' Football team captain ',
+    // 'Two-time league champions'
   ];
+
   final education = [
     {
       'degree': 'Bachelor of Science in Computer Science (BSCS)',
@@ -1578,6 +1562,32 @@ class _Resume5ScreenState extends State<Resume5Screen> {
       'subtitle':
           'A management app for small organizations to streamline tasks and improve productivity.',
     },
+    {
+      'title': 'YobleLamea',
+      'subtitle':
+          'A driving-hub app connecting customers with drivers for rides, deliveries, and corporate transport.',
+    },
+    {
+      'title': 'Muttaqi Quran App',
+      'subtitle':
+          'An Islamic app featuring Quran recitation, tafseer, and prayer timings with a spiritual and modern experience.',
+    },
+    {
+      'title': 'Bissi Player',
+      'subtitle':
+          'A media streaming app enabling users to watch Islamic content with AI-based recommendations.',
+    },
+  
+    {
+      'title': 'WirdBook',
+      'subtitle':
+          'A spiritual guide app for daily Islamic readings, duas, and progress tracking.',
+    },
+    {
+      'title': 'WeTeachs',
+      'subtitle':
+          'An e-learning app enabling schools and parents to manage lessons and student progress effectively.',
+    },
   ];
 
   final List<Map<String, String>> projects2 = [
@@ -1641,6 +1651,7 @@ class _Resume5ScreenState extends State<Resume5Screen> {
       'subtitle':
           'A health-tracking app focusing on improving diet, sleep, and fitness for long-term wellness.',
     },
+
     {
       'title': 'Amici',
       'subtitle':
@@ -1650,6 +1661,18 @@ class _Resume5ScreenState extends State<Resume5Screen> {
       'title': 'United Proposal',
       'subtitle':
           'A matchmaking app designed for proposals and long-term relationships with secure chat features.',
+    },
+    {
+      'title': 'Fittech',
+      'subtitle':
+          'A fitness app for athletes and trainers to monitor workouts, track performance, and share progress.',
+    },
+   
+
+    {
+      'title': 'Reverse Disease',
+      'subtitle':
+          'A health-tracking app focusing on improving diet, sleep, and fitness for long-term wellness.',
     },
     {
       'title': 'PricePro',
@@ -2035,16 +2058,635 @@ class _Resume5ScreenState extends State<Resume5Screen> {
 
   // ✅ PDF GENERATION
 
+  //   Future<void> _createPdfAndPrint() async {
+  //     final pdf = pw.Document();
+
+  //     final pw.Font ttf = await PdfGoogleFonts.openSansRegular();
+  //     final pw.Font ttfBold = await PdfGoogleFonts.openSansBold();
+
+  //     // 🔹 Sidebar Builder
+  //     pw.Widget buildSidebar({bool includeInfo = false}) {
+  //       return pw.Container(
+  //         width: 190,
+  //         color: PdfColor.fromHex('#134080'),
+  //         padding: const pw.EdgeInsets.all(12),
+  //         child: includeInfo
+  //             ? pw.Column(
+  //                 crossAxisAlignment: pw.CrossAxisAlignment.start,
+  //                 children: [
+  //                   pw.SizedBox(height: 20),
+  //                   pw.Text(
+  //                     'CONTACT',
+  //                     style: pw.TextStyle(
+  //                       font: pw.Font.timesBoldItalic(),
+  //                       fontSize: 11,
+  //                       color: PdfColors.white,
+  //                     ),
+  //                   ),
+  //                   pw.SizedBox(height: 10),
+  //                   pw.Text(
+  //                     ' Lahore,Pakistan\n+92 308 4695012\narhamsarwar786@gmail.com',
+  //                     style: pw.TextStyle(
+  //                       font: pw.Font.timesBoldItalic(),
+  //                       fontSize: 9,
+  //                       color: PdfColors.white,
+  //                     ),
+  //                   ),
+  //                   pw.SizedBox(height: 15),
+  //                   pw.Divider(color: PdfColors.grey, thickness: 0.3),
+  //                   pw.SizedBox(height: 15),
+  //                   pw.Text(
+  //                     'CORE QUALIFICATION',
+  //                     style: pw.TextStyle(
+  //                       font: pw.Font.timesBoldItalic(),
+  //                       fontSize: 11,
+  //                       color: PdfColors.white,
+  //                     ),
+  //                   ),
+  //                   pw.SizedBox(height: 4),
+  //                   ...coreSkills.map(
+  //                     (s) => pw.Padding(
+  //                       padding: const pw.EdgeInsets.only(bottom: 2),
+  //                       child: pw.Row(
+  //                         children: [
+  //                           pw.Text(
+  //                             '• ',
+  //                             style: pw.TextStyle(
+  //                               font: ttfBold,
+
+  //                               // font: pw.Font.timesBoldItalic(),
+  //                               fontSize: 9,
+  //                               color: PdfColors.white,
+  //                             ),
+  //                           ),
+  //                           pw.Text(
+  //                             '$s',
+  //                             style: pw.TextStyle(
+  //                               font: pw.Font.timesBoldItalic(),
+  //                               fontSize: 8,
+  //                               color: PdfColors.white,
+  //                             ),
+  //                           ),
+  //                         ],
+  //                       ),
+  //                     ),
+  //                   ),
+  //                   pw.SizedBox(height: 10),
+
+  //                   pw.Divider(color: PdfColors.grey, thickness: 0.3),
+  //                   pw.SizedBox(height: 15),
+  //                   pw.Text(
+  //                     'LANGUAGES',
+  //                     style: pw.TextStyle(
+  //                       font: pw.Font.timesBoldItalic(),
+  //                       fontSize: 11,
+  //                       color: PdfColors.white,
+  //                     ),
+  //                   ),
+  //                   pw.SizedBox(height: 5),
+
+  //                   ...languages.map(
+  //                     (s) => pw.Padding(
+  //                       padding: const pw.EdgeInsets.only(bottom: 2),
+  //                       child: pw.Row(
+  //                         children: [
+  //                           pw.Text(
+  //                             '• ',
+  //                             style: pw.TextStyle(
+  //                               font: ttfBold,
+  //                               // font: pw.Font.timesBoldItalic(),
+  //                               fontSize: 9,
+  //                               color: PdfColors.white,
+  //                             ),
+  //                           ),
+  //                           pw.Text(
+  //                             '$s',
+  //                             style: pw.TextStyle(
+  //                               font: pw.Font.timesBoldItalic(),
+  //                               fontSize: 9,
+  //                               color: PdfColors.white,
+  //                             ),
+  //                           ),
+  //                         ],
+  //                       ),
+  //                     ),
+  //                   ),
+  //                   pw.SizedBox(height: 10),
+
+  //                   pw.Divider(color: PdfColors.grey, thickness: 0.3),
+  //                   pw.SizedBox(height: 15),
+  //                   pw.Text(
+  //                     'ADDITIONAL INFORMATION',
+  //                     style: pw.TextStyle(
+  //                       font: pw.Font.timesBoldItalic(),
+  //                       fontSize: 11,
+  //                       color: PdfColors.white,
+  //                     ),
+  //                   ),
+  //                   pw.SizedBox(height: 5),
+
+  //                   ...AI.map(
+  //                     (s) => pw.Padding(
+  //                       padding: const pw.EdgeInsets.only(bottom: 2),
+  //                       child: pw.Row(
+  //                         children: [
+  //                           pw.Text(
+  //                             '• ',
+  //                             style: pw.TextStyle(
+  //                               font: ttfBold,
+  //                               fontSize: 9,
+  //                               color: PdfColors.white,
+  //                             ),
+  //                           ),
+  //                           pw.Text(
+  //                             '$s',
+  //                             style: pw.TextStyle(
+  //                               font: pw.Font.timesBoldItalic(),
+  //                               fontSize: 9,
+  //                               color: PdfColors.white,
+  //                             ),
+  //                           ),
+  //                         ],
+  //                       ),
+  //                     ),
+  //                   ),
+  //                   pw.SizedBox(height: 10),
+  //                   pw.Divider(color: PdfColors.grey, thickness: 0.3),
+  //                   pw.SizedBox(height: 15),
+  //                   pw.Text(
+  //                     'INTRESTS',
+  //                     style: pw.TextStyle(
+  //                       font: ttfBold,
+  //                       fontSize: 11,
+  //                       color: PdfColors.white,
+  //                     ),
+  //                   ),
+  //                   pw.SizedBox(height: 4),
+  //                   // ...intrests.map(
+  //                   //   (s) => pw.Padding(
+  //                   //     padding: const pw.EdgeInsets.only(bottom: 2),
+  //                   //     child: pw.Row(
+  //                   //       children: [
+  //                   //         pw.Text(
+  //                   //           '• ',
+  //                   //           style: pw.TextStyle(
+  //                   //             font: ttfBold,
+  //                   //             fontSize: 9,
+  //                   //             color: PdfColors.white,
+  //                   //           ),
+  //                   //         ),
+  //                   //         pw.Text(
+  //                   //           '$s',
+  //                   //           style: pw.TextStyle(
+  //                   //             font: pw.Font.timesBoldItalic(),
+  //                   //             fontSize: 9,
+  //                   //             color: PdfColors.white,
+  //                   //           ),
+  //                   //         ),
+  //                   //       ],
+  //                   //     ),
+  //                   //   ),
+  //                   // ),
+
+  //                   ...intrests.map(
+  //                     (s) => pw.Padding(
+  //                       padding: const pw.EdgeInsets.only(bottom: 2),
+  //                       child: pw.Row(
+  //                         children: [
+  //                           pw.Text(
+  //                             '• ',
+  //                             style: pw.TextStyle(
+  //                               font: ttfBold,
+  //                               fontSize: 9,
+  //                               color: PdfColors.white,
+  //                             ),
+  //                           ),
+  //                           pw.Text(
+  //                             '$s',
+  //                             style: pw.TextStyle(
+  //                               font: pw.Font.timesBoldItalic(),
+  //                               fontSize: 9,
+  //                               color: PdfColors.white,
+  //                             ),
+  //                           ),
+  //                         ],
+  //                       ),
+  //                     ),
+  //                   ),
+  //                   pw.SizedBox(height: 10),
+  //                   pw.Divider(color: PdfColors.grey, thickness: 0.3),
+  //                 ],
+  //               )
+  //             : pw.Container(), // Empty but keeps same structure
+  //       );
+  //     }
+
+  //     // 🔹 Header Builder (only for Page 1)
+  //     pw.Widget buildHeader() {
+  //       return pw.Container(
+  //         height: 100,
+  //         width: double.infinity,
+  //         color: PdfColor.fromHex("#4A4A4A"),
+  //         padding: const pw.EdgeInsets.symmetric(vertical: 20, horizontal: 23),
+  //         child: pw.Column(
+  //           mainAxisAlignment: pw.MainAxisAlignment.start,
+  //           crossAxisAlignment: pw.CrossAxisAlignment.start,
+  //           children: [
+  //             pw.SizedBox(width: 20),
+  //             pw.Text(
+  //               nameLine1,
+  //               style: pw.TextStyle(
+  //                 font: pw.Font.timesBoldItalic(),
+  //                 fontSize: 37,
+  //                 color: PdfColors.white,
+  //               ),
+  //             ),
+  //           ],
+  //         ),
+  //       );
+  //     }
+
+  //     // 🔹 Page Layout Builder
+  //     pw.Widget buildPage({
+  //       required pw.Widget content,
+  //       bool showHeader = true,
+  //       bool includeInfo = true,
+  //     }) {
+  //       return pw.Container(
+  //         width: double.infinity,
+  //         height: double.infinity,
+  //         child: pw.Column(
+  //           children: [
+  //             if (showHeader) buildHeader(),
+  //             pw.Expanded(
+  //               child: pw.Row(
+  //                 crossAxisAlignment: pw.CrossAxisAlignment.start,
+  //                 children: [
+  //                   buildSidebar(includeInfo: includeInfo),
+  //                   pw.SizedBox(width: 12),
+  //                   pw.Expanded(child: content),
+  //                 ],
+  //               ),
+  //             ),
+  //           ],
+  //         ),
+  //       );
+  //     }
+
+  //     // 🔸 PAGE 1 (Header + Full Sidebar)
+  //     pdf.addPage(
+  //       pw.Page(
+  //         pageFormat: PdfPageFormat.a4,
+  //         margin: pw.EdgeInsets.zero, // ensure full width usage
+  //         build: (context) => buildPage(
+  //           showHeader: true,
+  //           includeInfo: true,
+  //           content: pw.Padding(
+  //             padding: const pw.EdgeInsets.all(12),
+  //             child: pw.Column(
+  //               crossAxisAlignment: pw.CrossAxisAlignment.start,
+  //               children: [
+  //                 pw.SizedBox(height: 6),
+  //                 pw.Text(about, style: pw.TextStyle(font: ttf, fontSize: 10)),
+  //                 pw.SizedBox(height: 10),
+  //                 pw.Divider(thickness: 2, color: PdfColors.grey500),
+  //                 pw.SizedBox(height: 10),
+  //                 pw.Text(
+  //                   'EXPERIENCE',
+  //                   style: pw.TextStyle(
+  //                     font: pw.Font.timesBoldItalic(),
+  //                     fontSize: 15,
+  //                   ),
+  //                 ),
+  //                 pw.SizedBox(height: 6),
+  //                 ...experience.map(
+  //                   (exp) => pw.Padding(
+  //                     padding: const pw.EdgeInsets.only(bottom: 6),
+  //                     child: pw.Column(
+  //                       crossAxisAlignment: pw.CrossAxisAlignment.start,
+  //                       children: [
+  //                         pw.Text(
+  //                           exp['role']!,
+  //                           style: pw.TextStyle(
+  //                             font: pw.Font.helveticaBoldOblique(),
+  //                             fontSize: 11,
+  //                           ),
+  //                         ),
+  //                         pw.SizedBox(height: 3),
+  //                         pw.Text(
+  //                           ' ${exp['period']}',
+  //                           style: pw.TextStyle(fontSize: 9),
+  //                         ),
+  //                         pw.SizedBox(height: 3),
+  //                         ...((exp['bullets'] as List<String>).map(
+  //                           (b) => pw.Row(
+  //                             children: [
+  //                               pw.Text(
+  //                                 '• ',
+  //                                 style: pw.TextStyle(font: ttf, fontSize: 9),
+  //                               ),
+  //                               pw.Text(
+  //                                 '$b',
+  //                                 style: pw.TextStyle(font: ttf, fontSize: 9),
+  //                               ),
+  //                               pw.SizedBox(height: 3),
+  //                             ],
+  //                           ),
+  //                         )),
+  //                       ],
+  //                     ),
+  //                   ),
+
+  //                 ),
+  //               ],
+  //             ),
+  //           ),
+  //         ),
+  //       ),
+  //     );
+
+  //     // 🔸 PAGE 2 (NO header, EMPTY Sidebar — but same layout)
+  //     pdf.addPage(
+  //       pw.Page(
+  //         pageFormat: PdfPageFormat.a4,
+  //         margin: pw.EdgeInsets.zero,
+  //         build: (context) => buildPage(
+  //           showHeader: false, // No black header
+  //           includeInfo: false, // Sidebar same but empty
+  //           content: pw.Padding(
+  //             padding: const pw.EdgeInsets.all(12),
+  //             child: pw.Column(
+  //               crossAxisAlignment: pw.CrossAxisAlignment.start,
+  //               children: [
+  //                 ...experience2.map(
+  //                   (exp2) => pw.Padding(
+  //                     padding: const pw.EdgeInsets.only(bottom: 6),
+  //                     child: pw.Column(
+  //                       crossAxisAlignment: pw.CrossAxisAlignment.start,
+  //                       children: [
+  //                         pw.Text(
+  //                           exp2['role']!,
+  //                           style: pw.TextStyle(
+  //                             font: pw.Font.helveticaBoldOblique(),
+  //                             fontSize: 11,
+  //                           ),
+  //                         ),
+  //                         pw.SizedBox(height: 3),
+  //                         pw.Text(
+  //                           '${exp2['period']}',
+  //                           style: pw.TextStyle(font: ttfBold, fontSize: 9),
+  //                         ),
+  //                         pw.SizedBox(height: 3),
+  //                         ...((exp2['bullets'] as List<String>).map(
+  //                           (b) => pw.Row(
+  //                             children: [
+  //                               pw.Text(
+  //                                 '• ',
+  //                                 style: pw.TextStyle(font: ttf, fontSize: 9),
+  //                               ),
+  //                               pw.Text(
+  //                                 '$b',
+  //                                 style: pw.TextStyle(font: ttf, fontSize: 9),
+  //                               ),
+  //                               pw.SizedBox(height: 3),
+  //                             ],
+  //                           ),
+  //                         )),
+  //                       ],
+  //                     ),
+  //                   ),
+  //                 ),
+  //               ],
+  //             ),
+  //           ),
+  //         ),
+  //       ),
+  //     );
+
+  //     // page 3
+  //     pdf.addPage(
+  //       pw.Page(
+  //         pageFormat: PdfPageFormat.a4,
+  //         margin: pw.EdgeInsets.zero,
+  //         build: (context) => buildPage(
+  //           showHeader: false, // No black header
+  //           includeInfo: false, // Sidebar same but empty
+  //           content: pw.Padding(
+  //             padding: const pw.EdgeInsets.all(12),
+  //             child: pw.Column(
+  //               crossAxisAlignment: pw.CrossAxisAlignment.start,
+  //               children: [
+  //                 pw.SizedBox(height: 10),
+  //                 pw.Divider(thickness: 2, color: PdfColors.grey500),
+  //                 pw.SizedBox(height: 10),
+  //                 // 🔸 PROJECTS Section
+  //                 pw.Text(
+  //                   'PROJECTS',
+  //                   style: pw.TextStyle(
+  //                     font: pw.Font.timesBoldItalic(),
+  //                     fontSize: 15,
+  //                   ),
+  //                 ),
+  //                 pw.SizedBox(height: 6),
+  //                 ...projects.map(
+  //                   (p) => pw.Padding(
+  //                     padding: const pw.EdgeInsets.only(bottom: 4),
+  //                     child: pw.Column(
+  //                       crossAxisAlignment: pw.CrossAxisAlignment.start,
+  //                       children: [
+  //                         pw.Text(
+  //                           p['title']!,
+  //                           style: pw.TextStyle(
+  //                             font: pw.Font.helveticaBoldOblique(),
+  //                             fontSize: 11,
+  //                           ),
+  //                         ),
+  //                         pw.SizedBox(height: 3),
+  //                         pw.Text(
+  //                           p['subtitle']!,
+  //                           style: pw.TextStyle(font: ttf, fontSize: 9),
+  //                         ),
+  //                       ],
+  //                     ),
+  //                   ),
+  //                 ),
+  //               ],
+  //             ),
+  //           ),
+  //         ),
+  //       ),
+  //     );
+  //     // page 4
+  //     pdf.addPage(
+  //       pw.Page(
+  //         pageFormat: PdfPageFormat.a4,
+  //         margin: pw.EdgeInsets.zero,
+  //         build: (context) => buildPage(
+  //           showHeader: false, // No black header
+  //           includeInfo: false, // Sidebar same but empty
+  //           content: pw.Padding(
+  //             padding: const pw.EdgeInsets.all(12),
+  //             child: pw.Column(
+  //               crossAxisAlignment: pw.CrossAxisAlignment.start,
+  //               children: [
+  //                 // 🔸 PROJECTS Section
+  //                 ...projects2.map(
+  //                   (p) => pw.Padding(
+  //                     padding: const pw.EdgeInsets.only(bottom: 4),
+  //                     child: pw.Column(
+  //                       crossAxisAlignment: pw.CrossAxisAlignment.start,
+  //                       children: [
+  //                         pw.Text(
+  //                           p['title']!,
+  //                           style: pw.TextStyle(
+  //                             font: pw.Font.helveticaBoldOblique(),
+  //                             fontSize: 11,
+  //                           ),
+  //                         ),
+  //                         pw.SizedBox(height: 3),
+  //                         pw.Text(
+  //                           p['subtitle']!,
+  //                           style: pw.TextStyle(font: ttf, fontSize: 9),
+  //                         ),
+  //                       ],
+  //                     ),
+  //                   ),
+  //                 ),
+  //               ],
+  //             ),
+  //           ),
+  //         ),
+  //       ),
+  //     );
+  //     // page 5
+  //     pdf.addPage(
+  //       pw.Page(
+  //         pageFormat: PdfPageFormat.a4,
+  //         margin: pw.EdgeInsets.zero,
+  //         build: (context) => buildPage(
+  //           showHeader: false, // No black header
+  //           includeInfo: false, // Sidebar same but empty
+  //           content: pw.Padding(
+  //             padding: const pw.EdgeInsets.all(12),
+  //             child: pw.Column(
+  //               crossAxisAlignment: pw.CrossAxisAlignment.start,
+  //               children: [
+  //                 ...projects2.map(
+  //                   (p) => pw.Padding(
+  //                     padding: const pw.EdgeInsets.only(bottom: 4),
+  //                     child: pw.Column(
+  //                       crossAxisAlignment: pw.CrossAxisAlignment.start,
+  //                       children: [
+  //                         pw.Text(
+  //                           p['title']!,
+  //                           style: pw.TextStyle(
+  //                             font: pw.Font.helveticaBoldOblique(),
+  //                             fontSize: 11,
+  //                           ),
+  //                         ),
+  //                         pw.SizedBox(height: 3),
+  //                         pw.Text(
+  //                           p['subtitle']!,
+  //                           style: pw.TextStyle(font: ttf, fontSize: 9),
+  //                         ),
+  //                       ],
+  //                     ),
+  //                   ),
+  //                 ),
+  //               ],
+
+  //               // 🔸 PROJECTS Section
+  //             ),
+  //           ),
+  //         ),
+  //       ),
+  //     );
+
+  //     pdf.addPage(
+  //       pw.Page(
+  //         pageFormat: PdfPageFormat.a4,
+  //         margin: pw.EdgeInsets.zero,
+  //         build: (context) => buildPage(
+  //           showHeader: false, // No black header
+  //           includeInfo: false, // Sidebar same but empty
+  //           content: pw.Padding(
+  //             padding: const pw.EdgeInsets.all(12),
+  //             child: pw.Column(
+  //               crossAxisAlignment: pw.CrossAxisAlignment.start,
+  //               children: [
+  //                 pw.SizedBox(height: 10),
+  //                 pw.Divider(thickness: 2, color: PdfColors.grey600),
+  //                 pw.SizedBox(height: 10),
+  //                 pw.Text(
+  //                   'EDUCATION',
+  //                   style: pw.TextStyle(
+  //                     font: pw.Font.timesBoldItalic(),
+  //                     fontSize: 15,
+  //                   ),
+  //                 ),
+  //                 pw.SizedBox(height: 6),
+
+  //                 // 🔸 PROJECTS Section
+  //                 ...education.map(
+  //                   (edu) => pw.Padding(
+  //                     padding: const pw.EdgeInsets.only(bottom: 6),
+  //                     child: pw.Column(
+  //                       crossAxisAlignment: pw.CrossAxisAlignment.start,
+  //                       children: [
+  //                         pw.Text(
+  //                           '${edu['degree']}',
+  //                           style: pw.TextStyle(fontSize: 9),
+  //                         ),
+  //                         pw.Text(
+  //                           '${edu['institution']}',
+  //                           style: pw.TextStyle(
+  //                             fontSize: 9,
+  //                             font: pw.Font.helveticaBoldOblique(),
+  //                           ),
+  //                         ),
+  //                         pw.Text(
+  //                           '${edu['period']}',
+  //                           style: pw.TextStyle(fontSize: 9, font: ttf),
+  //                         ),
+  //                         ...((edu['details'] as List<String>).map(
+  //                           (b) => pw.Row(
+  //                             children: [
+  //                               pw.Text(
+  //                                 '• ',
+  //                                 style: pw.TextStyle(font: ttf, fontSize: 9),
+  //                               ),
+  //                               pw.Text(
+  //                                 '$b',
+  //                                 style: pw.TextStyle(font: ttf, fontSize: 9),
+  //                               ),
+  //                             ],
+  //                           ),
+  //                         )),
+  //                       ],
+  //                     ),
+  //                   ),
+  //                 ),
+  //               ],
+  //             ),
+  //           ),
+  //         ),
+  //       ),
+  //     );
+
+  //     await Printing.layoutPdf(onLayout: (format) => pdf.save());
+  //   }
+  // }
+
   Future<void> _createPdfAndPrint() async {
     final pdf = pw.Document();
 
     final pw.Font ttf = await PdfGoogleFonts.openSansRegular();
     final pw.Font ttfBold = await PdfGoogleFonts.openSansBold();
 
-    // 🔹 Sidebar Builder
+    // 🔹 Sidebar Builder (Blue Area)
     pw.Widget buildSidebar({bool includeInfo = false}) {
       return pw.Container(
-        width: 170,
+        width: 190,
         color: PdfColor.fromHex('#134080'),
         padding: const pw.EdgeInsets.all(12),
         child: includeInfo
@@ -2062,7 +2704,7 @@ class _Resume5ScreenState extends State<Resume5Screen> {
                   ),
                   pw.SizedBox(height: 10),
                   pw.Text(
-                    ' Lahore,Pakistan\n+92 308 4695012\narhamsarwar786@gmail.com',
+                    'Lahore, Pakistan\n+92 308 4695012\narhamsarwar786@gmail.com',
                     style: pw.TextStyle(
                       font: pw.Font.timesBoldItalic(),
                       fontSize: 9,
@@ -2090,8 +2732,6 @@ class _Resume5ScreenState extends State<Resume5Screen> {
                             '• ',
                             style: pw.TextStyle(
                               font: ttfBold,
-
-                              // font: pw.Font.timesBoldItalic(),
                               fontSize: 9,
                               color: PdfColors.white,
                             ),
@@ -2100,7 +2740,7 @@ class _Resume5ScreenState extends State<Resume5Screen> {
                             '$s',
                             style: pw.TextStyle(
                               font: pw.Font.timesBoldItalic(),
-                              fontSize: 9,
+                              fontSize: 8,
                               color: PdfColors.white,
                             ),
                           ),
@@ -2109,7 +2749,6 @@ class _Resume5ScreenState extends State<Resume5Screen> {
                     ),
                   ),
                   pw.SizedBox(height: 10),
-
                   pw.Divider(color: PdfColors.grey, thickness: 0.3),
                   pw.SizedBox(height: 15),
                   pw.Text(
@@ -2121,7 +2760,6 @@ class _Resume5ScreenState extends State<Resume5Screen> {
                     ),
                   ),
                   pw.SizedBox(height: 5),
-
                   ...languages.map(
                     (s) => pw.Padding(
                       padding: const pw.EdgeInsets.only(bottom: 2),
@@ -2131,7 +2769,6 @@ class _Resume5ScreenState extends State<Resume5Screen> {
                             '• ',
                             style: pw.TextStyle(
                               font: ttfBold,
-                              // font: pw.Font.timesBoldItalic(),
                               fontSize: 9,
                               color: PdfColors.white,
                             ),
@@ -2149,7 +2786,6 @@ class _Resume5ScreenState extends State<Resume5Screen> {
                     ),
                   ),
                   pw.SizedBox(height: 10),
-
                   pw.Divider(color: PdfColors.grey, thickness: 0.3),
                   pw.SizedBox(height: 15),
                   pw.Text(
@@ -2161,7 +2797,6 @@ class _Resume5ScreenState extends State<Resume5Screen> {
                     ),
                   ),
                   pw.SizedBox(height: 5),
-
                   ...AI.map(
                     (s) => pw.Padding(
                       padding: const pw.EdgeInsets.only(bottom: 2),
@@ -2191,7 +2826,7 @@ class _Resume5ScreenState extends State<Resume5Screen> {
                   pw.Divider(color: PdfColors.grey, thickness: 0.3),
                   pw.SizedBox(height: 15),
                   pw.Text(
-                    'INTRESTS',
+                    'INTERESTS',
                     style: pw.TextStyle(
                       font: ttfBold,
                       fontSize: 11,
@@ -2228,11 +2863,11 @@ class _Resume5ScreenState extends State<Resume5Screen> {
                   pw.Divider(color: PdfColors.grey, thickness: 0.3),
                 ],
               )
-            : pw.Container(), // Empty but keeps same structure
+            : pw.Container(),
       );
     }
 
-    // 🔹 Header Builder (only for Page 1)
+    // 🔹 Header Builder (only for first page)
     pw.Widget buildHeader() {
       return pw.Container(
         height: 100,
@@ -2240,7 +2875,6 @@ class _Resume5ScreenState extends State<Resume5Screen> {
         color: PdfColor.fromHex("#4A4A4A"),
         padding: const pw.EdgeInsets.symmetric(vertical: 20, horizontal: 23),
         child: pw.Column(
-          mainAxisAlignment: pw.MainAxisAlignment.start,
           crossAxisAlignment: pw.CrossAxisAlignment.start,
           children: [
             pw.SizedBox(width: 20),
@@ -2257,7 +2891,7 @@ class _Resume5ScreenState extends State<Resume5Screen> {
       );
     }
 
-    // 🔹 Page Layout Builder
+    // 🔹 Page Layout Builder (Sidebar only on first page)
     pw.Widget buildPage({
       required pw.Widget content,
       bool showHeader = true,
@@ -2273,9 +2907,18 @@ class _Resume5ScreenState extends State<Resume5Screen> {
               child: pw.Row(
                 crossAxisAlignment: pw.CrossAxisAlignment.start,
                 children: [
-                  buildSidebar(includeInfo: includeInfo),
-                  pw.SizedBox(width: 12),
-                  pw.Expanded(child: content),
+                  if (includeInfo) buildSidebar(includeInfo: includeInfo),
+                  if (includeInfo) pw.SizedBox(width: 12),
+                  // Content expands fully on pages without sidebar
+                  pw.Expanded(
+                    child: pw.Padding(
+                      padding: pw.EdgeInsets.only(
+                        right: 12,
+                        left: includeInfo ? 0 : 24,
+                      ),
+                      child: content,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -2284,342 +2927,286 @@ class _Resume5ScreenState extends State<Resume5Screen> {
       );
     }
 
-    // 🔸 PAGE 1 (Header + Full Sidebar)
+    // PAGE 1 - With Header + Sidebar
     pdf.addPage(
       pw.Page(
         pageFormat: PdfPageFormat.a4,
-        margin: pw.EdgeInsets.zero, // ensure full width usage
+        margin: pw.EdgeInsets.zero,
         build: (context) => buildPage(
           showHeader: true,
           includeInfo: true,
-          content: pw.Padding(
-            padding: const pw.EdgeInsets.all(12),
-            child: pw.Column(
-              crossAxisAlignment: pw.CrossAxisAlignment.start,
-              children: [
-                pw.SizedBox(height: 6),
-                pw.Text(about, style: pw.TextStyle(font: ttf, fontSize: 10)),
-                pw.SizedBox(height: 10),
-                pw.Divider(thickness: 2, color: PdfColors.grey500),
-                pw.SizedBox(height: 10),
-                pw.Text(
-                  'EXPERIENCE',
-                  style: pw.TextStyle(
-                    font: pw.Font.timesBoldItalic(),
-                    fontSize: 15,
+          content: pw.Column(
+            crossAxisAlignment: pw.CrossAxisAlignment.start,
+            children: [
+              pw.SizedBox(height: 15),
+              pw.Text(about, style: pw.TextStyle(font: ttf, fontSize: 10)),
+              pw.SizedBox(height: 10),
+              pw.Divider(thickness: 2, color: PdfColors.grey500),
+              pw.SizedBox(height: 10),
+              pw.Text(
+                'EXPERIENCE',
+                style: pw.TextStyle(
+                  font: pw.Font.timesBoldItalic(),
+                  fontSize:16,
+                ),
+              ),
+              pw.SizedBox(height: 6),
+              ...experience.map(
+                (exp) => pw.Padding(
+                  padding: const pw.EdgeInsets.only(bottom: 6),
+                  child: pw.Column(
+                    crossAxisAlignment: pw.CrossAxisAlignment.start,
+                    children: [
+                      pw.Text(
+                        exp['role']!,
+                        style: pw.TextStyle(
+                          font: pw.Font.helveticaBoldOblique(),
+                          fontSize: 11,
+                        ),
+                      ),
+                      pw.SizedBox(height: 3),
+                      pw.Text(
+                        ' ${exp['period']}',
+                        style: pw.TextStyle(fontSize: 9),
+                      ),
+                      pw.SizedBox(height: 3),
+                      ...((exp['bullets'] as List<String>).map(
+                        (b) => pw.Row(
+                          children: [
+                            pw.Text(
+                              '• ',
+                              style: pw.TextStyle(font: ttf, fontSize: 9),
+                            ),
+                            pw.Text(
+                              '$b',
+                              style: pw.TextStyle(font: ttf, fontSize: 9),
+                            ),
+                          ],
+                        ),
+                      )),
+                    ],
                   ),
                 ),
-                pw.SizedBox(height: 6),
-                ...experience.map(
-                  (exp) => pw.Padding(
-                    padding: const pw.EdgeInsets.only(bottom: 6),
-                    child: pw.Column(
-                      crossAxisAlignment: pw.CrossAxisAlignment.start,
-                      children: [
-                        pw.Text(
-                          exp['role']!,
-                          style: pw.TextStyle(
-                            font: pw.Font.helveticaBoldOblique(),
-                            fontSize: 11,
-                          ),
-                        ),
-                        pw.SizedBox(height: 3),
-                        pw.Text(
-                          ' ${exp['period']}',
-                          style: pw.TextStyle(fontSize: 9),
-                        ),
-                        pw.SizedBox(height: 3),
-                        ...((exp['bullets'] as List<String>).map(
-                          (b) => pw.Row(
-                            children: [
-                              pw.Text(
-                                '• ',
-                                style: pw.TextStyle(font: ttf, fontSize: 9),
-                              ),
-                              pw.Text(
-                                '$b',
-                                style: pw.TextStyle(font: ttf, fontSize: 9),
-                              ),
-                              pw.SizedBox(height: 3),
-                            ],
-                          ),
-                        )),
-                      ],
-                    ),
-                  ),
-        
-        
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
     );
 
-    // 🔸 PAGE 2 (NO header, EMPTY Sidebar — but same layout)
+    // PAGE 2 - Continuation of Experience
     pdf.addPage(
       pw.Page(
         pageFormat: PdfPageFormat.a4,
-        margin: pw.EdgeInsets.zero,
+        margin: pw.EdgeInsets.only(top: 25),
         build: (context) => buildPage(
-          showHeader: false, // No black header
-          includeInfo: false, // Sidebar same but empty
-          content: pw.Padding(
-            padding: const pw.EdgeInsets.all(12),
-            child: pw.Column(
-              crossAxisAlignment: pw.CrossAxisAlignment.start,
-              children: [
-                ...experience2.map(
-                  (exp2) => pw.Padding(
-                    padding: const pw.EdgeInsets.only(bottom: 6),
-                    child: pw.Column(
-                      crossAxisAlignment: pw.CrossAxisAlignment.start,
-                      children: [
-                        pw.Text(
-                          exp2['role']!,
-                          style: pw.TextStyle(
-                            font: pw.Font.helveticaBoldOblique(),
-                            fontSize: 11,
-                          ),
+          showHeader: false,
+          includeInfo: false,
+          content: pw.Column(
+            crossAxisAlignment: pw.CrossAxisAlignment.start,
+            children: [
+              pw.Divider(thickness: 2, color: PdfColors.grey500),
+              pw.SizedBox(height: 10),
+              ...experience2.map(
+                (exp2) => pw.Padding(
+                  padding: const pw.EdgeInsets.only(bottom: 6),
+                  child: pw.Column(
+                    crossAxisAlignment: pw.CrossAxisAlignment.start,
+                    children: [
+                      pw.Text(
+                        exp2['role']!,
+                        style: pw.TextStyle(
+                          font: pw.Font.helveticaBoldOblique(),
+                          fontSize: 11,
                         ),
-                        pw.SizedBox(height: 3),
-                        pw.Text(
-                          '${exp2['period']}',
-                          style: pw.TextStyle(font: ttfBold, fontSize: 9),
+                      ),
+                      pw.SizedBox(height: 3),
+                      pw.Text(
+                        '${exp2['period']}',
+                        style: pw.TextStyle(font: ttfBold, fontSize: 9),
+                      ),
+                      pw.SizedBox(height: 3),
+                      ...((exp2['bullets'] as List<String>).map(
+                        (b) => pw.Row(
+                          children: [
+                            pw.Text(
+                              '• ',
+                              style: pw.TextStyle(font: ttf, fontSize: 9),
+                            ),
+                            pw.Text(
+                              '$b',
+                              style: pw.TextStyle(font: ttf, fontSize: 9),
+                            ),
+                          ],
                         ),
-                        pw.SizedBox(height: 3),
-                        ...((exp2['bullets'] as List<String>).map(
-                          (b) => pw.Row(
-                            children: [
-                              pw.Text(
-                                '• ',
-                                style: pw.TextStyle(font: ttf, fontSize: 9),
-                              ),
-                              pw.Text(
-                                '$b',
-                                style: pw.TextStyle(font: ttf, fontSize: 9),
-                              ),
-                              pw.SizedBox(height: 3),
-                            ],
-                          ),
-                        )),
-                      ],
-                    ),
+                      )),
+                    ],
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
     );
 
-    // page 3
+    // PAGE 3 - Projects
     pdf.addPage(
       pw.Page(
         pageFormat: PdfPageFormat.a4,
         margin: pw.EdgeInsets.zero,
         build: (context) => buildPage(
-          showHeader: false, // No black header
-          includeInfo: false, // Sidebar same but empty
-          content: pw.Padding(
-            padding: const pw.EdgeInsets.all(12),
-            child: pw.Column(
-              crossAxisAlignment: pw.CrossAxisAlignment.start,
-              children: [
-                pw.SizedBox(height: 10),
-                pw.Divider(thickness: 2, color: PdfColors.grey500),
-                pw.SizedBox(height: 10),
-                // 🔸 PROJECTS Section
-                pw.Text(
-                  'PROJECTS',
-                  style: pw.TextStyle(
-                    font: pw.Font.timesBoldItalic(),
-                    fontSize: 15,
+          showHeader: false,
+          includeInfo: false,
+          content: pw.Column(
+            crossAxisAlignment: pw.CrossAxisAlignment.start,
+            children: [
+              pw.SizedBox(height: 25),
+              pw.Divider(thickness: 2, color: PdfColors.grey500),
+              pw.SizedBox(height: 10),
+              pw.Text(
+                'PROJECTS',
+                style: pw.TextStyle(
+                  font: pw.Font.timesBoldItalic(),
+                  fontSize:16,
+                ),
+              ),
+              pw.SizedBox(height: 15),
+              ...projects.map(
+                (p) => pw.Padding(
+                  padding: const pw.EdgeInsets.only(bottom: 4),
+                  child: pw.Column(
+                    crossAxisAlignment: pw.CrossAxisAlignment.start,
+                    children: [
+                      pw.Text(
+                        p['title']!,
+                        style: pw.TextStyle(
+                          font: pw.Font.helveticaBoldOblique(),
+                          fontSize: 11,
+                        ),
+                      ),
+                      pw.SizedBox(height: 3),
+                      pw.Text(
+                        p['subtitle']!,
+                        style: pw.TextStyle(font: ttf, fontSize: 9),
+                      ),
+                    ],
                   ),
                 ),
-                pw.SizedBox(height: 6),
-                ...projects.map(
-                  (p) => pw.Padding(
-                    padding: const pw.EdgeInsets.only(bottom: 4),
-                    child: pw.Column(
-                      crossAxisAlignment: pw.CrossAxisAlignment.start,
-                      children: [
-                        pw.Text(
-                          p['title']!,
-                          style: pw.TextStyle(
-                            font: pw.Font.helveticaBoldOblique(),
-                            fontSize: 11,
-                          ),
-                        ),
-                        pw.SizedBox(height: 3),
-                        pw.Text(
-                          p['subtitle']!,
-                          style: pw.TextStyle(font: ttf, fontSize: 9),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-    // page 4
-    pdf.addPage(
-      pw.Page(
-        pageFormat: PdfPageFormat.a4,
-        margin: pw.EdgeInsets.zero,
-        build: (context) => buildPage(
-          showHeader: false, // No black header
-          includeInfo: false, // Sidebar same but empty
-          content: pw.Padding(
-            padding: const pw.EdgeInsets.all(12),
-            child: pw.Column(
-              crossAxisAlignment: pw.CrossAxisAlignment.start,
-              children: [
-                // 🔸 PROJECTS Section
-                ...projects2.map(
-                  (p) => pw.Padding(
-                    padding: const pw.EdgeInsets.only(bottom: 4),
-                    child: pw.Column(
-                      crossAxisAlignment: pw.CrossAxisAlignment.start,
-                      children: [
-                        pw.Text(
-                          p['title']!,
-                          style: pw.TextStyle(
-                            font: pw.Font.helveticaBoldOblique(),
-                            fontSize: 11,
-                          ),
-                        ),
-                        pw.SizedBox(height: 3),
-                        pw.Text(
-                          p['subtitle']!,
-                          style: pw.TextStyle(font: ttf, fontSize: 9),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-    // page 5
-    pdf.addPage(
-      pw.Page(
-        pageFormat: PdfPageFormat.a4,
-        margin: pw.EdgeInsets.zero,
-        build: (context) => buildPage(
-          showHeader: false, // No black header
-          includeInfo: false, // Sidebar same but empty
-          content: pw.Padding(
-            padding: const pw.EdgeInsets.all(12),
-            child: pw.Column(
-              crossAxisAlignment: pw.CrossAxisAlignment.start,
-              children: [
-                ...projects2.map(
-                  (p) => pw.Padding(
-                    padding: const pw.EdgeInsets.only(bottom: 4),
-                    child: pw.Column(
-                      crossAxisAlignment: pw.CrossAxisAlignment.start,
-                      children: [
-                        pw.Text(
-                          p['title']!,
-                          style: pw.TextStyle(
-                            font: pw.Font.helveticaBoldOblique(),
-                            fontSize: 11,
-                          ),
-                        ),
-                        pw.SizedBox(height: 3),
-                        pw.Text(
-                          p['subtitle']!,
-                          style: pw.TextStyle(font: ttf, fontSize: 9),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-
-              // 🔸 PROJECTS Section
-            ),
+              ),
+            ],
           ),
         ),
       ),
     );
 
+    // PAGE 4 - More Projects
     pdf.addPage(
       pw.Page(
         pageFormat: PdfPageFormat.a4,
         margin: pw.EdgeInsets.zero,
         build: (context) => buildPage(
-          showHeader: false, // No black header
-          includeInfo: false, // Sidebar same but empty
-          content: pw.Padding(
-            padding: const pw.EdgeInsets.all(12),
-            child: pw.Column(
-              crossAxisAlignment: pw.CrossAxisAlignment.start,
-              children: [
-                pw.SizedBox(height: 10),
-                pw.Divider(thickness: 2, color: PdfColors.grey600),
-                pw.SizedBox(height: 10),
-                pw.Text(
-                  'EDUCATION',
-                  style: pw.TextStyle(
-                    font: pw.Font.timesBoldItalic(),
-                    fontSize: 15,
+          showHeader: false,
+          includeInfo: false,
+          content: pw.Column(
+            crossAxisAlignment: pw.CrossAxisAlignment.start,
+            children: [
+              pw.SizedBox(height: 25),
+              pw.Divider(thickness: 2, color: PdfColors.grey500),
+              pw.SizedBox(height: 10),
+              ...projects2.map(
+                (p) => pw.Padding(
+                  padding: const pw.EdgeInsets.only(bottom: 4),
+                  child: pw.Column(
+                    crossAxisAlignment: pw.CrossAxisAlignment.start,
+                    children: [
+                      pw.Text(
+                        p['title']!,
+                        style: pw.TextStyle(
+                          font: pw.Font.helveticaBoldOblique(),
+                          fontSize: 11,
+                        ),
+                      ),
+                      pw.SizedBox(height: 3),
+                      pw.Text(
+                        p['subtitle']!,
+                        style: pw.TextStyle(font: ttf, fontSize: 9),
+                      ),
+                    ],
                   ),
                 ),
-                pw.SizedBox(height: 6),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
 
-                // 🔸 PROJECTS Section
-                ...education.map(
-                  (edu) => pw.Padding(
-                    padding: const pw.EdgeInsets.only(bottom: 6),
-                    child: pw.Column(
-                      crossAxisAlignment: pw.CrossAxisAlignment.start,
-                      children: [
-                        pw.Text(
-                          '${edu['degree']}',
-                          style: pw.TextStyle(fontSize: 9),
+    // PAGE 5 - Education
+    pdf.addPage(
+      pw.Page(
+        pageFormat: PdfPageFormat.a4,
+        margin: pw.EdgeInsets.zero,
+        build: (context) => buildPage(
+          showHeader: false,
+          includeInfo: false,
+          content: pw.Column(
+            mainAxisAlignment: pw.MainAxisAlignment.start,
+            crossAxisAlignment: pw.CrossAxisAlignment.start,
+            children: [
+              pw.SizedBox(height: 25),
+              pw.Divider(thickness: 2, color: PdfColors.grey600),
+              pw.SizedBox(height: 10),
+              pw.Text(
+                'EDUCATION',
+                style: pw.TextStyle(
+                  font: pw.Font.timesBoldItalic(),
+                  fontSize:16,
+                ),
+              ),
+              pw.SizedBox(height: 15),
+              ...education.map(
+                (edu) => pw.Padding(
+                  padding: const pw.EdgeInsets.only(bottom: 6),
+                  child: pw.Column(
+                    crossAxisAlignment: pw.CrossAxisAlignment.start,
+                    children: [
+                      pw.Text(
+                        '${edu['degree']}',
+                        style: pw.TextStyle(fontSize: 10,font: pw.Font.helveticaBoldOblique(),),
+                      ),
+                      pw.SizedBox(height: 2),
+                      pw.Text(
+                        '${edu['institution']}',
+                        style: pw.TextStyle(
+                          fontSize: 10,
+
                         ),
-                        pw.Text(
-                          '${edu['institution']}',
-                          style: pw.TextStyle(
-                            fontSize: 9,
-                            font: pw.Font.helveticaBoldOblique(),
-                          ),
+                      ),
+                      pw.Text(
+                        '${edu['period']}',
+                        style: pw.TextStyle(fontSize: 8, font: ttf),
+                      ),
+                      ...((edu['details'] as List<String>).map(
+                        (b) => pw.Row(
+                          children: [
+                            pw.Text(
+                              '• ',
+                              style: pw.TextStyle(font: ttf, fontSize: 9),
+                            ),
+                            pw.Text(
+                              '$b',
+                              style: pw.TextStyle(font: ttf, fontSize: 9),
+                            ),
+                            pw.SizedBox(height: 6)
+                          ],
                         ),
-                        pw.Text(
-                          '${edu['period']}',
-                          style: pw.TextStyle(fontSize: 9, font: ttf),
-                        ),
-                        ...((edu['details'] as List<String>).map(
-                          (b) => pw.Row(
-                            children: [
-                              pw.Text(
-                                '• ',
-                                style: pw.TextStyle(font: ttf, fontSize: 9),
-                              ),
-                              pw.Text(
-                                '$b',
-                                style: pw.TextStyle(font: ttf, fontSize: 9),
-                              ),
-                            ],
-                          ),
-                        )),
-                      ],
-                    ),
+                      )),
+                    ],
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
@@ -2628,4 +3215,3 @@ class _Resume5ScreenState extends State<Resume5Screen> {
     await Printing.layoutPdf(onLayout: (format) => pdf.save());
   }
 }
-
