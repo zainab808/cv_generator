@@ -27,25 +27,25 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
       'role': 'Full Stack Developer (Flutter + Backend + Deployments)',
       'company': 'SecureHops | www.securehops.com',
       'period': 'Sept 2023 - Jan 2025',
-      'details': 'Developed cross-platform mobile apps using Flutter and Firebase.\n Integrated backend APIs and implemented CI/CD pipelines.'
+      'details': 'Developed cross-platform mobile apps using Flutter and Firebase.\n Integrated backend APIs and implemented CI/CD pipelines.\nDeployed applications on AWS and managed CI/CD pipelines backend APIs'
     },
     {
       'role': 'Team Lead (Flutter + Backend)',
       'company': 'SecureHops',
       'period': 'Jan 2023 - Jan 2025',
-      'details': 'Led a team, developed apps, integrated backend systems, mentored juniors.'
+      'details': 'Led a team, developed apps, integrated backend systems, mentored juniors.\nDeveloped mobile apps connecting customers with cleaning services.\nLed a cross-functional team of Flutter developers and UI designers'
     },
-    {
-      'role': 'Flutter Developer',
-      'company': 'TYDUP LTD',
-      'period': 'April 2024 - Sept 2025',
-      'details': 'Developed mobile apps connecting customers with cleaning services.'
-    },
+    // {
+    //   'role': 'Flutter Developer',
+    //   'company': 'TYDUP LTD',
+    //   'period': 'April 2024 - Sept 2025',
+    //   'details': 'Developed mobile apps connecting customers with cleaning services.'
+    // },
         {
       'role': 'Flutter Developer _ Salamgram',
      
       'period': 'Mar 2019 _ Jan 2025',
-      'details': 'As a Flutter Developer, contributing to the success of Salamly: Muslim Daily App, a comprehensive app for Muslims with 50K+ downloads Developed features for daily prayer days, Quran, and Islamic tools to enhance user engagement.\nPlayed a key role in achieving over 50,000 downloads through optimized performance and user-focused updates.'
+      'details': 'As a Flutter Developer, contributing to the success of Salamly:  a comprehensive app for Muslims with  for daily prayer days, Quran, and Islamic tools to enhance user engagement.\nPlayed a key role in achieving over 50,000 downloads through optimized performance and user-focused updates.'
     },
          
     
@@ -152,7 +152,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
     );
   }
 
-  // ✅ PDF with 4 Pages
+  // ✅ PDF with 1 Pages
   Future<Uint8List> _generatePdf(PdfPageFormat format) async {
     final doc = pw.Document();
 
@@ -173,34 +173,34 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                 ),
               ),
               pw.SizedBox(height: 10),
-              pw.Text('ARHAM SARWAR', style: pw.TextStyle(color: PdfColors.white, fontWeight: pw.FontWeight.bold,fontSize: 14)),
+              pw.Text('ARHAM SARWAR', style: pw.TextStyle(color: PdfColors.white, fontWeight: pw.FontWeight.bold,fontSize: 15)),
              
-              pw.Text('...', style: pw.TextStyle(color: PdfColors.white,)),
+              pw.Text('...', style: pw.TextStyle(color: PdfColors.grey200,)),
               pw.SizedBox(height: 3),
 
-              pw.Text('Senior Flutter Developer', style: pw.TextStyle(color: PdfColors.white, fontSize: 11)),
+              pw.Text('Senior Flutter Developer', style: pw.TextStyle(color: PdfColors.grey200, fontSize: 11)),
          
            
            pw.Column(
             crossAxisAlignment: pw.CrossAxisAlignment.start,
             children: [
                    pw.SizedBox(height: 20),
-              pw.Text('Details', style: pw.TextStyle(color: PdfColors.white, fontWeight: pw.FontWeight.bold,fontSize: 14)),
+              pw.Text('Details', style: pw.TextStyle(color: PdfColors.white, fontWeight: pw.FontWeight.bold,fontSize: 12)),
     pw.SizedBox(height: 10),
-              pw.Text('Mobile: +92 308 4695012', style: pw.TextStyle(color: PdfColors.white, fontSize: 8)),
+              pw.Text('Mobile: +92 308 4695012', style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8)),
              pw.SizedBox(height: 5),
              
-              pw.Text('Email: arham.sarwar786@gmail.com', style: pw.TextStyle(color: PdfColors.white, fontSize: 8)),
+              pw.Text('Email: arham.sarwar786@gmail.com', style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8)),
              
                pw.SizedBox(height: 5),
              
-              pw.Text('Linkedin:arham-sarwar-a1b56b176 ', style: pw.TextStyle(color: PdfColors.white, fontSize: 8)),
+              pw.Text('Linkedin:arham-sarwar-a1b56b176 ', style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8)),
              
               pw.SizedBox(height: 20),
-              pw.Text('Skills', style: pw.TextStyle(color: PdfColors.white, fontWeight: pw.FontWeight.bold,fontSize: 14)), 
+              pw.Text('Skills', style: pw.TextStyle(color: PdfColors.white, fontWeight: pw.FontWeight.bold,fontSize: 12)), 
               pw.SizedBox(height: 10),
               pw.Text('Flutter Cross-Platform Development',
- style: pw.TextStyle(color: PdfColors.white, fontSize: 8)),
+ style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8)),
    pw.SizedBox(height: 10),
  pw.Container(
   height: 4,
@@ -211,7 +211,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
 
   pw.Text('Firebase Suite_Cloud Functions',
     
- style: pw.TextStyle(color: PdfColors.white, fontSize: 8)),
+ style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8)),
    pw.SizedBox(height: 10),
  pw.Container(
   height: 4,
@@ -221,7 +221,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
  pw.SizedBox(height: 5), pw.Text(
     'Backend Development ',
     
- style: pw.TextStyle(color: PdfColors.white, fontSize: 8)),
+ style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8)),
    pw.SizedBox(height: 10),
  pw.Container(
   height: 4,
@@ -231,7 +231,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
  pw.SizedBox(height: 5),pw.Text(
     'State Management',
 
- style: pw.TextStyle(color: PdfColors.white, fontSize: 8)),
+ style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8)),
    pw.SizedBox(height: 10),
  pw.Container(
   height: 4,
@@ -241,7 +241,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
  pw.SizedBox(height: 5),pw.Text(
     'DevOps & Deployment ',
     
- style: pw.TextStyle(color: PdfColors.white, fontSize: 8)),
+ style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8)),
    pw.SizedBox(height: 10),
  pw.Container(
   height: 4,
@@ -251,7 +251,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
  pw.SizedBox(height: 5),pw.Text(
     'AI & ML Integration',
 
- style: pw.TextStyle(color: PdfColors.white, fontSize: 8)),
+ style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8)),
    pw.SizedBox(height: 10),
  pw.Container(
   height: 4,
@@ -261,7 +261,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
  pw.SizedBox(height: 5), pw.Text(
     'Databases ',
   
- style: pw.TextStyle(color: PdfColors.white, fontSize: 8)),
+ style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8)),
    pw.SizedBox(height: 10),
  pw.Container(
   height: 4,
@@ -271,7 +271,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
  pw.SizedBox(height: 5), pw.Text(
     'Version Control ',
    
- style: pw.TextStyle(color: PdfColors.white, fontSize: 8)),
+ style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8)),
    pw.SizedBox(height: 10),
  pw.Container(
   height: 4,
@@ -280,7 +280,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
  ), 
  pw.SizedBox(height: 5),pw.Text(
     'Project Tools ',
- style: pw.TextStyle(color: PdfColors.white, fontSize: 8)),
+ style: pw.TextStyle(color: PdfColors.grey200, fontSize: 8)),
    pw.SizedBox(height: 10),
  pw.Container(
   height: 4,
@@ -310,11 +310,11 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
 
 
               pw.SizedBox(height: 20),
-              pw.Text('Profile', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 17,  color: PdfColor.fromHex('#084A3F'),)),
+              pw.Text('Profile', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 16,  color: PdfColor.fromHex('#084A3F'),)),
              pw.SizedBox(height:  10),
               pw.Text(aboutText, style: const pw.TextStyle(fontSize: 10)),
               pw.SizedBox(height: 8),
-              pw.Text('Experience', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 17,  color: PdfColor.fromHex('#084A3F'),)),
+              pw.Text('Experience', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 16,  color: PdfColor.fromHex('#084A3F'),)),
             //   for (var e in experiences)
             //     pw.Padding(
             //       padding: const pw.EdgeInsets.only(top: 6),
@@ -381,7 +381,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                     'Education',
                     style: pw.TextStyle(
                       fontWeight: pw.FontWeight.bold,
-                      fontSize: 19,
+                      fontSize: 16,
                       color: PdfColor.fromHex('#084A3F'),
                     ),
                   ),
@@ -390,51 +390,53 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
                     'Bachelors in Information Technology',
                     style: pw.TextStyle(
                       fontWeight: pw.FontWeight.bold,
-                      fontSize: 12,
+                      fontSize: 11,
                     ),
                   ),
-
+pw.SizedBox(height: 1),
                   pw.Text(
                     'University of Punjab Lahore',
                     style: pw.TextStyle(
                       fontWeight: pw.FontWeight.bold,
-                      fontSize: 10,
+                      fontSize: 9,
                     ),
                   ),
                   pw.SizedBox(height: 5),
                   pw.Text('2019 - 2023', style: pw.TextStyle(fontSize: 10)),
-                  pw.SizedBox(height: 10),
+                  pw.SizedBox(height: 13),
                   pw.Text(
                     'F.Sc Pre-Engineering',
                     style: pw.TextStyle(
                       fontWeight: pw.FontWeight.bold,
-                      fontSize: 12,
+                      fontSize: 11,
                     ),
                   ),
+pw.SizedBox(height: 1),
 
                   pw.Text(
                     'Islamia College, Lahore',
                     style: pw.TextStyle(
                       fontWeight: pw.FontWeight.bold,
-                      fontSize: 10,
+                      fontSize: 9,
                     ),
                   ),
                   pw.SizedBox(height: 5),
                   pw.Text('2016 - 2019', style: pw.TextStyle(fontSize: 10)),
-                  pw.SizedBox(height: 10),
+                  pw.SizedBox(height: 13),
                   pw.Text(
                     'Matric',
                     style: pw.TextStyle(
                       fontWeight: pw.FontWeight.bold,
-                      fontSize: 12,
+                      fontSize: 11,
                     ),
                   ),
+pw.SizedBox(height: 1),
 
                   pw.Text(
                     'Islamia High School, Lahore',
                     style: pw.TextStyle(
                       fontWeight: pw.FontWeight.bold,
-                      fontSize: 10,
+                      fontSize: 9,
                     ),
                   ),
                   pw.SizedBox(height: 5),

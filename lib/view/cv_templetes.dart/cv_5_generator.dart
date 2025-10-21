@@ -3150,7 +3150,9 @@ class _Resume5ScreenState extends State<Resume5Screen> {
         build: (context) => buildPage(
           showHeader: false,
           includeInfo: false,
-          content: pw.Column(
+          content:
+          
+           pw.Column(
             mainAxisAlignment: pw.MainAxisAlignment.start,
             crossAxisAlignment: pw.CrossAxisAlignment.start,
             children: [
