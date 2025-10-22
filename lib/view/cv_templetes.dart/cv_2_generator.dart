@@ -45,7 +45,7 @@ Senior Flutter Developer with 6+ years of experience in mobile app development, 
       'company': 'SecureHops',
       'period': 'Jan 2023 - Jan 2025',
       'details':
-          'Led a team, developed apps, integrated backend systems, mentored juniors.\nLed a cross-functional team of Flutter developers and UI designers',
+          'Led a team, developed apps, integrated backend systems, mentored juniors.\n ',
     },
     {
       'role': 'Flutter Developer',
